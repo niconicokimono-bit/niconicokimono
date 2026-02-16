@@ -5934,7 +5934,7 @@
                                 
                                 <!-- 版權資訊 -->
                                 <div style="font-size: 0.875rem; color: #FFFCF7; opacity: 0.8;">
-                                    © 2025 Niconico Kimono Rental. All rights reserved.
+                                    © ${new Date().getFullYear()} Niconico Kimono Rental. All rights reserved.
                                 </div>
                             </div>
                         </div>
