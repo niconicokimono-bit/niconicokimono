@@ -6438,6 +6438,26 @@
         window.handleRoute = handleRoute;
         window.switchLanguage = switchLanguage;
 
+        // 手機版漢堡選單
+        window.toggleMobileMenu = function() {
+            var menu = document.getElementById('mobile-menu');
+            var hamburger = document.getElementById('hamburger-icon');
+            var closeIcon = document.getElementById('close-icon');
+            if (!menu) return;
+            var isOpen = menu.style.display !== 'none';
+            menu.style.display = isOpen ? 'none' : 'block';
+            if (hamburger) hamburger.style.display = isOpen ? 'block' : 'none';
+            if (closeIcon) closeIcon.style.display = isOpen ? 'none' : 'block';
+        };
+        window.closeMobileMenu = function() {
+            var menu = document.getElementById('mobile-menu');
+            var hamburger = document.getElementById('hamburger-icon');
+            var closeIcon = document.getElementById('close-icon');
+            if (menu) menu.style.display = 'none';
+            if (hamburger) hamburger.style.display = 'block';
+            if (closeIcon) closeIcon.style.display = 'none';
+        };
+
         // 滾動淡入淡出效果
         let scrollObserver = null;
         

@@ -112,23 +112,3 @@
     </div>
 </header>
 
-<script>
-function toggleMobileMenu() {
-    var menu = document.getElementById('mobile-menu');
-    var hamburger = document.getElementById('hamburger-icon');
-    var closeIcon = document.getElementById('close-icon');
-    if (!menu) return;
-    var isOpen = menu.style.display !== 'none';
-    menu.style.display = isOpen ? 'none' : 'block';
-    if (hamburger) hamburger.style.display = isOpen ? 'block' : 'none';
-    if (closeIcon) closeIcon.style.display = isOpen ? 'none' : 'block';
-}
-function closeMobileMenu() {
-    var menu = document.getElementById('mobile-menu');
-    var hamburger = document.getElementById('hamburger-icon');
-    var closeIcon = document.getElementById('close-icon');
-    if (menu) menu.style.display = 'none';
-    if (hamburger) hamburger.style.display = 'block';
-    if (closeIcon) closeIcon.style.display = 'none';
-}
-</script>

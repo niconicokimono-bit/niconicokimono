@@ -5562,6 +5562,22 @@ body[data-lang="en"] .kimono-plan-card {
     }
 }
 
+/* ====== 照片庫卡片格線 - 響應式 ====== */
+.top-12-grid {
+    gap: 1.5rem !important;
+}
+@media (max-width: 1024px) {
+    .top-12-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+@media (max-width: 768px) {
+    .top-12-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+}
+
 /* ====== 手機版漢堡選單連結 ====== */
 .mobile-menu-link {
     display: block;
