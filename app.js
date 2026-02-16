@@ -325,7 +325,7 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/cover3.png',
+                image: 'img/cover3.jpg',
                 price: '¥5,500（含稅）',
                 photos: [
                     'img/cover1.jpg',
@@ -1225,7 +1225,7 @@
                                 <img src="img/cover2.jpg" alt="${t('京都和服租借 - NicoNico Kimono 專業造型')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/cover3.png" alt="${t('京都清水寺和服體驗 - NicoNico 蕾絲和服振袖')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
+                                <img src="img/cover3.jpg" alt="${t('京都清水寺和服體驗 - NicoNico 蕾絲和服振袖')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
                             </div>
                             <div class="hero-image-item">
                                 <img src="img/cover4.jpg" alt="${t('京都八阪神社和服散策 - NicoNico Kimono')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
@@ -6438,9 +6438,10 @@
             }
         }
 
-        // 將 handleRoute 和 initScrollFadeIn 暴露到全域作用域
-        // 讓全域的 switchLanguage 能夠呼叫
+        // 將 handleRoute、switchLanguage 和 initScrollFadeIn 暴露到全域作用域
+        // 讓全域的 onclick 事件能夠呼叫
         window.handleRoute = handleRoute;
+        window.switchLanguage = switchLanguage;
 
         // 滾動淡入淡出效果
         let scrollObserver = null;

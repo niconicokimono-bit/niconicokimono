@@ -4934,12 +4934,12 @@ body[data-lang="en"] .photo-plan-service-card li {
 @media (max-width: 768px) {
     .fixed-contact-widget {
         right: 0;
-        bottom: 10px;
+        bottom: 60px;
         min-width: 180px;
     }
     .fixed-top-button {
         right: 10px;
-        bottom: 90px;
+        bottom: 130px;
         width: 50px;
         height: 50px;
         font-size: 0.75rem;
@@ -4985,6 +4985,12 @@ body[data-lang="en"] .photo-plan-service-card li {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
+    display: none; /* Hide by default */
+}
+
+/* Only show overlay when modal is active */
+.booking-modal.active .booking-modal-overlay {
+    display: block;
 }
 
 .booking-modal-content {
@@ -5523,7 +5529,7 @@ body[data-lang="en"] .kimono-plan-card {
 @media (max-width: 768px) {
     .floating-lang-switch {
         right: 12px;
-        bottom: 155px;
+        bottom: 200px;
     }
 
     .floating-lang-trigger {
