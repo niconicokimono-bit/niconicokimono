@@ -1,0 +1,1886 @@
+{
+  "首頁": {
+    "ja": "ホーム",
+    "en": "Home"
+  },
+  "店內介紹": {
+    "ja": "店舗紹介",
+    "en": "About Us"
+  },
+  "和服方案": {
+    "ja": "着物プラン",
+    "en": "Kimono Plans"
+  },
+  "女士": {
+    "ja": "レディース",
+    "en": "Ladies"
+  },
+  "男士": {
+    "ja": "メンズ",
+    "en": "Men"
+  },
+  "小孩": {
+    "ja": "お子様",
+    "en": "Kids"
+  },
+  "情侶": {
+    "ja": "カップル",
+    "en": "Couples"
+  },
+  "其他": {
+    "ja": "その他",
+    "en": "Others"
+  },
+  "小紋套餐": {
+    "ja": "小紋プラン",
+    "en": "Komon Plan"
+  },
+  "高級小紋套餐": {
+    "ja": "高級小紋プラン",
+    "en": "Premium Komon Plan"
+  },
+  "蕾絲套餐": {
+    "ja": "レースプラン",
+    "en": "Lace Kimono Plan"
+  },
+  "二尺袖套餐": {
+    "ja": "二尺袖プラン",
+    "en": "Nishaku-sode Plan"
+  },
+  "訪問服套餐": {
+    "ja": "訪問着プラン",
+    "en": "Houmongi Plan"
+  },
+  "黑留袖套餐": {
+    "ja": "黒留袖プラン",
+    "en": "Kurotomesode Plan"
+  },
+  "袴套餐": {
+    "ja": "袴プラン",
+    "en": "Hakama Plan"
+  },
+  "振袖套餐": {
+    "ja": "振袖プラン",
+    "en": "Furisode Plan"
+  },
+  "和服套餐": {
+    "ja": "着物プラン",
+    "en": "Kimono Plan"
+  },
+  "高級武士服套餐": {
+    "ja": "高級武士服プラン",
+    "en": "Premium Samurai Plan"
+  },
+  "髮型設計": {
+    "ja": "ヘアセット",
+    "en": "Hair Styling"
+  },
+  "攝影方案": {
+    "ja": "撮影プラン",
+    "en": "Photography"
+  },
+  "茶室": {
+    "ja": "茶室",
+    "en": "Tea Room"
+  },
+  "照片庫": {
+    "ja": "フォトギャラリー",
+    "en": "Gallery"
+  },
+  "常見問題": {
+    "ja": "よくあるご質問",
+    "en": "FAQ"
+  },
+  "交通資訊": {
+    "ja": "アクセス",
+    "en": "Access"
+  },
+  "點我預約": {
+    "ja": "ご予約はこちら",
+    "en": "Book Now"
+  },
+  "立即預約": {
+    "ja": "今すぐ予約",
+    "en": "Book Now"
+  },
+  "京都和服租借": {
+    "ja": "京都着物レンタル",
+    "en": "Kyoto Kimono Rental"
+  },
+  "京都和服體驗・攝影・茶室": {
+    "ja": "京都着物体験・撮影・茶室",
+    "en": "Kimono Experience, Photography & Tea Room"
+  },
+  "小紅書": {
+    "ja": "RED",
+    "en": "RED"
+  },
+  "聯絡我們": {
+    "ja": "お問い合わせ",
+    "en": "Contact Us"
+  },
+  "載入中...": {
+    "ja": "読み込み中...",
+    "en": "Loading..."
+  },
+  "【女士】小紋套餐": {
+    "ja": "【レディース】小紋プラン",
+    "en": "[Ladies] Komon Plan"
+  },
+  "【女士】高級小紋套餐": {
+    "ja": "【レディース】高級小紋プラン",
+    "en": "[Ladies] Premium Komon Plan"
+  },
+  "【女士】蕾絲套餐": {
+    "ja": "【レディース】レースプラン",
+    "en": "[Ladies] Lace Kimono Plan"
+  },
+  "【女士】二尺袖套餐": {
+    "ja": "【レディース】二尺袖プラン",
+    "en": "[Ladies] Nishaku-sode Plan"
+  },
+  "【女士】訪問服套餐": {
+    "ja": "【レディース】訪問着プラン",
+    "en": "[Ladies] Houmongi Plan"
+  },
+  "【女士】黑留袖套餐": {
+    "ja": "【レディース】黒留袖プラン",
+    "en": "[Ladies] Kurotomesode Plan"
+  },
+  "【女士】袴套餐": {
+    "ja": "【レディース】袴プラン",
+    "en": "[Ladies] Hakama Plan"
+  },
+  "【女士】振袖套餐": {
+    "ja": "【レディース】振袖プラン",
+    "en": "[Ladies] Furisode Plan"
+  },
+  "【男士】和服套餐": {
+    "ja": "【メンズ】着物プラン",
+    "en": "[Men] Kimono Plan"
+  },
+  "【男士】高級武士服套餐": {
+    "ja": "【メンズ】高級武士服プラン",
+    "en": "[Men] Premium Samurai Plan"
+  },
+  "【小孩】和服套餐": {
+    "ja": "【お子様】着物プラン",
+    "en": "[Kids] Kimono Plan"
+  },
+  "【情侶】和服套餐": {
+    "ja": "【カップル】着物プラン",
+    "en": "[Couples] Kimono Plan"
+  },
+  "⋈*｡ 價格含腰帶、髮型、草履、手提包": {
+    "ja": "⋈*｡ 帯・ヘアセット・草履・バッグ込み",
+    "en": "⋈*｡ Price includes obi belt, hairstyling, zori sandals & bag"
+  },
+  "⋈*｡ 價格含腰帶、草履、手提包": {
+    "ja": "⋈*｡ 帯・草履・バッグ込み",
+    "en": "⋈*｡ Price includes obi belt, zori sandals & bag"
+  },
+  "⋈*｡ 款式皆為普通小紋,到店後可換款補差價": {
+    "ja": "⋈*｡ 小紋のお着物です。差額で他プランへの変更も可能",
+    "en": "⋈*｡ Standard Komon style; upgrades available at the store for a fee"
+  },
+  "✿和服介紹": {
+    "ja": "✿着物のご紹介",
+    "en": "✿ About This Kimono"
+  },
+  "✿方案包含：": {
+    "ja": "✿プラン内容：",
+    "en": "✿ Plan Includes:"
+  },
+  "✿歸還時間": {
+    "ja": "✿ご返却時間",
+    "en": "✿ Return Time"
+  },
+  "⋆˚. 照片參考₊⊹": {
+    "ja": "⋆˚. お写真ギャラリー₊⊹",
+    "en": "⋆˚. Photo Gallery ₊⊹"
+  },
+  "｜可提前預留款式": {
+    "ja": "｜事前のお取り置き可能",
+    "en": "｜ Advance reservation available"
+  },
+  "以細緻優雅的「全面花紋」為特色，適合各種場合。": {
+    "ja": "繊細で上品な「全面柄」が特徴で、様々なシーンにお召しいただけます。",
+    "en": "Featuring delicate and elegant all-over patterns, perfect for any occasion."
+  },
+  "材質與設計更高級的小紋和服，適合追求更高質感與獨特花紋的您。": {
+    "ja": "より上質な生地とデザインの小紋着物。ワンランク上の質感と個性的な柄をお求めの方におすすめです。",
+    "en": "Premium-grade Komon kimono with superior fabric and unique patterns, for those seeking refined quality."
+  },
+  "近年來人氣爆棚的款式！結合日式傳統與西方蕾絲元素，打造獨一無二的甜美或復古風格。": {
+    "ja": "近年大人気のスタイル！日本の伝統と西洋のレース素材を融合し、唯一無二のスウィート＆レトロな装いに。",
+    "en": "An incredibly popular style in recent years! Blending Japanese tradition with Western lace for a unique sweet or vintage look."
+  },
+  "「二尺袖」是充滿活力的「中袖長」款式。花紋通常色彩鮮明、圖案大方，推薦給喜歡鮮豔色彩的您。": {
+    "ja": "「二尺袖」は活気あふれる「中振袖」スタイル。色鮮やかで大胆な柄が特徴で、華やかなお色味がお好きな方におすすめです。",
+    "en": "The Nishaku-sode is a vibrant mid-length sleeve style with bold, colorful patterns — perfect if you love vivid colors."
+  },
+  "「訪問服」是高雅的準禮服，不論已婚或未婚皆可穿著。適合參加朋友婚宴、派對、茶會等正式場合。本套餐包含一般訪問服與高級訪問服，使用頂級絲綢與手工刺繡的高級訪問服，無論是布料、染色或圖案，皆為上乘之選，適合最重要的時刻。": {
+    "ja": "「訪問着」は格調高い準礼装で、既婚・未婚を問わずお召しいただけます。ご友人のご結婚式やパーティー、お茶会などフォーマルな場にふさわしい装いです。本プランには一般訪問着と高級訪問着がございます。最高級の正絹と手刺繍を施した高級訪問着は、生地・染め・柄ともに逸品で、特別なひとときにふさわしいお着物です。",
+    "en": "The Houmongi is an elegant semi-formal kimono suitable for both married and unmarried women. Ideal for weddings, parties, and tea ceremonies. This plan includes standard and premium Houmongi — the premium versions feature top-grade silk and hand embroidery, perfect for your most special occasions."
+  },
+  "「黑留袖」是已婚女士的第一禮服，通常在婚禮等最莊重的场合穿著。圖案集中在下擺，展現極致的格調與品味。": {
+    "ja": "「黒留袖」は既婚女性の第一礼装で、ご結婚式など最も格式高い場でお召しになるお着物です。裾に集中した柄が、最上級の格と品格を表現いたします。",
+    "en": "The Kurotomesode is the most formal kimono for married women, traditionally worn at weddings. With patterns concentrated at the hem, it embodies the utmost elegance."
+  },
+  "「袴」是日本傳統的褲裙式服裝，結合和服上衣與袴褲，展現優雅而現代的日式風格。適合畢業典禮、成人式或特殊場合穿著，既傳統又時尚。": {
+    "ja": "「袴」は日本の伝統的なスカートスタイルのお衣装で、着物の上衣と袴を合わせた優雅でモダンな和のスタイルです。卒業式や成人式、特別な場にふさわしい、伝統とおしゃれを兼ね備えた装いです。",
+    "en": "Hakama is a traditional Japanese divided-skirt garment paired with a kimono top, creating an elegant yet modern Japanese look. Perfect for graduations, coming-of-age ceremonies, or special occasions."
+  },
+  "「振袖」是未婚女士的最高級禮服，以華麗的長袖為特徵。適合畢業典禮、成人式或拍攝紀念照。": {
+    "ja": "「振袖」は未婚女性の最高格の礼装で、華やかな長いお袖が特徴です。卒業式や成人式、記念撮影にぴったりのお着物です。",
+    "en": "The Furisode is the most formal kimono for unmarried women, distinguished by its gorgeous long sleeves. Ideal for graduations, coming-of-age ceremonies, or commemorative photos."
+  },
+  "低調而帥氣的男士專屬方案，體驗傳統日本風格。我們提供多種尺寸和顏色的男士和服，風格沉穩，適合與伴侶一同漫步京都。": {
+    "ja": "落ち着いた粋なメンズ専用プランで、日本の伝統スタイルをご体験いただけます。様々なサイズとお色味のメンズ着物をご用意しており、大切な方と京都の街をお散歩するのにぴったりです。",
+    "en": "A refined and stylish plan exclusively for men to experience traditional Japanese style. We offer various sizes and colors, perfect for strolling through Kyoto with your partner."
+  },
+  "體驗更正式的男士服飾「袴」或高品質的和服。此方案提供更精緻的布料與設計，展現武士般的氣勢與品味。": {
+    "ja": "よりフォーマルなメンズの「袴」や高品質なお着物をご体験いただけます。上質な生地とデザインで、武士のような凛々しさと気品を演出いたします。",
+    "en": "Experience the more formal men's Hakama or high-quality kimono. This plan features premium fabrics and design, evoking the dignity and taste of a samurai."
+  },
+  "專為小朋友設計的和服套餐，讓孩子也能體驗傳統日式文化。我們提供多種可愛的款式和顏色，讓小朋友在京都留下美好的回憶。": {
+    "ja": "お子様専用の着物プランです。可愛らしいデザインとお色味を豊富にご用意し、お子様にも日本の伝統文化をご体験いただけます。京都での素敵な思い出づくりにぜひどうぞ。",
+    "en": "A kimono plan designed for children, letting little ones experience traditional Japanese culture. We offer a variety of adorable styles and colors for unforgettable memories in Kyoto."
+  },
+  "專為情侶設計的和服套餐，讓您與伴侶一同體驗傳統日式文化。款式皆為普通小紋，可補差價換款，詳情請詢問": {
+    "ja": "カップル専用の着物プランです。お二人で日本の伝統文化をご体験いただけます。お着物は小紋となりますが、差額で他のプランへの変更も可能です。詳しくはお問い合わせください",
+    "en": "A kimono plan designed for couples to enjoy traditional Japanese culture together. Standard Komon style with upgrade options available — please ask for details."
+  },
+  "小紋 ¥5,500 一套": {
+    "ja": "小紋 ¥5,500（一式）",
+    "en": "Komon ¥5,500 (tax incl.) per set"
+  },
+  "⌁小紋 ¥5,500 一套": {
+    "ja": "⌁小紋 ¥5,500（一式）",
+    "en": "⌁ Komon ¥5,500 (tax incl.) per set"
+  },
+  "高級小紋 ¥7,700 一套": {
+    "ja": "高級小紋 ¥7,700（一式）",
+    "en": "Premium Komon ¥7,700 (tax incl.) per set"
+  },
+  "⌁高級小紋 ¥7,700 一套": {
+    "ja": "⌁高級小紋 ¥7,700（一式）",
+    "en": "⌁ Premium Komon ¥7,700 (tax incl.) per set"
+  },
+  "⌁蕾絲 ¥7,700 一套": {
+    "ja": "⌁レース着物 ¥7,700（一式）",
+    "en": "⌁ Lace Kimono ¥7,700 (tax incl.) per set"
+  },
+  "⌁二尺袖 ¥8,800 一套": {
+    "ja": "⌁二尺袖 ¥8,800（一式）",
+    "en": "⌁ Nishaku-sode ¥8,800 (tax incl.) per set"
+  },
+  "⌁訪問服 ¥11,000~¥16,500 一套": {
+    "ja": "⌁訪問着 ¥11,000〜¥16,500（一式）",
+    "en": "⌁ Houmongi ¥11,000–¥16,500 (tax incl.) per set"
+  },
+  "⌁黑留袖 ¥11,000 一套": {
+    "ja": "⌁黒留袖 ¥11,000（一式）",
+    "en": "⌁ Kurotomesode ¥11,000 (tax incl.) per set"
+  },
+  "⌁袴+和服 ¥11,000~30,000 一套": {
+    "ja": "⌁袴＋着物 ¥11,000〜30,000（一式）",
+    "en": "⌁ Hakama + Kimono ¥11,000–¥30,000 (tax incl.) per set"
+  },
+  "⌁振袖 ¥9,900~27,500 一套": {
+    "ja": "⌁振袖 ¥9,900〜27,500（一式）",
+    "en": "⌁ Furisode ¥9,900–¥27,500 (tax incl.) per set"
+  },
+  "⌁普通和服 ¥5,500 一套": {
+    "ja": "⌁着物 ¥5,500（一式）",
+    "en": "⌁ Standard Kimono ¥5,500 (tax incl.) per set"
+  },
+  "⌁另加購羽織 ¥1,100": {
+    "ja": "⌁羽織 追加 ¥1,100",
+    "en": "⌁ Add-on Haori jacket ¥1,100"
+  },
+  "⌁高級和服+羽織+袴 ¥16,500 一套": {
+    "ja": "⌁高級着物＋羽織＋袴 ¥16,500（一式）",
+    "en": "⌁ Premium Kimono + Haori + Hakama ¥16,500 (tax incl.) per set"
+  },
+  "⌁兒童和服 ¥5,500 一套": {
+    "ja": "⌁お子様着物 ¥5,500（一式）",
+    "en": "⌁ Children's Kimono ¥5,500 (tax incl.) per set"
+  },
+  "⌁女士小紋 ¥5,500 一套": {
+    "ja": "⌁レディース小紋 ¥5,500（一式）",
+    "en": "⌁ Ladies' Komon ¥5,500 (tax incl.) per set"
+  },
+  "⌁男士和服 ¥6,600 一套": {
+    "ja": "⌁メンズ着物 ¥6,600（一式）",
+    "en": "⌁ Men's Kimono ¥6,600 (tax incl.) per set"
+  },
+  "⌁半幅腰帶 / 兵兒帶": {
+    "ja": "⌁半幅帯 / 兵児帯",
+    "en": "⌁ Half-width obi / Heko obi"
+  },
+  "⌁半幅腰帶": {
+    "ja": "⌁半幅帯",
+    "en": "⌁ Half-width obi"
+  },
+  "⌁名古屋帶 / 二重太鼓帶": {
+    "ja": "⌁名古屋帯 / 二重太鼓帯",
+    "en": "⌁ Nagoya obi / Double-drum obi"
+  },
+  "⌁半幅帶": {
+    "ja": "⌁半幅帯",
+    "en": "⌁ Half-width obi"
+  },
+  "⌁袋帶": {
+    "ja": "⌁袋帯",
+    "en": "⌁ Fukuro obi"
+  },
+  "⌁免費髮型 / 髮飾": {
+    "ja": "⌁無料ヘアセット / 髪飾り",
+    "en": "⌁ Free hairstyling / Hair accessories"
+  },
+  "⌁精美髮型": {
+    "ja": "⌁ヘアセット",
+    "en": "⌁ Hair styling"
+  },
+  "⌁內搭、分趾襪、草履、日式提包": {
+    "ja": "⌁肌着・足袋・草履・和装バッグ",
+    "en": "⌁ Inner wear, tabi socks, zori sandals & Japanese bag"
+  },
+  "⌁腰帶、分趾襪、草履、手提包": {
+    "ja": "⌁帯・足袋・草履・バッグ",
+    "en": "⌁ Obi belt, tabi socks, zori sandals & bag"
+  },
+  "⌁腰帶、髮型(女士)": {
+    "ja": "⌁帯・ヘアセット（レディース）",
+    "en": "⌁ Obi belt & hairstyling (ladies)"
+  },
+  "⌁可免費租借拍攝道具（雨傘、扇子）": {
+    "ja": "⌁撮影小物の無料レンタル（傘・扇子）",
+    "en": "⌁ Free rental of photo props (umbrella, fan)"
+  },
+  "⌁分趾襪、草履、手提包": {
+    "ja": "⌁足袋・草履・バッグ",
+    "en": "⌁ Tabi socks, zori sandals & bag"
+  },
+  "⌁浴衣一套": {
+    "ja": "⌁浴衣一式",
+    "en": "⌁ Yukata set"
+  },
+  "⌁肌襦袢（內襯衣）": {
+    "ja": "⌁肌襦袢（インナー）",
+    "en": "⌁ Hadajuban (inner wear)"
+  },
+  "⌁草履、手提包": {
+    "ja": "⌁草履・バッグ",
+    "en": "⌁ Zori sandals & bag"
+  },
+  "⌁內襯、腰帶": {
+    "ja": "⌁肌着・帯",
+    "en": "⌁ Inner wear & obi belt"
+  },
+  "⌁二趾襪、草履、手提包": {
+    "ja": "⌁足袋・草履・バッグ",
+    "en": "⌁ Tabi socks, zori sandals & bag"
+  },
+  "蕾絲 ¥7,700 一套": {
+    "ja": "レース着物 ¥7,700（一式）",
+    "en": "Lace Kimono ¥7,700 (tax incl.) per set"
+  },
+  "二尺袖 ¥8,800 一套": {
+    "ja": "二尺袖 ¥8,800（一式）",
+    "en": "Nishaku-sode ¥8,800 (tax incl.) per set"
+  },
+  "訪問服 ¥11,000~¥16,500 一套": {
+    "ja": "訪問着 ¥11,000〜¥16,500（一式）",
+    "en": "Houmongi ¥11,000–¥16,500 (tax incl.) per set"
+  },
+  "黑留袖 ¥11,000 一套": {
+    "ja": "黒留袖 ¥11,000（一式）",
+    "en": "Kurotomesode ¥11,000 (tax incl.) per set"
+  },
+  "袴+和服 ¥11,000~30,000 一套": {
+    "ja": "袴＋着物 ¥11,000〜30,000（一式）",
+    "en": "Hakama + Kimono ¥11,000–¥30,000 (tax incl.) per set"
+  },
+  "振袖 ¥9,900~27,500 一套": {
+    "ja": "振袖 ¥9,900〜27,500（一式）",
+    "en": "Furisode ¥9,900–¥27,500 (tax incl.) per set"
+  },
+  "普通和服 ¥5,500 一套": {
+    "ja": "着物 ¥5,500（一式）",
+    "en": "Standard Kimono ¥5,500 (tax incl.) per set"
+  },
+  "另加購羽織 ¥1,100": {
+    "ja": "羽織 追加 ¥1,100",
+    "en": "Add-on Haori jacket ¥1,100"
+  },
+  "高級和服+羽織+袴 ¥16,500 一套": {
+    "ja": "高級着物＋羽織＋袴 ¥16,500（一式）",
+    "en": "Premium Kimono + Haori + Hakama ¥16,500 (tax incl.) per set"
+  },
+  "兒童和服 ¥5,500 一套": {
+    "ja": "お子様着物 ¥5,500（一式）",
+    "en": "Children's Kimono ¥5,500 (tax incl.) per set"
+  },
+  "女士小紋 ¥5,500 一套": {
+    "ja": "レディース小紋 ¥5,500（一式）",
+    "en": "Ladies' Komon ¥5,500 (tax incl.) per set"
+  },
+  "男士和服 ¥6,600 一套": {
+    "ja": "メンズ着物 ¥6,600（一式）",
+    "en": "Men's Kimono ¥6,600 (tax incl.) per set"
+  },
+  "半幅腰帶 / 兵兒帶": {
+    "ja": "半幅帯 / 兵児帯",
+    "en": "Half-width obi / Heko obi"
+  },
+  "半幅腰帶": {
+    "ja": "半幅帯",
+    "en": "Half-width obi"
+  },
+  "名古屋帶 / 二重太鼓帶": {
+    "ja": "名古屋帯 / 二重太鼓帯",
+    "en": "Nagoya obi / Double-drum obi"
+  },
+  "半幅帶": {
+    "ja": "半幅帯",
+    "en": "Half-width obi"
+  },
+  "袋帶": {
+    "ja": "袋帯",
+    "en": "Fukuro obi"
+  },
+  "免費髮型 / 髮飾": {
+    "ja": "無料ヘアセット / 髪飾り",
+    "en": "Free hairstyling / Hair accessories"
+  },
+  "精美髮型": {
+    "ja": "ヘアセット",
+    "en": "Hair styling"
+  },
+  "內搭、分趾襪、草履、日式提包": {
+    "ja": "肌着・足袋・草履・和装バッグ",
+    "en": "Inner wear, tabi socks, zori sandals & Japanese bag"
+  },
+  "腰帶、分趾襪、草履、手提包": {
+    "ja": "帯・足袋・草履・バッグ",
+    "en": "Obi belt, tabi socks, zori sandals & bag"
+  },
+  "腰帶、髮型(女士)": {
+    "ja": "帯・ヘアセット（レディース）",
+    "en": "Obi belt & hairstyling (ladies)"
+  },
+  "可免費租借拍攝道具（雨傘、扇子）": {
+    "ja": "撮影小物の無料レンタル（傘・扇子）",
+    "en": "Free rental of photo props (umbrella, fan)"
+  },
+  "分趾襪、草履、手提包": {
+    "ja": "足袋・草履・バッグ",
+    "en": "Tabi socks, zori sandals & bag"
+  },
+  "浴衣一套": {
+    "ja": "浴衣一式",
+    "en": "Yukata set"
+  },
+  "肌襦袢（內襯衣）": {
+    "ja": "肌襦袢（インナー）",
+    "en": "Hadajuban (inner wear)"
+  },
+  "草履、手提包": {
+    "ja": "草履・バッグ",
+    "en": "Zori sandals & bag"
+  },
+  "內襯、腰帶": {
+    "ja": "肌着・帯",
+    "en": "Inner wear & obi belt"
+  },
+  "二趾襪、草履、手提包": {
+    "ja": "足袋・草履・バッグ",
+    "en": "Tabi socks, zori sandals & bag"
+  },
+  "當日17:30前需歸還": {
+    "ja": "当日17:30までにご返却ください",
+    "en": "Return by 5:30 PM on the same day"
+  },
+  "免費隔日中午12:00前歸還（需付押金¥10,000）": {
+    "ja": "翌日12:00までの無料返却可（デポジット¥10,000）",
+    "en": "Free next-day return by 12:00 PM (¥10,000 deposit required)"
+  },
+  "※當日17:30前需歸還": {
+    "ja": "※当日17:30までにご返却ください",
+    "en": "※ Return by 5:30 PM on the same day"
+  },
+  "※免費隔日中午12:00前歸還（需付押金¥10,000）": {
+    "ja": "※翌日12:00までの無料返却可（デポジット¥10,000）",
+    "en": "※ Free next-day return by 12:00 PM (¥10,000 deposit required)"
+  },
+  "¥5,500（含稅）": {
+    "ja": "¥5,500（税込）",
+    "en": "¥5,500 (tax incl.)"
+  },
+  "¥7,700（含稅）": {
+    "ja": "¥7,700（税込）",
+    "en": "¥7,700 (tax incl.)"
+  },
+  "¥8,800（含稅）": {
+    "ja": "¥8,800（税込）",
+    "en": "¥8,800 (tax incl.)"
+  },
+  "¥11,000~16,500（含稅）": {
+    "ja": "¥11,000〜16,500（税込）",
+    "en": "¥11,000–16,500 (tax incl.)"
+  },
+  "¥11,000（含稅）": {
+    "ja": "¥11,000（税込）",
+    "en": "¥11,000 (tax incl.)"
+  },
+  "¥11,000~（含稅）": {
+    "ja": "¥11,000〜（税込）",
+    "en": "¥11,000– (tax incl.)"
+  },
+  "¥9,900~27,500（含稅）": {
+    "ja": "¥9,900〜27,500（税込）",
+    "en": "¥9,900–27,500 (tax incl.)"
+  },
+  "¥5,500~8,800（含稅）": {
+    "ja": "¥5,500〜8,800（税込）",
+    "en": "¥5,500–8,800 (tax incl.)"
+  },
+  "¥16,500（含稅）": {
+    "ja": "¥16,500（税込）",
+    "en": "¥16,500 (tax incl.)"
+  },
+  "¥9,900~（含稅）": {
+    "ja": "¥9,900〜（税込）",
+    "en": "¥9,900– (tax incl.)"
+  },
+  "全部": {
+    "ja": "すべて",
+    "en": "All"
+  },
+  "人氣": {
+    "ja": "人気",
+    "en": "Popular"
+  },
+  "查看更多": {
+    "ja": "もっと見る",
+    "en": "See More"
+  },
+  "查看詳細內容": {
+    "ja": "詳しく見る",
+    "en": "View Details"
+  },
+  "查看更多問題": {
+    "ja": "もっと質問を見る",
+    "en": "More Questions"
+  },
+  "查看照片": {
+    "ja": "お写真を見る",
+    "en": "View Photos"
+  },
+  "查看作品集": {
+    "ja": "ポートフォリオを見る",
+    "en": "View Portfolio"
+  },
+  "返回方案列表": {
+    "ja": "プラン一覧に戻る",
+    "en": "Back to Plans"
+  },
+  "返回照片庫": {
+    "ja": "フォトギャラリーに戻る",
+    "en": "Back to Gallery"
+  },
+  "找不到方案": {
+    "ja": "プランが見つかりません",
+    "en": "Plan not found"
+  },
+  "圖片缺失": {
+    "ja": "画像なし",
+    "en": "Image missing"
+  },
+  "型錄照片準備中，敬請期待": {
+    "ja": "カタログ写真を準備中です。お楽しみに",
+    "en": "Catalog photos coming soon"
+  },
+  "暫無照片，敬請期待": {
+    "ja": "お写真準備中です。お楽しみに",
+    "en": "Photos coming soon"
+  },
+  "請稍候～": {
+    "ja": "少々お待ちください〜",
+    "en": "Please wait~"
+  },
+  "馬上就要上傳照片了！": {
+    "ja": "もうすぐお写真をアップします！",
+    "en": "Photos will be uploaded soon!"
+  },
+  "和服": {
+    "ja": "着物",
+    "en": "Kimono"
+  },
+  "腰帶": {
+    "ja": "帯",
+    "en": "Obi belt"
+  },
+  "內搭": {
+    "ja": "肌着",
+    "en": "Inner wear"
+  },
+  "髮型": {
+    "ja": "ヘア",
+    "en": "Hair"
+  },
+  "草履": {
+    "ja": "草履",
+    "en": "Zori"
+  },
+  "提包": {
+    "ja": "バッグ",
+    "en": "Bag"
+  },
+  "長襦袢": {
+    "ja": "長襦袢",
+    "en": "Nagajuban"
+  },
+  "日式提包": {
+    "ja": "和装バッグ",
+    "en": "Japanese bag"
+  },
+  "分趾襪": {
+    "ja": "足袋",
+    "en": "Tabi socks"
+  },
+  "髮飾": {
+    "ja": "髪飾り",
+    "en": "Hair accessories"
+  },
+  "全部振袖": {
+    "ja": "振袖すべて",
+    "en": "All Furisode"
+  },
+  "精品振袖 ¥9,900": {
+    "ja": "上質振袖 ¥9,900",
+    "en": "Premium Furisode ¥9,900"
+  },
+  "金絲振袖 ¥16,500": {
+    "ja": "金糸振袖 ¥16,500",
+    "en": "Gold Thread Furisode ¥16,500"
+  },
+  "高訂振袖 ¥27,500": {
+    "ja": "高級振袖 ¥27,500",
+    "en": "Haute Couture Furisode ¥27,500"
+  },
+  "訪問服 ¥11,000": {
+    "ja": "訪問着 ¥11,000",
+    "en": "Houmongi ¥11,000"
+  },
+  "高級訪問服 ¥16,500": {
+    "ja": "高級訪問着 ¥16,500",
+    "en": "Premium Houmongi ¥16,500"
+  },
+  "白": {
+    "ja": "白",
+    "en": "White"
+  },
+  "米": {
+    "ja": "ベージュ",
+    "en": "Beige"
+  },
+  "紅": {
+    "ja": "赤",
+    "en": "Red"
+  },
+  "橘": {
+    "ja": "オレンジ",
+    "en": "Orange"
+  },
+  "綠": {
+    "ja": "緑",
+    "en": "Green"
+  },
+  "藍": {
+    "ja": "青",
+    "en": "Blue"
+  },
+  "紫": {
+    "ja": "紫",
+    "en": "Purple"
+  },
+  "粉": {
+    "ja": "ピンク",
+    "en": "Pink"
+  },
+  "黑": {
+    "ja": "黒",
+    "en": "Black"
+  },
+  "價格表": {
+    "ja": "料金表",
+    "en": "Price List"
+  },
+  "女士套餐": {
+    "ja": "レディースプラン",
+    "en": "Ladies' Plans"
+  },
+  "男士套餐": {
+    "ja": "メンズプラン",
+    "en": "Men's Plans"
+  },
+  "其他套餐": {
+    "ja": "その他のプラン",
+    "en": "Other Plans"
+  },
+  "小孩和服套餐": {
+    "ja": "お子様着物プラン",
+    "en": "Children's Kimono Plan"
+  },
+  "情侶和服套餐": {
+    "ja": "カップル着物プラン",
+    "en": "Couples Kimono Plan"
+  },
+  "加購服務": {
+    "ja": "オプションサービス",
+    "en": "Add-on Services"
+  },
+  "茶室租借": {
+    "ja": "茶室レンタル",
+    "en": "Tea Room Rental"
+  },
+  "抹茶體驗": {
+    "ja": "抹茶体験",
+    "en": "Matcha Experience"
+  },
+  "飯店歸還": {
+    "ja": "ホテル返却",
+    "en": "Hotel Return"
+  },
+  "本店特色": {
+    "ja": "当店の特徴",
+    "en": "Our Features"
+  },
+  "免費隔日歸還": {
+    "ja": "翌日返却無料",
+    "en": "Free Next-day Return"
+  },
+  "最晚可隔日中午前歸還，不用匆忙趕時間。讓您有充足的時間享受京都之旅，無需擔心時間壓力。": {
+    "ja": "翌日のお昼までにご返却いただけますので、お時間を気にせず京都の旅をごゆっくりお楽しみいただけます。",
+    "en": "Return by noon the next day — no need to rush. Enjoy your Kyoto trip at your own pace without time pressure."
+  },
+  "可跨店歸還": {
+    "ja": "他店舗返却可能",
+    "en": "Cross-store Return"
+  },
+  "祇園店 / 清水寺店皆可歸還，行程安排更自由。無論您在哪裡結束旅程，都能方便歸還和服。": {
+    "ja": "祇園店・清水寺店どちらでもご返却いただけます。旅の最後にお近くの店舗へお越しください。",
+    "en": "Return at either our Gion or Kiyomizu-dera store for maximum flexibility. Conveniently drop off wherever your trip ends."
+  },
+  "多種免費髮型": {
+    "ja": "豊富な無料ヘアスタイル",
+    "en": "Free Hairstyling Options"
+  },
+  "提供多款可愛髮型，部分升級造型也可加價選擇。專業髮型師為您打造完美日式造型。": {
+    "ja": "可愛いヘアスタイルを多数ご用意。プロのスタイリストが和装にぴったりのヘアをお仕上げいたします。",
+    "en": "Choose from various cute hairstyles; premium upgrades also available. Our professional stylists create the perfect Japanese look for you."
+  },
+  "專業攝影師": {
+    "ja": "プロカメラマン",
+    "en": "Professional Photographer"
+  },
+  "熟悉京都景點與光線，為您記錄最美京都時光。專業攝影師捕捉您最動人的瞬間。": {
+    "ja": "京都の名所と光を熟知したプロカメラマンが、最も美しい瞬間を写真に残します。",
+    "en": "Our photographers know Kyoto's best spots and lighting, capturing your most beautiful moments in the city."
+  },
+  "店內附設日式茶室，可拍照或搭配抹茶體驗。在傳統日式空間中留下珍貴回憶。": {
+    "ja": "店内に日本茶室を併設しております。お写真撮影や抹茶体験と合わせて、伝統的な和の空間で特別な思い出をお作りいただけます。",
+    "en": "Our in-store Japanese tea room is available for photos or a matcha experience. Create precious memories in a traditional Japanese setting."
+  },
+  "服務親切": {
+    "ja": "親切なおもてなし",
+    "en": "Friendly Service"
+  },
+  "中文、英文、日文對應的工作人員，耐心協助挑選和服。親切專業的服務讓您安心享受和服體驗。": {
+    "ja": "中国語・英語・日本語対応のスタッフが、丁寧にお着物選びをお手伝いいたします。安心して着物体験をお楽しみください。",
+    "en": "Our staff speak Chinese, English, and Japanese, patiently helping you choose the perfect kimono. Enjoy your experience with peace of mind."
+  },
+  "在京都，<br>留下美好的回憶": {
+    "ja": "京都で、<br>美しい思い出を",
+    "en": "In Kyoto,<br>create beautiful memories"
+  },
+  "穿上優雅的和服，漫步於傳統街道，感受日本文化的魅力。每一張照片都記錄著美好的時光，讓您的京都之旅更加難忘。": {
+    "ja": "優雅なお着物を纏い、京都の伝統ある街並みをそぞろ歩き。一枚一枚のお写真が美しい時間を刻み、忘れられない京都の旅になることでしょう。",
+    "en": "Dress in an elegant kimono, stroll through traditional streets, and feel the charm of Japanese culture. Every photo captures a precious moment, making your Kyoto trip truly unforgettable."
+  },
+  "【重要】只要留下五星Google評論 即可免費使用茶室(15m)！": {
+    "ja": "【重要】Google五つ星レビューで茶室15分無料！",
+    "en": "[Important] Leave a 5-star Google review for 15 min free tea room access!"
+  },
+  "【通知】高級訪問服新款到貨！": {
+    "ja": "【お知らせ】高級訪問着の新作が入荷しました！",
+    "en": "[Notice] New premium Houmongi arrivals!"
+  },
+  "【通知】推出情侶套餐": {
+    "ja": "【お知らせ】カップルプラン登場",
+    "en": "[Notice] Couples Plan now available"
+  },
+  "【通知】攝影方案全面升級": {
+    "ja": "【お知らせ】撮影プラン全面リニューアル",
+    "en": "[Notice] Photography plans fully upgraded"
+  },
+  "【通知】店內茶室空間翻新完成": {
+    "ja": "【お知らせ】店内茶室リニューアル完了",
+    "en": "[Notice] Tea room renovation complete"
+  },
+  "茶室體驗": {
+    "ja": "茶室体験",
+    "en": "Tea Room Experience"
+  },
+  "抹茶體驗 NEW OPEN": {
+    "ja": "抹茶体験 NEW OPEN",
+    "en": "Matcha Experience NEW OPEN"
+  },
+  "攝影服務": {
+    "ja": "撮影サービス",
+    "en": "Photography Service"
+  },
+  "專業外拍方案": {
+    "ja": "プロ撮影プラン",
+    "en": "Professional Photoshoot Plans"
+  },
+  "30分鐘方案": {
+    "ja": "30分プラン",
+    "en": "30-min Plan"
+  },
+  "輕鬆記錄京都的美好瞬間。底片 30-60 張，無精修，適合 1~2 人的快速街拍體驗。": {
+    "ja": "気軽に京都の素敵な瞬間を記録。撮影データ30〜60枚、レタッチなし。1〜2名様のお手軽ストリートフォト体験に。",
+    "en": "Capture beautiful moments in Kyoto with ease. 30–60 photos, no retouching — a quick street-snap experience for 1–2 people."
+  },
+  "60分鐘方案": {
+    "ja": "60分プラン",
+    "en": "60-min Plan"
+  },
+  "深度探索京都風情。底片 80-100 張，含精修 5 張，適合 1~3 人的悠閒攝影散步。": {
+    "ja": "京都の風情をじっくり堪能。撮影データ80〜100枚、レタッチ5枚付き。1〜3名様のゆったり撮影散歩に。",
+    "en": "Explore Kyoto in depth. 80–100 photos with 5 retouched — a relaxed photo walk for 1–3 people."
+  },
+  "90分鐘方案": {
+    "ja": "90分プラン",
+    "en": "90-min Plan"
+  },
+  "完整的京都攝影之旅。底片 150 張以上，含精修 10 張，適合 1~6 人的團體或特殊紀念。": {
+    "ja": "本格的な京都フォトツアー。撮影データ150枚以上、レタッチ10枚付き。1〜6名様のグループや特別な記念に。",
+    "en": "A full Kyoto photo tour. 150+ photos with 10 retouched — ideal for groups of 1–6 or special occasions."
+  },
+  "可以當日預約嗎？": {
+    "ja": "当日予約は可能ですか？",
+    "en": "Can I book on the same day?"
+  },
+  "建議提前預約！但若當天有空檔，也可接受預約。": {
+    "ja": "事前のご予約をおすすめいたしますが、当日空きがございましたらご予約を承ります。",
+    "en": "We recommend booking in advance, but same-day reservations may be available if there are openings."
+  },
+  "穿著和服加做髮型需要多長時間？": {
+    "ja": "着物の着付けとヘアセットにどのくらい時間がかかりますか？",
+    "en": "How long does kimono dressing and hairstyling take?"
+  },
+  "穿著和服以及髮型設計約需1小時左右。": {
+    "ja": "お着付けとヘアセットで約1時間ほどお時間を頂戴いたします。",
+    "en": "Kimono dressing and hairstyling take approximately 1 hour."
+  },
+  "最早可以預約幾點？": {
+    "ja": "最も早い予約時間は何時ですか？",
+    "en": "What is the earliest reservation time?"
+  },
+  "我們最早可接受早上6:00的預約。": {
+    "ja": "朝6:00からご予約を承っております。",
+    "en": "We accept reservations as early as 6:00 AM."
+  },
+  "最晚幾點前要歸還？": {
+    "ja": "返却は何時までですか？",
+    "en": "What is the latest return time?"
+  },
+  "當日17:30前需歸還。如需隔日歸還，可免費隔日中午12:00前歸還（需付押金¥10,000）。": {
+    "ja": "当日17:30までにご返却ください。翌日返却をご希望の場合は、翌日12:00まで無料でご返却いただけます（デポジット¥10,000）。",
+    "en": "Return by 5:30 PM on the same day. For next-day return (free, by 12:00 PM), a ¥10,000 deposit is required."
+  },
+  "可以寄放行李在店裡嗎？": {
+    "ja": "荷物を店内に預けられますか？",
+    "en": "Can I store my luggage at the shop?"
+  },
+  "可以！我們提供行李寄存服務，讓您輕鬆享受和服體驗，無需擔心隨身物品的存放問題。": {
+    "ja": "はい！手荷物のお預かりサービスをご用意しておりますので、身軽に着物体験をお楽しみいただけます。",
+    "en": "Yes! We offer luggage storage, so you can enjoy your kimono experience hands-free."
+  },
+  "在京都，遇見最美的自己 ✧ 用和服與照片，為您留下最珍貴的回憶": {
+    "ja": "京都で、最も美しいあなたに出会う ✧ お着物とお写真で、かけがえのない思い出を",
+    "en": "Discover your most beautiful self in Kyoto ✧ Kimono & photography for your most precious memories"
+  },
+  "和服租借": {
+    "ja": "着物レンタル",
+    "en": "Kimono Rental"
+  },
+  "專業攝影": {
+    "ja": "プロ撮影",
+    "en": "Professional Photography"
+  },
+  "如有未列於選單的服務，歡迎透過聯絡表單詢問。": {
+    "ja": "メニューにないサービスにつきましても、お気軽にお問い合わせくださいませ。",
+    "en": "For services not listed, please feel free to contact us via the inquiry form."
+  },
+  "基本髮型": {
+    "ja": "基本ヘアスタイル",
+    "en": "Basic Hairstyles"
+  },
+  "所有和服方案皆包含以下八種基本髮型，由專業造型師為您打造": {
+    "ja": "全ての着物プランに以下の8種類の基本ヘアスタイルが含まれます。プロのスタイリストがお仕上げいたします",
+    "en": "All kimono plans include the following 8 basic hairstyles, crafted by our professional stylists"
+  },
+  "女士和服套餐皆包含免費髮型設計，由專業造型師依據您的臉型與和服款式，量身打造最適合的造型。": {
+    "ja": "レディース着物プランには全て無料ヘアセットが含まれます。プロのスタイリストが、お顔立ちとお着物に合わせて最適なスタイルをお仕上げいたします。",
+    "en": "All ladies' kimono plans include free hairstyling. Our stylists customize the perfect look based on your face shape and kimono choice."
+  },
+  "日系盤髮": {
+    "ja": "和風アップスタイル",
+    "en": "Japanese Updo"
+  },
+  "日系盤髮2": {
+    "ja": "和風アップスタイルII",
+    "en": "Japanese Updo II"
+  },
+  "日系低盤": {
+    "ja": "和風ローシニヨン",
+    "en": "Japanese Low Bun"
+  },
+  "雙馬尾造型": {
+    "ja": "ツインテール",
+    "en": "Twin Tails"
+  },
+  "日系馬尾": {
+    "ja": "和風ポニーテール",
+    "en": "Japanese Ponytail"
+  },
+  "短髮盤髮": {
+    "ja": "ショートヘアアップ",
+    "en": "Short Hair Updo"
+  },
+  "假髮造型": {
+    "ja": "ウィッグスタイル",
+    "en": "Wig Style"
+  },
+  "丸子造型": {
+    "ja": "お団子スタイル",
+    "en": "Bun Style"
+  },
+  "無料 / Free": {
+    "ja": "無料 / Free",
+    "en": "Free"
+  },
+  "新日本髮": {
+    "ja": "新日本髪",
+    "en": "Shin-Nihongami"
+  },
+  "しんにほんがみ": {
+    "ja": "しんにほんがみ",
+    "en": "Shin-Nihongami"
+  },
+  "傳統日本髮的現代詮釋，結合古典美學與當代技法。適合振袖、訪問服等正式場合，展現極致優雅。": {
+    "ja": "伝統的な日本髪をモダンにアレンジ。古典美と現代の技法を融合させた、振袖や訪問着など格式あるお席にふさわしい極上のスタイルです。",
+    "en": "A modern take on traditional Japanese hairstyling, blending classical beauty with contemporary techniques. Perfect for formal occasions with Furisode or Houmongi."
+  },
+  "專業造型師約 20 分鐘精心打造": {
+    "ja": "プロのスタイリストが約20分で丁寧にお仕上げ",
+    "en": "Crafted by professional stylists in approx. 20 min"
+  },
+  "適合拍攝紀念寫真": {
+    "ja": "記念撮影にもおすすめ",
+    "en": "Ideal for commemorative photo shoots"
+  },
+  "髮型設計時間約 15-20 分鐘": {
+    "ja": "ヘアセットの所要時間は約15〜20分",
+    "en": "Hairstyling takes approx. 15–20 min"
+  },
+  "女士套餐價格皆包含髮型設計，並可任選髮飾": {
+    "ja": "レディースプランには全てヘアセットと髪飾りが含まれます",
+    "en": "All ladies' plans include hairstyling with your choice of hair accessories"
+  },
+  "另提供加購髮型 (¥5,500~)": {
+    "ja": "オプションヘアスタイルもございます（¥5,500〜）",
+    "en": "Premium hairstyle upgrade available (¥5,500–)"
+  },
+  "如有額外需求，請私訊": {
+    "ja": "その他のご要望は、InstagramのDMにてお問い合わせください",
+    "en": "For additional requests, please DM us on Instagram"
+  },
+  "放大檢視": {
+    "ja": "拡大表示",
+    "en": "Enlarge"
+  },
+  "相簿圖片": {
+    "ja": "アルバム写真",
+    "en": "Album Photo"
+  },
+  "挑選和服": {
+    "ja": "着物選び",
+    "en": "Choose Your Kimono"
+  },
+  "數百套和服任您挑選，從日常小紋到華麗振袖，找到最適合您的京都之美。": {
+    "ja": "数百着のお着物の中からお選びいただけます。カジュアルな小紋から華やかな振袖まで、京都にぴったりの一着を。",
+    "en": "Choose from hundreds of kimono — from casual Komon to gorgeous Furisode — and find the perfect Kyoto look for you."
+  },
+  "髮型著裝區": {
+    "ja": "着付け＆ヘアセットエリア",
+    "en": "Dressing & Styling Area"
+  },
+  "專業造型師為您打造精緻日式髮型，多款免費造型可供選擇。": {
+    "ja": "プロのスタイリストが和装にぴったりのヘアスタイルをお仕上げ。豊富な無料スタイルからお選びいただけます。",
+    "en": "Our professional stylists create exquisite Japanese hairstyles, with many free options to choose from."
+  },
+  "附設傳統日式茶室，可拍照留念或搭配抹茶體驗，在靜謐空間中留下珍貴回憶。": {
+    "ja": "伝統的な和の茶室を併設。お写真撮影や抹茶体験とともに、静寂な空間で特別な思い出をお作りいただけます。",
+    "en": "Our traditional Japanese tea room is available for photos or matcha experience — create precious memories in a serene setting."
+  },
+  "中文、英文、日文對應，耐心協助挑選搭配和服，讓您安心享受京都之旅。": {
+    "ja": "中国語・英語・日本語に対応。丁寧にお着物選びをお手伝いし、安心して京都の旅をお楽しみいただけます。",
+    "en": "Our staff speak Chinese, English, and Japanese to help you find the perfect kimono. Enjoy your Kyoto trip with complete peace of mind."
+  },
+  "穿上和服，踏入茶室，體驗一場正統的京都抹茶時光。為旅程留下最優雅的回憶。": {
+    "ja": "お着物を纏い茶室へ。京都ならではの本格抹茶のひとときをご体験ください。旅の中で最も優雅な思い出となることでしょう。",
+    "en": "Dress in a kimono, step into the tea room, and enjoy an authentic Kyoto matcha experience. Create the most elegant memories of your trip."
+  },
+  "在靜謐的茶室中，親手點一碗抹茶，感受京都獨有的慢節奏。": {
+    "ja": "静かな茶室で、ご自身の手で一碗の抹茶を点て、京都ならではのゆったりとした時間をお感じください。",
+    "en": "In the tranquil tea room, whisk your own bowl of matcha and savor Kyoto's unique slow pace."
+  },
+  "從抹茶的香氣、泡沫到入口的回甘，每一個步驟都是與日本茶文化的對話。": {
+    "ja": "抹茶の香り、泡立ち、口に広がる余韻——一つひとつの所作が、日本茶文化との対話です。",
+    "en": "From the aroma and froth to the lingering sweetness — every step is a dialogue with Japanese tea culture."
+  },
+  "放慢腳步，讓一碗抹茶，成為旅途中最安靜、最難忘的片刻。": {
+    "ja": "足を止め、一碗の抹茶とともに、旅の中で最も静かで忘れられないひとときを。",
+    "en": "Slow down and let a bowl of matcha become the quietest, most unforgettable moment of your journey."
+  },
+  "在充滿日式風情的傳統茶室中，享受寧靜的時光。可以在此拍攝和服照片，或單純感受京都的傳統文化氛圍。": {
+    "ja": "日本情緒あふれる伝統茶室で、静かなひとときをお過ごしください。お着物でのお写真撮影や、京都の伝統文化の雰囲気をお楽しみいただけます。",
+    "en": "Enjoy a tranquil moment in a traditional Japanese tea room. Take kimono photos here or simply soak in Kyoto's cultural atmosphere."
+  },
+  "茶室使用30分鐘": {
+    "ja": "茶室ご利用30分",
+    "en": "Tea room use: 30 minutes"
+  },
+  "從抹茶的香氣、泡沫到入口的回甘，專業茶道師傅將指導您體驗傳統茶道儀式，讓您深入了解日本茶文化的精髓。": {
+    "ja": "抹茶の香り、泡立ち、口に広がる余韻——。茶道の先生が丁寧にお点前をご指導いたします。日本茶文化の真髄をご体験ください。",
+    "en": "From aroma and froth to aftertaste — our tea ceremony master will guide you through the traditional ritual, offering deep insight into the essence of Japanese tea culture."
+  },
+  "抹茶體驗45分鐘（含茶道指導）": {
+    "ja": "抹茶体験45分（茶道のお点前指導付き）",
+    "en": "Matcha experience: 45 min (includes tea ceremony instruction)"
+  },
+  "和服抹茶體驗": {
+    "ja": "着物＆抹茶体験",
+    "en": "Kimono & Matcha Experience"
+  },
+  "穿上優雅的和服，在傳統茶室中體驗抹茶文化。結合和服之美與茶道之雅，讓您完整感受京都的傳統文化魅力。": {
+    "ja": "優雅なお着物を纏い、伝統茶室で抹茶文化をご体験ください。着物の美しさと茶道の雅を合わせた、京都の伝統文化を存分にお楽しみいただけます。",
+    "en": "Dress in an elegant kimono and enjoy matcha culture in a traditional tea room. Combining the beauty of kimono with the grace of tea ceremony for the full Kyoto cultural experience."
+  },
+  "小紋和服搭配抹茶體驗（可補差價升級成不同款式）": {
+    "ja": "小紋着物＋抹茶体験（差額で他のお着物への変更可能）",
+    "en": "Komon kimono with matcha experience (upgradeable for a fee)"
+  },
+  "費用：": {
+    "ja": "料金：",
+    "en": "Price:"
+  },
+  "內容：": {
+    "ja": "内容：",
+    "en": "Includes:"
+  },
+  "人數：": {
+    "ja": "人数：",
+    "en": "Capacity:"
+  },
+  "為什麼要選擇我們的攝影服務？我們專注於捕捉最自然、最真實的瞬間，讓每一張照片都充滿情感與溫度。": {
+    "ja": "なぜ私たちの撮影サービスを選ぶのか。私たちは最も自然で真実の瞬間を捉えることに注力し、一枚一枚に感動と温もりを込めます。",
+    "en": "Why choose our photography service? We focus on capturing the most natural, authentic moments — filling every photo with emotion and warmth."
+  },
+  "擅長日系風格攝影，以清新、自然、溫暖的色調，為您記錄下最美好的回憶。無論是個人寫真、情侶照、還是家庭照，我們都能用鏡頭捕捉您最真實、最動人的一面。": {
+    "ja": "日本的なスタイルの撮影を得意とし、清々しく自然で温かみのあるトーンで最高の思い出をお撮りいたします。個人写真、カップルフォト、ファミリーフォト——レンズを通してお客様の最も自然で美しい表情を捉えます。",
+    "en": "Specializing in Japanese-style photography with fresh, natural, warm tones to record your most beautiful memories. Whether solo, couple, or family — our lens captures your most genuine, radiant self."
+  },
+  "我們的攝影師擁有豐富的經驗，能夠以親切、耐心的方式引導您，讓您在拍攝過程中感到輕鬆自在。": {
+    "ja": "経験豊富なカメラマンが、親切で丁寧なガイドで撮影中もリラックスしてお過ごしいただけるようお手伝いいたします。",
+    "en": "Our experienced photographers guide you with warmth and patience, so you feel relaxed and natural throughout the shoot."
+  },
+  "讓我們一起，在京都的美景中，創造屬於您的獨特回憶。": {
+    "ja": "京都の美しい景色の中で、あなただけの特別な思い出を一緒に創りましょう。",
+    "en": "Let's create your unique memories together against the beautiful backdrop of Kyoto."
+  },
+  "方案 | Plan": {
+    "ja": "プラン | Plan",
+    "en": "Plans"
+  },
+  "30分鐘外拍方案": {
+    "ja": "30分ロケーション撮影プラン",
+    "en": "30-min Location Shoot"
+  },
+  "在周邊的景點（如知恩院、円山公園）快速拍攝。適合想要快速記錄美好瞬間的您。": {
+    "ja": "周辺のスポット（知恩院、円山公園など）でのお手軽撮影。短時間で素敵な瞬間を残したい方におすすめです。",
+    "en": "Quick shoot at nearby scenic spots (Chion-in, Maruyama Park). Perfect for those who want to capture beautiful moments in a flash."
+  },
+  "60分鐘外拍方案": {
+    "ja": "60分ロケーション撮影プラン",
+    "en": "60-min Location Shoot"
+  },
+  "可至八阪神社、清水寺、二三年坂等知名景點拍攝。（可免費在店內茶室拍攝）": {
+    "ja": "八坂神社、清水寺、二年坂・三年坂など人気スポットでの撮影が可能です。（店内茶室での撮影も無料）",
+    "en": "Shoot at famous spots like Yasaka Shrine, Kiyomizu-dera, and Ninenzaka. (In-store tea room shooting included free.)"
+  },
+  "90分鐘外拍方案": {
+    "ja": "90分ロケーション撮影プラン",
+    "en": "90-min Location Shoot"
+  },
+  "底片30-60張，無精修": {
+    "ja": "撮影データ30〜60枚、レタッチなし",
+    "en": "30–60 photos, no retouching"
+  },
+  "底片80-100張，精修5張": {
+    "ja": "撮影データ80〜100枚、レタッチ5枚付き",
+    "en": "80–100 photos, 5 retouched"
+  },
+  "底片150張以上，精修10張": {
+    "ja": "撮影データ150枚以上、レタッチ10枚付き",
+    "en": "150+ photos, 10 retouched"
+  },
+  "1~2人 (每加1人會額外收¥2,500)": {
+    "ja": "1〜2名様（1名追加ごとに¥2,500）",
+    "en": "1–2 people (¥2,500 per extra person)"
+  },
+  "1~3人 (每加1人會額外收¥2,500)": {
+    "ja": "1〜3名様（1名追加ごとに¥2,500）",
+    "en": "1–3 people (¥2,500 per extra person)"
+  },
+  "1~6人 (每加1人會額外收¥2,500)": {
+    "ja": "1〜6名様（1名追加ごとに¥2,500）",
+    "en": "1–6 people (¥2,500 per extra person)"
+  },
+  "1~4人": {
+    "ja": "1〜4名様",
+    "en": "1–4 people"
+  },
+  "使用Sonya7c2及GR3進行拍攝，捕捉充滿自然光線溫暖的照片，以及能夠感受到日常生活的瞬間。": {
+    "ja": "Sony a7c2とGR3で撮影し、自然光の温もりあふれるお写真と、日常の美しい瞬間を捉えます。",
+    "en": "Shot with Sony a7c2 and Ricoh GR3, capturing warm natural-light photos and everyday life moments."
+  },
+  "如有疑問，歡迎隨時與我們聯繫諮詢": {
+    "ja": "ご不明な点がございましたら、お気軽にお問い合わせくださいませ",
+    "en": "If you have any questions, please don't hesitate to contact us"
+  },
+  "✧˚.常見Ｑ＆Ａ": {
+    "ja": "✧˚.よくあるＱ＆Ａ",
+    "en": "✧˚. FAQ"
+  },
+  "Ｑ：精修包含哪些？": {
+    "ja": "Ｑ：レタッチには何が含まれますか？",
+    "en": "Q: What does retouching include?"
+  },
+  "Ａ： 調色、臉部微調（皮膚、瘦臉等等），以自然為主。": {
+    "ja": "Ａ：色調補正、お顔の微調整（肌補正、小顔補正など）を、自然な仕上がりを基本にお直しいたします。",
+    "en": "A: Color correction and facial touch-ups (skin, face slimming, etc.) — keeping a natural look as the priority."
+  },
+  "Ｑ：如果下雨會怎麼辦？": {
+    "ja": "Ｑ：雨の場合はどうなりますか？",
+    "en": "Q: What happens if it rains?"
+  },
+  "Ａ：小雨會照常拍攝，攝影師會準備透明雨傘作為道具。若遇暴雨，可免費改期或取消。": {
+    "ja": "Ａ：小雨の場合は通常通り撮影いたします。カメラマンが透明傘を小道具としてご用意いたします。大雨の場合は無料で日程変更またはキャンセルが可能です。",
+    "en": "A: We shoot through light rain — our photographer prepares clear umbrellas as props. In heavy rain, free rescheduling or cancellation is available."
+  },
+  "Ｑ：照片大概多久會拿到？": {
+    "ja": "Ｑ：写真はどのくらいで届きますか？",
+    "en": "Q: How soon will I receive the photos?"
+  },
+  "Ａ：底片會於 3-5天內提供下載連結。精修照片會於 2 週內提供。": {
+    "ja": "Ａ：撮影データは3〜5日以内にダウンロードリンクをお送りいたします。レタッチ写真は2週間以内にお届けいたします。",
+    "en": "A: Unedited photos will be available for download within 3–5 days. Retouched photos will be delivered within 2 weeks."
+  },
+  "Ｑ：會去哪裡拍攝？": {
+    "ja": "Ｑ：どこで撮影しますか？",
+    "en": "Q: Where will the shoot take place?"
+  },
+  "Ａ：可與攝影師討論喜歡的風格、場景，再決定要去哪裡拍攝。": {
+    "ja": "Ａ：お好みのスタイルやロケーションをカメラマンとご相談の上、撮影場所をお決めいただけます。",
+    "en": "A: You can discuss your preferred style and scenes with the photographer to decide on the shooting locations."
+  },
+  "※照片下載連結期限為14天，14天後將會刪除檔案。": {
+    "ja": "※写真ダウンロードリンクの有効期限は14日間です。期限後はファイルが削除されます。",
+    "en": "※ Photo download links expire in 14 days; files will be deleted after that."
+  },
+  "※所有照片皆經過客人同意才會上傳到官網、Instagram。": {
+    "ja": "※全てのお写真はお客様の同意を得た上でウェブサイト・Instagramに掲載しております。",
+    "en": "※ All photos are uploaded to our website/Instagram only with the customer's consent."
+  },
+  "攝影師Instagram ੯‧̀͡u\\": {
+    "ja": "カメラマンInstagram ੯‧̀͡u\\",
+    "en": "Photographer Instagram ੯‧̀͡u\\"
+  },
+  "— 作品集 | Portfolio": {
+    "ja": "— ポートフォリオ | Portfolio",
+    "en": "— Portfolio"
+  },
+  "預約相關資訊": {
+    "ja": "ご予約について",
+    "en": "Reservation Info"
+  },
+  "和服及髮型設計": {
+    "ja": "着物・ヘアセットについて",
+    "en": "Kimono & Hairstyling"
+  },
+  "歸還相關資訊": {
+    "ja": "ご返却について",
+    "en": "Return Info"
+  },
+  "其他常見問題": {
+    "ja": "その他のご質問",
+    "en": "Other FAQ"
+  },
+  "可以當日預約嗎": {
+    "ja": "当日予約は可能ですか",
+    "en": "Can I make a same-day booking?"
+  },
+  "可以預留和服嗎": {
+    "ja": "着物の取り置きは可能ですか",
+    "en": "Can I reserve a kimono in advance?"
+  },
+  "非常歡迎！您可以提前預約並預留喜歡的和服款式。建議提前聯繫我們以確保您心儀的款式可用。": {
+    "ja": "ぜひお気軽にどうぞ！事前にご予約いただき、お気に入りの着物をお取り置きいただけます。ご希望のお着物をご用意できるよう、お早めにご連絡くださいませ。",
+    "en": "Absolutely! You can book in advance and reserve your favorite kimono. We recommend contacting us early to ensure availability."
+  },
+  "最早可以預約幾點": {
+    "ja": "最も早い予約時間は",
+    "en": "What is the earliest booking time?"
+  },
+  "取消預約會被收取額外費用嗎": {
+    "ja": "予約キャンセルに追加料金はかかりますか",
+    "en": "Is there a cancellation fee?"
+  },
+  "提前24小時取消預約不會收取費用。但當日取消將酌收部分費用。": {
+    "ja": "24時間前までのキャンセルは無料です。当日キャンセルの場合は一部料金を頂戴する場合がございます。",
+    "en": "Cancellations made at least 24 hours in advance are free. Same-day cancellations may incur a partial charge."
+  },
+  "有什麼付款方式": {
+    "ja": "お支払い方法について",
+    "en": "What payment methods are accepted?"
+  },
+  "我們接受現金以及微信支付。": {
+    "ja": "現金およびWeChat Payでのお支払いを承っております。",
+    "en": "We accept cash and WeChat Pay."
+  },
+  "穿著和服加做髮型需要多長時間": {
+    "ja": "着付けとヘアセットにかかる時間は",
+    "en": "How long does kimono dressing + hairstyling take?"
+  },
+  "需要準備什麼東西嗎": {
+    "ja": "何か準備するものはありますか",
+    "en": "Do I need to prepare anything?"
+  },
+  "不需要特別準備！冬天建議可以穿著 V/U領發熱衣 及 七分發熱褲。": {
+    "ja": "特別なご準備は不要です！冬季はV/Uネックのヒートテックと七分丈のヒートテックレギンスのご着用をおすすめいたします。",
+    "en": "No special preparation needed! In winter, we recommend wearing V/U-neck heat-tech innerwear and 3/4-length heat-tech leggings."
+  },
+  "有幾種髮型可以選擇": {
+    "ja": "ヘアスタイルは何種類ありますか",
+    "en": "How many hairstyle options are available?"
+  },
+  "本店提供8種免費髮型，也有需要額外加購的日本髮型，如需加購請提前預約。": {
+    "ja": "当店では8種類の無料ヘアスタイルをご用意しております。有料の日本髪もございますので、ご希望の方は事前にご予約くださいませ。",
+    "en": "We offer 8 free hairstyles. Premium Japanese hairstyles are also available for an additional fee — please book in advance."
+  },
+  "和服弄髒怎麼辦": {
+    "ja": "着物が汚れた場合は",
+    "en": "What if the kimono gets dirty?"
+  },
+  "請在歸還和服時告知工作人員，如有輕微污漬，我們會協助處理。若造成嚴重損壞或無法清除的污漬，可能需要支付清潔費或賠償費用。": {
+    "ja": "ご返却時にスタッフへお知らせください。軽微な汚れは当店で対応いたします。著しい損傷や除去できない汚れの場合は、クリーニング代または弁償費用を頂戴する場合がございます。",
+    "en": "Please inform our staff upon return. We'll handle minor stains. For serious damage or permanent stains, cleaning or compensation fees may apply."
+  },
+  "有化妝服務嗎": {
+    "ja": "メイクサービスはありますか",
+    "en": "Is makeup service available?"
+  },
+  "本店提供日系淡妝服務¥5500，如需預約請提前告知。": {
+    "ja": "当店では日本風ナチュラルメイクサービス（¥5,500）をご用意しております。ご希望の方は事前にお知らせくださいませ。",
+    "en": "We offer a Japanese-style natural makeup service for ¥5,500. Please book in advance."
+  },
+  "最晚幾點前要歸還": {
+    "ja": "返却は何時までですか",
+    "en": "What is the latest return time?"
+  },
+  "可以在不同店鋪歸還嗎": {
+    "ja": "別の店舗で返却できますか",
+    "en": "Can I return at a different store?"
+  },
+  "延遲歸還會被額外收費嗎": {
+    "ja": "返却遅延の場合、追加料金はかかりますか",
+    "en": "Are there late return fees?"
+  },
+  "若超過歸還時間未歸還且未提前聯繫，可能會收取延遲費用。請務必提前聯繫我們安排延遲歸還。": {
+    "ja": "ご返却時間を過ぎ、事前のご連絡がない場合は、延滞料金を頂戴する場合がございます。遅れる場合は必ず事前にご連絡くださいませ。",
+    "en": "Late returns without prior notice may incur additional fees. Please contact us in advance to arrange a late return."
+  },
+  "可以寄放行李在店裡嗎": {
+    "ja": "荷物を預けられますか",
+    "en": "Can I store my luggage at the shop?"
+  },
+  "孕期可以租借和服嗎": {
+    "ja": "妊娠中でも着物のレンタルは可能ですか",
+    "en": "Can I rent kimono during pregnancy?"
+  },
+  "不建議懷孕期間租借和服。和服穿著需要束腰，可能對孕婦造成不適。為了您的健康與安全，建議待產後再來體驗和服服務。": {
+    "ja": "妊娠中のお着物レンタルはおすすめしておりません。着物の着付けには帯締めが必要で、妊婦様にはご負担となる場合がございます。ご健康と安全のため、ご出産後にぜひお越しくださいませ。",
+    "en": "We do not recommend kimono rental during pregnancy, as the obi tying process may cause discomfort. For your health and safety, we suggest visiting after delivery."
+  },
+  "如有其他問題，歡迎聯繫": {
+    "ja": "その他ご質問がございましたら、お気軽にお問い合わせください",
+    "en": "For any other questions, please contact us"
+  },
+  "【祇園店】": {
+    "ja": "【祇園店】",
+    "en": "[Gion Store]"
+  },
+  "【清水寺店】": {
+    "ja": "【清水寺店】",
+    "en": "[Kiyomizu-dera Store]"
+  },
+  "地址": {
+    "ja": "住所",
+    "en": "Address"
+  },
+  "交通方式：": {
+    "ja": "アクセス方法：",
+    "en": "Getting here:"
+  },
+  "搭乘巴士 46、86、201、202、203、206號，於「知恩院前」站下車，步行 1 分鐘。": {
+    "ja": "バス46・86・201・202・203・206番「知恩院前」下車、徒歩1分。",
+    "en": "Take bus No. 46, 86, 201, 202, 203, or 206 to 'Chion-in-mae' stop, then 1 min walk."
+  },
+  "地下鐵東西線「東山駅」2號出口出站，步行約9分鐘。": {
+    "ja": "地下鉄東西線「東山駅」2番出口より徒歩約9分。",
+    "en": "Tozai Line 'Higashiyama Station' Exit 2, approx. 9 min walk."
+  },
+  "搭乘巴士 80、86、106、202、206、207號，於「五條坂」站下車，步行 5 分鐘。": {
+    "ja": "バス80・86・106・202・206・207番「五条坂」下車、徒歩5分。",
+    "en": "Take bus No. 80, 86, 106, 202, 206, or 207 to 'Gojozaka' stop, then 5 min walk."
+  },
+  "店鋪資訊": {
+    "ja": "店舗情報",
+    "en": "Store Information"
+  },
+  "營業時間": {
+    "ja": "営業時間",
+    "en": "Business Hours"
+  },
+  "最早 6:00 可預約": {
+    "ja": "最早6:00よりご予約可能",
+    "en": "Earliest reservation: 6:00 AM"
+  },
+  "預約表單": {
+    "ja": "ご予約フォーム",
+    "en": "Reservation Form"
+  },
+  "已收到預約申請！": {
+    "ja": "ご予約を承りました！",
+    "en": "Reservation received!"
+  },
+  "我們將在確認檔期後，發送電子郵件通知您預約是否成功。": {
+    "ja": "空き状況を確認の上、メールにてご予約結果をお知らせいたします。",
+    "en": "We will confirm availability and notify you by email."
+  },
+  "姓名": {
+    "ja": "お名前",
+    "en": "Name"
+  },
+  "請輸入您的姓名": {
+    "ja": "お名前をご入力ください",
+    "en": "Please enter your name"
+  },
+  "預約店鋪": {
+    "ja": "ご予約店舗",
+    "en": "Store"
+  },
+  "請選擇預約店鋪": {
+    "ja": "店舗をお選びください",
+    "en": "Please select a store"
+  },
+  "祇園店": {
+    "ja": "祇園店",
+    "en": "Gion Store"
+  },
+  "清水寺店": {
+    "ja": "清水寺店",
+    "en": "Kiyomizu-dera Store"
+  },
+  "預約日期": {
+    "ja": "ご予約日",
+    "en": "Date"
+  },
+  "預約時間": {
+    "ja": "ご予約時間",
+    "en": "Time"
+  },
+  "請選擇預約時間": {
+    "ja": "時間をお選びください",
+    "en": "Please select a time"
+  },
+  "最早可預約 6:00~ 如需預約營業外時間 請私訊 Instagram": {
+    "ja": "最早6:00〜ご予約可能。営業時間外をご希望の方はInstagramのDMへ",
+    "en": "Earliest booking: 6:00 AM. For off-hours, DM us on Instagram"
+  },
+  "人數": {
+    "ja": "人数",
+    "en": "No. of Guests"
+  },
+  "請選擇人數": {
+    "ja": "人数をお選びください",
+    "en": "Please select number of guests"
+  },
+  "5人以上": {
+    "ja": "5名以上",
+    "en": "5 or more"
+  },
+  "電子郵件": {
+    "ja": "メールアドレス",
+    "en": "Email"
+  },
+  "請輸入您的電子郵件": {
+    "ja": "メールアドレスをご入力ください",
+    "en": "Please enter your email"
+  },
+  "備註": {
+    "ja": "備考",
+    "en": "Notes"
+  },
+  "如有其他需求或問題，請在此留言（選填）": {
+    "ja": "その他のご要望やご質問がございましたら、こちらにご記入ください（任意）",
+    "en": "Any other requests or questions? Leave a note here (optional)"
+  },
+  "取消": {
+    "ja": "キャンセル",
+    "en": "Cancel"
+  },
+  "送出預約": {
+    "ja": "予約を送信",
+    "en": "Submit Reservation"
+  },
+  "送出中...": {
+    "ja": "送信中...",
+    "en": "Submitting..."
+  },
+  "← 返回照片庫": {
+    "ja": "← フォトギャラリーに戻る",
+    "en": "← Back to Gallery"
+  },
+  "共": {
+    "ja": "計",
+    "en": "Total"
+  },
+  "張": {
+    "ja": "枚",
+    "en": "photos"
+  },
+  "型錄照片": {
+    "ja": "カタログ写真",
+    "en": "Catalog Photos"
+  },
+  "照": {
+    "ja": "フ",
+    "en": "Ga"
+  },
+  "片": {
+    "ja": "ォ",
+    "en": "lle"
+  },
+  "庫": {
+    "ja": "ト",
+    "en": "ry"
+  },
+  "小紋套餐 ｜ Komon plan": {
+    "ja": "小紋プラン ｜ Komon plan",
+    "en": "Komon Plan"
+  },
+  "高級小紋套餐 ｜ Premium Komon": {
+    "ja": "高級小紋プラン ｜ Premium Komon",
+    "en": "Premium Komon Plan"
+  },
+  "蕾絲套餐 ｜ Lace plan": {
+    "ja": "レースプラン ｜ Lace plan",
+    "en": "Lace Kimono Plan"
+  },
+  "二尺袖套餐 ｜ Nishaku-sode plan": {
+    "ja": "二尺袖プラン ｜ Nishaku-sode plan",
+    "en": "Nishaku-sode Plan"
+  },
+  "訪問服套餐 ｜ Houmongi plan": {
+    "ja": "訪問着プラン ｜ Houmongi plan",
+    "en": "Houmongi Plan"
+  },
+  "黑留袖套餐 ｜ Kurotomesode plan": {
+    "ja": "黒留袖プラン ｜ Kurotomesode plan",
+    "en": "Kurotomesode Plan"
+  },
+  "袴套餐 ｜ Hakama plan": {
+    "ja": "袴プラン ｜ Hakama plan",
+    "en": "Hakama Plan"
+  },
+  "振袖套餐 ｜ Furisode plan": {
+    "ja": "振袖プラン ｜ Furisode plan",
+    "en": "Furisode Plan"
+  },
+  "男士和服套餐 ｜ Men's kimono plan": {
+    "ja": "メンズ着物プラン ｜ Men's kimono plan",
+    "en": "Men's Kimono Plan"
+  },
+  "高級武士服套餐 ｜ Premium Samurai": {
+    "ja": "高級武士服プラン ｜ Premium Samurai",
+    "en": "Premium Samurai Plan"
+  },
+  "情侶套餐 ｜ Couple plan": {
+    "ja": "カップルプラン ｜ Couple plan",
+    "en": "Couples Plan"
+  },
+  "小孩和服套餐 ｜ Child kimono plan": {
+    "ja": "お子様着物プラン ｜ Child kimono plan",
+    "en": "Children's Kimono Plan"
+  },
+  "小紋": {
+    "ja": "小紋",
+    "en": "Komon"
+  },
+  "高級小紋": {
+    "ja": "高級小紋",
+    "en": "Premium Komon"
+  },
+  "蕾絲": {
+    "ja": "レース",
+    "en": "Lace"
+  },
+  "二尺袖": {
+    "ja": "二尺袖",
+    "en": "Nishaku-sode"
+  },
+  "訪問服": {
+    "ja": "訪問着",
+    "en": "Houmongi"
+  },
+  "黑留袖": {
+    "ja": "黒留袖",
+    "en": "Kurotomesode"
+  },
+  "袴": {
+    "ja": "袴",
+    "en": "Hakama"
+  },
+  "振袖": {
+    "ja": "振袖",
+    "en": "Furisode"
+  },
+  "男士和服": {
+    "ja": "メンズ着物",
+    "en": "Men's Kimono"
+  },
+  "高級武士服": {
+    "ja": "高級武士服",
+    "en": "Premium Samurai"
+  },
+  "情侶套餐": {
+    "ja": "カップルプラン",
+    "en": "Couples Plan"
+  },
+  "小孩和服": {
+    "ja": "お子様着物",
+    "en": "Children's Kimono"
+  },
+  "高級訪問服相簿": {
+    "ja": "高級訪問着アルバム",
+    "en": "Premium Houmongi Album"
+  },
+  "蝴蝶訪問服相簿": {
+    "ja": "蝶柄訪問着アルバム",
+    "en": "Butterfly Houmongi Album"
+  },
+  "紫金絲振袖相簿": {
+    "ja": "紫金糸振袖アルバム",
+    "en": "Purple Gold Thread Furisode Album"
+  },
+  "紅金絲振袖相簿": {
+    "ja": "赤金糸振袖アルバム",
+    "en": "Red Gold Thread Furisode Album"
+  },
+  "白金振袖相簿": {
+    "ja": "白金振袖アルバム",
+    "en": "White Gold Furisode Album"
+  },
+  "綠振袖相簿": {
+    "ja": "緑振袖アルバム",
+    "en": "Green Furisode Album"
+  },
+  "紫高訂振袖相簿": {
+    "ja": "紫高級振袖アルバム",
+    "en": "Purple Haute Couture Furisode Album"
+  },
+  "點 我 預 約": {
+    "ja": "ご 予 約",
+    "en": "B O O K"
+  },
+  "深綠": {
+    "ja": "深緑",
+    "en": "Dark Green"
+  },
+  "黃": {
+    "ja": "黄色",
+    "en": "Yellow"
+  },
+  "ニコニコ着物為您提供的服務一覽。": {
+    "ja": "ニコニコ着物のサービス一覧。",
+    "en": "A full list of services by Niconico Kimono."
+  },
+  "高定振袖套餐": {
+    "ja": "高級振袖プラン",
+    "en": "Haute Couture Furisode Plan"
+  },
+  "您請求的方案 ID:": {
+    "ja": "ご指定のプランID：",
+    "en": "The plan ID you requested:"
+  },
+  "不存在。": {
+    "ja": "は存在しません。",
+    "en": "does not exist."
+  },
+  "我們提供專業的日式髮型設計與化妝服務，讓您的和服造型更加完美。": {
+    "ja": "プロによる日本式ヘアセット＆メイクで、お着物姿をより一層美しく。",
+    "en": "We offer professional Japanese hairstyling and makeup services to perfect your kimono look."
+  },
+  "我們的髮型師會根據您的臉型與選擇的和服款式，為您設計最適合的髮型。包含編髮、盤髮等，並提供多種精美髮飾供您租借（部分需額外付費）。": {
+    "ja": "スタイリストがお顔立ちとお着物に合わせて最適なヘアスタイルをご提案いたします。編み込みやアップスタイルなど、多彩な髪飾りもご用意しております（一部有料）。",
+    "en": "Our stylists design the ideal hairstyle based on your face shape and kimono choice, including braids and updos, with a variety of beautiful hair accessories (some at extra cost)."
+  },
+  "簡易髮型：": {
+    "ja": "シンプルヘア：",
+    "en": "Simple Style:"
+  },
+  "包含在標準方案內。": {
+    "ja": "スタンダードプランに含まれます。",
+    "en": "Included in the standard plan."
+  },
+  "精緻髮型：": {
+    "ja": "スペシャルヘア：",
+    "en": "Premium Style:"
+  },
+  "包含指定髮飾": {
+    "ja": "指定髪飾り付き",
+    "en": "Includes selected hair accessories"
+  },
+  "化妝服務": {
+    "ja": "メイクサービス",
+    "en": "Makeup Service"
+  },
+  "由專業化妝師提供的全套日式妝容服務，讓您上鏡更好看。": {
+    "ja": "プロのメイクアップアーティストによる本格日本風メイクで、お写真映えもばっちり。",
+    "en": "A full Japanese-style makeup service by professional artists — look stunning in every photo."
+  },
+  "重點化妝：": {
+    "ja": "ポイントメイク：",
+    "en": "Partial Makeup:"
+  },
+  "眼妝、唇彩": {
+    "ja": "アイメイク・リップ",
+    "en": "Eye makeup & lip color"
+  },
+  "全套妝容：": {
+    "ja": "フルメイク：",
+    "en": "Full Makeup:"
+  },
+  "底妝至全臉完妝": {
+    "ja": "ベースメイクからフル仕上げまで",
+    "en": "From base to full face"
+  },
+  "髮型設計及化妝服務": {
+    "ja": "ヘアセット＆メイクサービス",
+    "en": "Hair & Makeup Services"
+  },
+  "女士和服套餐皆包含免費髮型設計，": {
+    "ja": "レディース着物プランには全て無料ヘアセットが含まれます。",
+    "en": "All ladies' kimono plans include free hairstyling."
+  },
+  "由專業造型師依據您的臉型與和服款式，": {
+    "ja": "プロのスタイリストが、お顔立ちとお着物に合わせて",
+    "en": "Our professional stylists customize your look"
+  },
+  "量身打造最適合的造型。": {
+    "ja": "最適なスタイルをお仕上げいたします。",
+    "en": "based on your face shape and kimono choice."
+  },
+  "數百套和服任您挑選，": {
+    "ja": "数百着のお着物からお選びいただけます。",
+    "en": "Choose from hundreds of kimono."
+  },
+  "從日常小紋到華麗振袖，": {
+    "ja": "カジュアルな小紋から華やかな振袖まで、",
+    "en": "From casual Komon to gorgeous Furisode,"
+  },
+  "找到最適合您的京都之美。": {
+    "ja": "京都にぴったりの一着を。",
+    "en": "find your perfect Kyoto look."
+  },
+  "專業造型師為您打造": {
+    "ja": "プロのスタイリストが",
+    "en": "Professional stylists create"
+  },
+  "精緻日式髮型，": {
+    "ja": "和装にぴったりのヘアスタイルを、",
+    "en": "exquisite Japanese hairstyles,"
+  },
+  "多款免費造型可供選擇。": {
+    "ja": "豊富な無料スタイルからお選びいただけます。",
+    "en": "with many free options to choose from."
+  },
+  "附設傳統日式茶室，": {
+    "ja": "伝統的な和の茶室を併設。",
+    "en": "Traditional Japanese tea room on-site."
+  },
+  "可拍照留念或搭配抹茶體驗，": {
+    "ja": "お写真撮影や抹茶体験とともに、",
+    "en": "Take photos or enjoy a matcha experience,"
+  },
+  "在靜謐空間中留下珍貴回憶。": {
+    "ja": "静寂な空間で特別な思い出を。",
+    "en": "creating precious memories in a serene space."
+  },
+  "中文、英文、日文對應，": {
+    "ja": "中国語・英語・日本語に対応。",
+    "en": "Chinese, English & Japanese support."
+  },
+  "耐心協助挑選搭配和服，": {
+    "ja": "丁寧にお着物選びをお手伝いし、",
+    "en": "Patient assistance in choosing your kimono,"
+  },
+  "讓您安心享受京都之旅。": {
+    "ja": "安心して京都の旅をお楽しみいただけます。",
+    "en": "so you can enjoy Kyoto worry-free."
+  },
+  "穿上和服，踏入茶室，": {
+    "ja": "お着物を纏い茶室へ。",
+    "en": "Dress in a kimono, step into the tea room,"
+  },
+  "體驗一場正統的京都抹茶時光。": {
+    "ja": "京都ならではの本格抹茶のひとときを。",
+    "en": "and experience authentic Kyoto matcha time."
+  },
+  "為旅程留下最優雅的回憶。": {
+    "ja": "旅の中で最も優雅な思い出を。",
+    "en": "Create the most elegant memory of your trip."
+  },
+  "照片庫封面": {
+    "ja": "フォトギャラリーカバー",
+    "en": "Gallery Cover"
+  },
+  "男士和服套餐": {
+    "ja": "メンズ着物プラン",
+    "en": "Men's Kimono Plan"
+  },
+  "方案補充照片": {
+    "ja": "プラン参考写真",
+    "en": "Plan Reference Photos"
+  },
+  "攝影介紹": {
+    "ja": "撮影ご紹介",
+    "en": "Photography Introduction"
+  },
+  "傳統日本髮的現代詮釋，結合古典美學與當代技法。": {
+    "ja": "伝統的な日本髪をモダンにアレンジ。古典美と現代の技法を融合させました。",
+    "en": "A modern interpretation of traditional Japanese hair, blending classical aesthetics with contemporary techniques."
+  },
+  "適合振袖、訪問服等正式場合，展現極致優雅。": {
+    "ja": "振袖や訪問着など格式あるお席にふさわしい極上のスタイルです。",
+    "en": "Ideal for formal occasions such as Furisode and Houmongi, showcasing ultimate elegance."
+  },
+  "封面照1": {
+    "ja": "カバー写真1",
+    "en": "Cover Photo 1"
+  },
+  "封面照2": {
+    "ja": "カバー写真2",
+    "en": "Cover Photo 2"
+  },
+  "封面照3": {
+    "ja": "カバー写真3",
+    "en": "Cover Photo 3"
+  },
+  "封面照4": {
+    "ja": "カバー写真4",
+    "en": "Cover Photo 4"
+  },
+  "封面照5": {
+    "ja": "カバー写真5",
+    "en": "Cover Photo 5"
+  },
+  "封面照6": {
+    "ja": "カバー写真6",
+    "en": "Cover Photo 6"
+  },
+  "封面照7": {
+    "ja": "カバー写真7",
+    "en": "Cover Photo 7"
+  },
+  "茶室體驗1": {
+    "ja": "茶室体験1",
+    "en": "Tea Room 1"
+  },
+  "茶室體驗2": {
+    "ja": "茶室体験2",
+    "en": "Tea Room 2"
+  },
+  "茶室體驗3": {
+    "ja": "茶室体験3",
+    "en": "Tea Room 3"
+  },
+  "茶室體驗4": {
+    "ja": "茶室体験4",
+    "en": "Tea Room 4"
+  },
+  "攝影方案封面": {
+    "ja": "撮影プランカバー",
+    "en": "Photography Cover"
+  },
+  "攝影作品": {
+    "ja": "撮影作品",
+    "en": "Photography Works"
+  },
+  "高級訪問服": {
+    "ja": "高級訪問着",
+    "en": "Premium Houmongi"
+  },
+  "型錄": {
+    "ja": "カタログ",
+    "en": "Catalog"
+  },
+  "縮圖": {
+    "ja": "サムネイル",
+    "en": "Thumbnail"
+  },
+  "為什麼要選擇我們的攝影服務？": {
+    "ja": "当店の撮影サービスが選ばれる理由",
+    "en": "Why choose our photography service?"
+  },
+  "我們專注於捕捉最自然、最真實的瞬間，讓每一張照片都充滿情感與溫度。": {
+    "ja": "私たちは、最も自然でリアルな瞬間を捉えることにこだわり、一枚一枚の写真に感情と温もりを込めています。",
+    "en": "We focus on capturing the most natural, authentic moments — filling every photo with emotion and warmth."
+  },
+  "擅長日系風格攝影，以清新、自然、溫暖的色調，為您記錄下最美好的回憶。": {
+    "ja": "清潔感があり、自然で温かみのあるトーンの日本風フォトを得意としており、お客様の最高の思い出を記録します。",
+    "en": "Specializing in Japanese-style photography with fresh, natural, warm tones to record your most beautiful memories."
+  },
+  "無論是個人寫真、情侶照、還是家庭照，我們都能用鏡頭捕捉您最真實、最動人的一面。": {
+    "ja": "ソロ写真、カップル、ご家族での撮影など、どのようなシーンでも、お客様の最も輝く瞬間をレンズで捉えます。",
+    "en": "Whether solo, couple, or family portraits — our lens captures your most genuine, radiant self."
+  }
+}

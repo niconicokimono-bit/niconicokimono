@@ -1,0 +1,56 @@
+<!-- 固定右側按鈕組 -->
+
+<!-- 聯絡我們小工具 -->
+<div class="fixed-contact-widget">
+    <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" class="fixed-contact-item">
+        <svg class="fixed-contact-icon" viewBox="0 0 24 24" fill="none" stroke="#859A93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span class="fixed-contact-text" data-i18n="聯絡我們">聯絡我們</span>
+    </a>
+</div>
+
+<!-- Top 按鈕 -->
+<button id="fixed-top-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="fixed-top-button">
+    Top
+</button>
+
+<!-- 懸浮語言切換下拉選單 -->
+<div id="floating-lang-switch" class="floating-lang-switch" onclick="this.classList.toggle('open')">
+    <!-- 觸發按鈕 -->
+    <div class="floating-lang-trigger">
+        <svg class="floating-lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="floating-lang-label" class="floating-lang-label">中文</span>
+        <svg class="floating-lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
+    <!-- 下拉選單 -->
+    <div class="floating-lang-dropdown">
+        <button class="floating-lang-option active" data-lang="zh-TW" onclick="event.stopPropagation(); switchLanguage('zh-TW'); this.closest('.floating-lang-switch').classList.remove('open');">
+            中文
+        </button>
+        <button class="floating-lang-option" data-lang="ja" onclick="event.stopPropagation(); switchLanguage('ja'); this.closest('.floating-lang-switch').classList.remove('open');">
+            日本語
+        </button>
+        <button class="floating-lang-option" data-lang="en" onclick="event.stopPropagation(); switchLanguage('en'); this.closest('.floating-lang-switch').classList.remove('open');">
+            English
+        </button>
+    </div>
+</div>
+
+<!-- 點擊外部關閉下拉選單 -->
+<script>
+document.addEventListener('click', function(e) {
+    const langSwitch = document.getElementById('floating-lang-switch');
+    if (langSwitch && !langSwitch.contains(e.target)) {
+        langSwitch.classList.remove('open');
+    }
+});
+</script>

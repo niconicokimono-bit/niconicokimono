@@ -1,0 +1,148 @@
+<!-- 預約表單 Modal -->
+<div id="booking-modal" class="booking-modal">
+    <div class="booking-modal-overlay" onclick="closeBookingModal()"></div>
+    <div class="booking-modal-content">
+        <div class="booking-modal-header">
+            <h2 class="booking-modal-title" data-i18n="預約表單">預約表單</h2>
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+        </div>
+        <form id="booking-form" class="booking-form" action="https://docs.google.com/forms/d/e/1FAIpQLSf872SQo2I-uXkn0ryhR0kpkW8-RzA3aoZK14b-cetKAw7tAA/formResponse" method="POST" target="hidden_iframe" onsubmit="handleBookingSubmit(event)">
+            <!-- 成功訊息顯示區域 -->
+            <div id="booking-success-message" class="booking-success-message" style="display: none;">
+                <div class="booking-success-icon">✓</div>
+                <h3 class="booking-success-title" data-i18n="已收到預約申請！">已收到預約申請！</h3>
+                <p class="booking-success-text" data-i18n="我們將在確認檔期後，發送電子郵件通知您預約是否成功。">我們將在確認檔期後，發送電子郵件通知您預約是否成功。</p>
+            </div>
+            
+            <!-- 表單內容 -->
+            <div id="booking-form-content">
+                <div class="booking-form-group">
+                    <label for="booking-name" class="booking-form-label"><span data-i18n="姓名">姓名</span> <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="booking-name" 
+                        name="entry.281622848" 
+                        class="booking-form-input" 
+                        placeholder="請輸入您的姓名" data-i18n-placeholder="請輸入您的姓名"
+                        required
+                    >
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-store" class="booking-form-label"><span data-i18n="預約店鋪">預約店鋪</span> <span class="required">*</span></label>
+                    <select 
+                        id="booking-store" 
+                        name="entry.1525533651" 
+                        class="booking-form-input booking-form-select" 
+                        required
+                    >
+                        <option value="" data-i18n="請選擇預約店鋪">請選擇預約店鋪</option>
+                        <option value="祇園店" data-i18n="祇園店">祇園店</option>
+                        <option value="清水寺店" data-i18n="清水寺店">清水寺店</option>
+                    </select>
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-date" class="booking-form-label"><span data-i18n="預約日期">預約日期</span> <span class="required">*</span></label>
+                    <input 
+                        type="date" 
+                        id="booking-date" 
+                        name="date" 
+                        class="booking-form-input" 
+                        required
+                        min=""
+                    >
+                    <!-- 隱藏字段：用於提交日期的年、月、日 -->
+                    <input type="hidden" id="booking-date-year" name="entry.156307657_year" value="">
+                    <input type="hidden" id="booking-date-month" name="entry.156307657_month" value="">
+                    <input type="hidden" id="booking-date-day" name="entry.156307657_day" value="">
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-time" class="booking-form-label"><span data-i18n="預約時間">預約時間</span> <span class="required">*</span></label>
+                    <select 
+                        id="booking-time" 
+                        name="time" 
+                        class="booking-form-input booking-form-select" 
+                        required
+                    >
+                        <option value="" data-i18n="請選擇預約時間">請選擇預約時間</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                    <!-- 隱藏字段：用於提交時間的小時和分鐘 -->
+                    <input type="hidden" id="booking-time-hour" name="entry.1467094571_hour" value="">
+                    <input type="hidden" id="booking-time-minute" name="entry.1467094571_minute" value="">
+                    <p class="booking-form-note" style="margin-top: 0.5rem; font-size: 0.75rem; color: #6b7280; line-height: 1.5;" data-i18n="最早可預約 6:00~ 如需預約營業外時間 請私訊 Instagram">
+                        最早可預約 6:00~ 如需預約營業外時間 請私訊 Instagram <a href="https://www.instagram.com/niconico_kimono" target="_blank" rel="noopener noreferrer" style="color: #859A93; text-decoration: underline;">@niconico_kimono</a>
+                    </p>
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-people" class="booking-form-label"><span data-i18n="人數">人數</span> <span class="required">*</span></label>
+                    <select 
+                        id="booking-people" 
+                        name="people" 
+                        class="booking-form-input booking-form-select" 
+                        required
+                    >
+                        <option value="" data-i18n="請選擇人數">請選擇人數</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="5人以上" data-i18n="5人以上">5人以上</option>
+                    </select>
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-email" class="booking-form-label"><span data-i18n="電子郵件">電子郵件</span> <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="booking-email" 
+                        name="entry.66004767" 
+                        class="booking-form-input" 
+                        placeholder="請輸入您的電子郵件" data-i18n-placeholder="請輸入您的電子郵件"
+                        required
+                    >
+                </div>
+                
+                <div class="booking-form-group">
+                    <label for="booking-message" class="booking-form-label" data-i18n="備註">備註</label>
+                    <textarea 
+                        id="booking-message" 
+                        name="message" 
+                        class="booking-form-textarea" 
+                        rows="4"
+                        placeholder="如有其他需求或問題，請在此留言（選填）" data-i18n-placeholder="如有其他需求或問題，請在此留言（選填）"
+                    ></textarea>
+                </div>
+                
+                <div class="booking-form-actions">
+                    <button type="button" class="booking-btn-cancel" onclick="closeBookingModal()" data-i18n="取消">取消</button>
+                    <button type="submit" class="booking-btn-submit" data-i18n="送出預約">送出預約</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- 隱藏的 iframe，用於接收 Google Forms 回應，避免頁面跳轉 -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+    </div>
+</div>
+

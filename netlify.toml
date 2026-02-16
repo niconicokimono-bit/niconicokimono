@@ -1,0 +1,32 @@
+[build]
+  # 靜態網站，無需構建命令
+  command = ""
+  publish = "."
+
+# ─── 圖片快取（1 年）───
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Accept-Ranges = "bytes"
+
+# ─── JS/CSS 快取（1 天 + stale-while-revalidate）───
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# ─── 大檔案上傳限制（Netlify Free 最大部署 500MB）───
+# ⚠️ 如果壓縮後仍超過 500MB，需升級 Netlify Pro 或改用 Cloudinary
+# Netlify Pro 支持最大 2GB 部署
+
+# SPA 路由（hash-based 路由不需要，但保留作備用）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,25 @@
+{
+  "name": "niconico-kyoto",
+  "version": "1.0.0",
+  "description": "Niconico Kimono Rental - 京都和服租借網站",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "optimize": "node scripts/optimize-images.js",
+    "optimize:preview": "node scripts/optimize-images.js --dry-run",
+    "optimize:webp": "node scripts/optimize-images.js --webp --update-refs",
+    "update-photos": "node update-photos.js",
+    "upload-cloudinary": "node upload-to-cloudinary.js",
+    "sync-gallery": "node scripts/sync-gallery.js",
+    "full-optimize": "node scripts/optimize-images.js --webp --update-refs && node update-photos.js"
+  },
+  "keywords": [
+    "kimono",
+    "rental",
+    "kyoto"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

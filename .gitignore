@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# 構建輸出
+dist/
+build/
+
+# ─── 圖片備份（optimize-images.js 自動產生的原始檔備份）───
+# ⚠️ 非常重要：此資料夾可能超過 1GB，絕對不能推上 Git
+img-original/
+
+# 圖片處理產物（可選）
+# img/**/*.avif
+# img/**/*_small.*
+# img/**/*_medium.*
+# img/**/*_large.*
+# img/**/*_xlarge.*
+
+# ─── 大型媒體檔案（避免意外推送）───
+*.mov
+*.mp4
+*.avi
+*.psd
+*.tif
+*.tiff
+*.bmp
+*.raw
+*.cr2
+*.nef
+*.arw
+
+# 環境變數
+.env
+.env.local
+
+# Cloudinary 上傳記錄
+.cloudinary-uploaded.json
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系統文件
+.DS_Store
+Thumbs.db
+
+# 日誌
+*.log
+npm-debug.log*

@@ -1,0 +1,18 @@
+# Niconico Kyoto 着物レンタル
+# https://niconico-kyoto.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://niconico-kyoto.com/sitemap.xml
+
+# 禁止爬蟲存取的路徑
+Disallow: /components/
+Disallow: /node_modules/
+Disallow: /update-photos.js
+Disallow: /photos.js
+Disallow: /package.json
+Disallow: /upload-to-cloudinary.js
+Disallow: /cloudinary-config.js
+Disallow: /.cloudinary-uploaded.json

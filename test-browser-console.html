@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Console Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .log-container {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .error { color: red; font-weight: bold; }
+        .warn { color: orange; }
+        .info { color: blue; }
+        .success { color: green; }
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        h1 { color: #333; }
+        #lang-switcher-status {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Browser Console & Language Switcher Test</h1>
+    
+    <div id="lang-switcher-status">
+        <h3>Language Switcher Status</h3>
+        <div id="switcher-info"></div>
+    </div>
+
+    <div class="log-container" id="console-log">
+        <h3>Console Output:</h3>
+    </div>
+
+    <script>
+        // Capture console output
+        const logContainer = document.getElementById('console-log');
+        const originalConsole = {
+            log: console.log,
+            error: console.error,
+            warn: console.warn,
+            info: console.info
+        };
+
+        function addLogEntry(type, message) {
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${type.toUpperCase()}] ${new Date().toLocaleTimeString()} - ${message}`;
+            logContainer.appendChild(entry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        console.log = function(...args) {
+            originalConsole.log.apply(console, args);
+            addLogEntry('info', args.join(' '));
+        };
+
+        console.error = function(...args) {
+            originalConsole.error.apply(console, args);
+            addLogEntry('error', args.join(' '));
+        };
+
+        console.warn = function(...args) {
+            originalConsole.warn.apply(console, args);
+            addLogEntry('warn', args.join(' '));
+        };
+
+        console.info = function(...args) {
+            originalConsole.info.apply(console, args);
+            addLogEntry('info', args.join(' '));
+        };
+
+        // Capture global errors
+        window.addEventListener('error', function(event) {
+            addLogEntry('error', `${event.message} at ${event.filename}:${event.lineno}:${event.colno}`);
+        });
+
+        // Test if we're on the main site
+        console.log('Starting browser console test...');
+        
+        // Load the actual site in an iframe to test it
+        setTimeout(function() {
+            console.log('Checking language switcher component...');
+            
+            // Check if language switcher exists
+            const langSwitcher = document.getElementById('floating-lang-switch');
+            const langLabel = document.getElementById('floating-lang-label');
+            const langGlobe = document.querySelector('.floating-lang-globe');
+            const langChevron = document.querySelector('.floating-lang-chevron');
+            const langDropdown = document.querySelector('.floating-lang-dropdown');
+            
+            const statusInfo = document.getElementById('switcher-info');
+            let statusHTML = '<ul>';
+            
+            statusHTML += `<li>Language Switcher Container: ${langSwitcher ? '✅ Found' : '❌ Not Found'}</li>`;
+            statusHTML += `<li>Language Label (中文): ${langLabel ? '✅ Found - Text: "' + langLabel.textContent + '"' : '❌ Not Found'}</li>`;
+            statusHTML += `<li>Globe Icon SVG: ${langGlobe ? '✅ Found' : '❌ Not Found'}</li>`;
+            statusHTML += `<li>Chevron Arrow SVG: ${langChevron ? '✅ Found' : '❌ Not Found'}</li>`;
+            statusHTML += `<li>Dropdown Menu: ${langDropdown ? '✅ Found' : '❌ Not Found'}</li>`;
+            
+            if (langSwitcher) {
+                const computedStyle = window.getComputedStyle(langSwitcher);
+                statusHTML += `<li>Position: ${computedStyle.position}</li>`;
+                statusHTML += `<li>Display: ${computedStyle.display}</li>`;
+                statusHTML += `<li>Visibility: ${computedStyle.visibility}</li>`;
+            }
+            
+            statusHTML += '</ul>';
+            statusInfo.innerHTML = statusHTML;
+            
+            console.log('Language switcher check complete');
+        }, 2000);
+    </script>
+
+    <!-- Load the main site components -->
+    <script src="components-loader.js"></script>
+    <script src="photos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

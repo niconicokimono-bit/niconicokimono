@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- 首頁 -->
+    <url>
+        <loc>https://niconico-kyoto.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#home</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- 和服方案總覽 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#kimono-plans</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- 女士方案 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan1</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan2</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan3</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan4</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan5</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan7</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan8</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan13</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 男士方案 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan10</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan11</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 情侶 / 小孩方案 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan14</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#plan/plan15</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 攝影方案 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#photo-plans</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 髮型設計 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#hairstyle</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 茶室 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#tea-room</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 照片庫 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#reviews</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 照片庫 - 各方案相簿 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#album/komon</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#album/premium-komon</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#album/lace</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#album/furisode</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://niconico-kyoto.com/#album/houmongi</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- 店內介紹 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#store-intro</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- FAQ -->
+    <url>
+        <loc>https://niconico-kyoto.com/#faq</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- 交通資訊 -->
+    <url>
+        <loc>https://niconico-kyoto.com/#access</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

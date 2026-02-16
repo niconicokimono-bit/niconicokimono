@@ -1,0 +1,29 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║            Git LFS 追蹤設定                                  ║
+# ╠══════════════════════════════════════════════════════════════╣
+# ║                                                              ║
+# ║  啟用步驟：                                                  ║
+# ║    1. 安裝 Git LFS：brew install git-lfs                     ║
+# ║    2. 初始化 LFS：  git lfs install                          ║
+# ║    3. 此檔案會自動告訴 Git 哪些檔案用 LFS 追蹤              ║
+# ║    4. 正常 git add / commit / push 即可                      ║
+# ║                                                              ║
+# ║  ⚠️ 注意：GitHub Free 帳號 LFS 額度為 1GB 儲存 + 1GB/月頻寬 ║
+# ║     建議先用 optimize-images.js 壓縮圖片再決定是否需要 LFS   ║
+# ║                                                              ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+# ─── 圖片檔案（超過一般 Git 大小建議的二進位檔）───
+img/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+img/**/*.JPG filter=lfs diff=lfs merge=lfs -text
+img/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+img/**/*.JPEG filter=lfs diff=lfs merge=lfs -text
+img/**/*.png filter=lfs diff=lfs merge=lfs -text
+img/**/*.PNG filter=lfs diff=lfs merge=lfs -text
+img/**/*.webp filter=lfs diff=lfs merge=lfs -text
+img/**/*.gif filter=lfs diff=lfs merge=lfs -text
+img/**/*.avif filter=lfs diff=lfs merge=lfs -text
+
+# ─── 影片檔案 ───
+img/**/*.mov filter=lfs diff=lfs merge=lfs -text
+img/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
