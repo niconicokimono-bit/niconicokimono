@@ -1375,6 +1375,14 @@
     "ja": "店舗情報",
     "en": "Store Information"
   },
+  "京都市東山區石橋町307-9": {
+    "ja": "京都市東山区石橋町307-9",
+    "en": "307-9 Ishibashi-cho, Higashiyama-ku, Kyoto"
+  },
+  "京都府京都市東山區五條橋東6丁目583-70": {
+    "ja": "京都府京都市東山区五条橋東6丁目583-70",
+    "en": "583-70 Gojobashi-higashi 6-chome, Higashiyama-ku, Kyoto"
+  },
   "營業時間": {
     "ja": "営業時間",
     "en": "Business Hours"
@@ -1382,6 +1390,18 @@
   "最早 6:00 可預約": {
     "ja": "最早6:00よりご予約可能",
     "en": "Earliest reservation: 6:00 AM"
+  },
+  "可以！": {
+    "ja": "はい！",
+    "en": "Yes! You can return at either "
+  },
+  "和": {
+    "ja": "と",
+    "en": " or "
+  },
+  "皆可歸還，讓您的行程安排更自由。": {
+    "ja": "のどちらでもご返却いただけますので、旅程に合わせて自由にお選びいただけます。",
+    "en": ", giving you full flexibility for your itinerary."
   },
   "預約表單": {
     "ja": "ご予約フォーム",

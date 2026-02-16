@@ -5891,11 +5891,11 @@
                                 <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
                                     <div>
                                         <p style="font-weight: 600; color: #FFFCF7; margin-bottom: 0.25rem;">${t('【祇園店】')}</p>
-                                        <p style="color: #FFFCF7; opacity: 0.9; line-height: 1.6;">〒605-0066<br>京都市東山区石橋町307-9</p>
+                                        <p style="color: #FFFCF7; opacity: 0.9; line-height: 1.6;">〒605-0066<br>${t('京都市東山區石橋町307-9')}</p>
                                     </div>
                                     <div>
                                         <p style="font-weight: 600; color: #FFFCF7; margin-bottom: 0.25rem;">${t('【清水寺店】')}</p>
-                                        <p style="color: #FFFCF7; opacity: 0.9; line-height: 1.6;">〒605-0846<br>京都府京都市東山区五条橋東6丁目583-70</p>
+                                        <p style="color: #FFFCF7; opacity: 0.9; line-height: 1.6;">〒605-0846<br>${t('京都府京都市東山區五條橋東6丁目583-70')}</p>
                                     </div>
                                     <div style="margin-top: 0.5rem;">
                                         <p style="font-weight: 600; color: #FFFCF7; margin-bottom: 0.25rem;">${t('營業時間')}</p>
@@ -6322,10 +6322,10 @@
                     <div class="access-card-title">${t('【祇園店】')}</div>
                     <div class="access-info">
                         <p style="font-weight: 600; color: #544739; margin-bottom: 0.5rem;">${t('地址')}</p>
-                        <p>〒605-0066<br>京都市東山区石橋町307-9</p>
+                        <p>〒605-0066<br>${t('京都市東山區石橋町307-9')}</p>
                     </div>
                     <div class="access-info" style="margin-bottom: 1.5rem;">
-                        <iframe src="https://www.google.com/maps?q=京都市東山区石橋町307-9&output=embed&zoom=16&hl=${currentLang === 'ja' ? 'ja' : 'zh-TW'}" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps?q=京都市東山区石橋町307-9&output=embed&zoom=16&hl=${currentLang === 'en' ? 'en' : currentLang === 'ja' ? 'ja' : 'zh-TW'}" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="access-info">
                         <p style="font-weight: 600; color: #544739; margin-bottom: 0.5rem;">${t('交通方式：')}</p>
@@ -6351,10 +6351,10 @@
                     <div class="access-card-title">${t('【清水寺店】')}</div>
                     <div class="access-info">
                         <p style="font-weight: 600; color: #544739; margin-bottom: 0.5rem;">${t('地址')}</p>
-                        <p>〒605-0846<br>京都府京都市東山区五条橋東6丁目583-70 二階</p>
+                        <p>〒605-0846<br>${t('京都府京都市東山區五條橋東6丁目583-70')}</p>
                     </div>
                     <div class="access-info" style="margin-bottom: 1.5rem;">
-                        <iframe src="https://www.google.com/maps?q=京都府京都市東山区五条橋東6丁目583-70&output=embed&zoom=16&hl=${currentLang === 'ja' ? 'ja' : 'zh-TW'}" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps?q=京都府京都市東山区五条橋東6丁目583-70&output=embed&zoom=16&hl=${currentLang === 'en' ? 'en' : currentLang === 'ja' ? 'ja' : 'zh-TW'}" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="access-info">
                         <p style="font-weight: 600; color: #544739; margin-bottom: 0.5rem;">${t('交通方式：')}</p>
