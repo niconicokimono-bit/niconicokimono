@@ -222,6 +222,7 @@ window.planFiles = [
     "Plan_Houmongi_other.jpg",
     "Plan_Houmongi_pink1.jpg",
     "Plan_Houmongi_pink2.jpg",
+    "Plan_Kids_250101_pink.jpg",
     "Plan_Komon_green.jpg",
     "Plan_Komon_green2.jpg",
     "Plan_Kuro_Tomesode1.jpg",

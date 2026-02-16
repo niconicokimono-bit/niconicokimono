@@ -880,9 +880,7 @@
                 `,
                 image: "img/Gallery_Kids_240102_red1.jpg",
                 price: '¥5,500（含稅）',
-                photos: [
-                    'img/Plan_Kids_250101_pink.jpg'
-                ]
+                photos: []
             },
             
             // --- 情侶方案 ---
