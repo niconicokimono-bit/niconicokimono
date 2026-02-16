@@ -1,32 +1,31 @@
 #!/usr/bin/env node
 /**
  * ╔══════════════════════════════════════════════════════════════════╗
- * ║        optimize-images.js — 圖片批次壓縮與 WebP 轉換工具        ║
+ * ║        optimize-images.js — 圖片批次壓縮與格式統一工具          ║
  * ╠══════════════════════════════════════════════════════════════════╣
  * ║                                                                  ║
  * ║  功能：                                                          ║
  * ║    • 將 img/ 內所有 JPG/PNG 縮至最大 1920px 寬度                 ║
- * ║    • 壓縮至目標檔案大小（預設 ~500KB）                           ║
- * ║    • 可選擇直接轉換為 WebP 格式（體積更小 30-50%）               ║
- * ║    • 原始檔自動備份到 img-original/                              ║
+ * ║    • 壓縮至目標檔案大小（預設 ~500KB），最低品質不低於 70        ║
+ * ║    • 統一所有副檔名為小寫（.JPG→.jpg, .PNG→.png）              ║
+ * ║    • 支援從 img-original/ 備份重新壓縮                          ║
+ * ║    • 自動更新 app.js 和 photos.js 中的副檔名引用               ║
  * ║                                                                  ║
  * ║  使用方式：                                                      ║
- * ║    node scripts/optimize-images.js                 (壓縮不轉檔)  ║
- * ║    node scripts/optimize-images.js --webp          (轉為 WebP)   ║
- * ║    node scripts/optimize-images.js --webp --update-refs          ║
- * ║                                              (轉 WebP + 更新引用)║
+ * ║    node scripts/optimize-images.js                 (壓縮 img/)   ║
+ * ║    node scripts/optimize-images.js --from-backup   (從備份重壓)  ║
  * ║    node scripts/optimize-images.js --dry-run       (預覽不修改)  ║
  * ║                                                                  ║
  * ║  選項：                                                          ║
+ * ║    --from-backup   從 img-original/ 讀取原始檔重新壓縮           ║
  * ║    --webp          轉換為 WebP 格式                              ║
  * ║    --update-refs   同步更新 app.js 中的圖片路徑副檔名            ║
  * ║    --max-width N   最大寬度（預設 1920）                         ║
  * ║    --target-kb N   目標檔案大小 KB（預設 500）                   ║
- * ║    --quality N     壓縮品質 1-100（預設 82）                     ║
+ * ║    --quality N     壓縮品質 1-100（預設 85）                     ║
+ * ║    --min-quality N 最低品質下限（預設 70）                       ║
  * ║    --no-backup     不建立備份                                    ║
  * ║    --dry-run       僅預覽，不實際修改                            ║
- * ║                                                                  ║
- * ║  需要：npm install sharp（已在 devDependencies）                 ║
  * ║                                                                  ║
  * ╚══════════════════════════════════════════════════════════════════╝
  */
@@ -42,13 +41,15 @@ function getArg(name, defaultVal) {
     if (typeof defaultVal === 'boolean') return true;
     return args[idx + 1] !== undefined ? args[idx + 1] : defaultVal;
 }
+const FROM_BACKUP   = args.includes('--from-backup');
 const CONVERT_WEBP  = args.includes('--webp');
 const UPDATE_REFS   = args.includes('--update-refs');
 const DRY_RUN       = args.includes('--dry-run');
 const NO_BACKUP     = args.includes('--no-backup');
 const MAX_WIDTH     = parseInt(getArg('max-width', '1920'), 10);
 const TARGET_KB     = parseInt(getArg('target-kb', '500'), 10);
-const INIT_QUALITY  = parseInt(getArg('quality', '82'), 10);
+const INIT_QUALITY  = parseInt(getArg('quality', '85'), 10);
+const MIN_QUALITY   = parseInt(getArg('min-quality', '70'), 10);
 
 // ─── 路徑設定 ───────────────────────────────────────
 const ROOT_DIR    = path.join(__dirname, '..');
@@ -75,81 +76,77 @@ async function main() {
     try {
         sharp = require('sharp');
     } catch (e) {
-        console.error('❌ 找不到 sharp 套件！請先執行：');
-        console.error('   npm install sharp');
+        console.error('❌ 找不到 sharp 套件！請先執行：npm install sharp');
         process.exit(1);
     }
+
+    const SOURCE_DIR = FROM_BACKUP ? BACKUP_DIR : IMG_DIR;
+    const sourceLabel = FROM_BACKUP ? 'img-original/（從備份重壓）' : 'img/';
 
     console.log('');
     console.log('╔══════════════════════════════════════════════════╗');
     console.log('║         🖼️  圖片批次優化工具                     ║');
     console.log('╚══════════════════════════════════════════════════╝');
     console.log('');
-    console.log('  📁 來源：     img/');
+    console.log('  📁 來源：     ' + sourceLabel);
     console.log('  📏 最大寬度： ' + MAX_WIDTH + 'px');
     console.log('  🎯 目標大小： ~' + TARGET_KB + 'KB');
-    console.log('  🎨 初始品質： ' + INIT_QUALITY);
-    console.log('  📦 輸出格式： ' + (CONVERT_WEBP ? 'WebP' : '原格式（JPG/PNG 壓縮）'));
-    console.log('  📝 更新引用： ' + (UPDATE_REFS ? '是' : '否'));
-    console.log('  💾 備份原檔： ' + (NO_BACKUP ? '否' : 'img-original/'));
-    if (DRY_RUN) console.log('  ⚠️  預覽模式：  不會修改任何檔案');
+    console.log('  🎨 壓縮品質： ' + INIT_QUALITY + '（最低 ' + MIN_QUALITY + '）');
+    console.log('  📦 輸出格式： ' + (CONVERT_WEBP ? 'WebP' : '原格式（副檔名統一小寫）'));
+    if (DRY_RUN) console.log('  ⚠️  預覽模式： 不會修改任何檔案');
     console.log('');
 
-    // 掃描圖片
-    if (!fs.existsSync(IMG_DIR)) {
-        console.error('❌ 找不到 img/ 資料夾');
+    // 掃描來源圖片
+    if (!fs.existsSync(SOURCE_DIR)) {
+        console.error('❌ 找不到來源資料夾：' + SOURCE_DIR);
+        if (FROM_BACKUP) {
+            console.error('   提示：img-original/ 是由壓縮腳本自動產生的備份資料夾');
+        }
         process.exit(1);
     }
 
-    const allFiles = fs.readdirSync(IMG_DIR).filter(isImage).sort();
+    const allFiles = fs.readdirSync(SOURCE_DIR).filter(isImage).sort();
     if (allFiles.length === 0) {
-        console.log('⚠️ img/ 中沒有 JPG/PNG 圖片');
+        console.log('⚠️ 來源資料夾中沒有 JPG/PNG 圖片');
         return;
     }
 
     console.log('🔍 掃描到 ' + allFiles.length + ' 張圖片');
 
-    // 計算原始大小
     let totalOriginalBytes = 0;
     allFiles.forEach(function(f) {
-        totalOriginalBytes += fs.statSync(path.join(IMG_DIR, f)).size;
+        totalOriginalBytes += fs.statSync(path.join(SOURCE_DIR, f)).size;
     });
-    console.log('   原始總大小：' + formatBytes(totalOriginalBytes));
+    console.log('   來源總大小：' + formatBytes(totalOriginalBytes));
     console.log('');
 
     if (DRY_RUN) {
-        console.log('── 預覽模式：以下為預計操作 ──');
+        console.log('── 預覽模式 ──');
         console.log('');
-        // 預覽前 10 大檔案
         const sorted = allFiles.map(function(f) {
-            return { name: f, size: fs.statSync(path.join(IMG_DIR, f)).size };
+            return { name: f, size: fs.statSync(path.join(SOURCE_DIR, f)).size };
         }).sort(function(a, b) { return b.size - a.size; });
 
         console.log('📊 最大的 15 張圖片：');
         sorted.slice(0, 15).forEach(function(f, i) {
-            const ext = CONVERT_WEBP ? '.webp' : path.extname(f.name);
             const base = f.name.replace(/\.[^.]+$/, '');
-            console.log('   ' + (i + 1) + '. ' + f.name + ' (' + formatBytes(f.size) + ') → ' + base + ext + ' (~' + TARGET_KB + 'KB)');
+            const newExt = CONVERT_WEBP ? '.webp' : path.extname(f.name).toLowerCase();
+            console.log('   ' + (i + 1) + '. ' + f.name + ' (' + formatBytes(f.size) + ') → ' + base + newExt);
         });
-        console.log('');
-        const estSize = allFiles.length * TARGET_KB * 1024;
-        console.log('📉 預估壓縮後：' + formatBytes(estSize) + '（節省 ' + Math.round((1 - estSize / totalOriginalBytes) * 100) + '%）');
         console.log('');
         console.log('💡 移除 --dry-run 即可開始壓縮');
         return;
     }
 
-    // 建立備份資料夾
-    if (!NO_BACKUP) {
+    // 備份（僅從 img/ 壓縮時需要備份）
+    if (!FROM_BACKUP && !NO_BACKUP) {
         if (!fs.existsSync(BACKUP_DIR)) {
             fs.mkdirSync(BACKUP_DIR, { recursive: true });
             console.log('📁 已建立備份資料夾：img-original/');
-        } else {
-            console.log('📁 備份資料夾已存在：img-original/');
         }
     }
 
-    // 逐一處理圖片
+    // ─── 逐一處理圖片 ───────────────────────────────
     let processed = 0;
     let failed = 0;
     let totalNewBytes = 0;
@@ -157,12 +154,14 @@ async function main() {
 
     for (let i = 0; i < allFiles.length; i++) {
         const filename = allFiles[i];
-        const inputPath = path.join(IMG_DIR, filename);
-        const ext = path.extname(filename).toLowerCase();
-        const baseName = filename.replace(/\.[^.]+$/, '');
-        const newExt = CONVERT_WEBP ? '.webp' : ext;
+        const inputPath = path.join(SOURCE_DIR, filename);
+        const ext = path.extname(filename);
+        const extLower = ext.toLowerCase();
+        const baseName = filename.slice(0, filename.length - ext.length);
+        const newExt = CONVERT_WEBP ? '.webp' : extLower;
         const outputName = baseName + newExt;
         const outputPath = path.join(IMG_DIR, outputName);
+        const oldPathInImg = path.join(IMG_DIR, filename);
 
         const progress = '[' + (i + 1) + '/' + allFiles.length + ']';
         const originalSize = fs.statSync(inputPath).size;
@@ -170,85 +169,79 @@ async function main() {
         try {
             process.stdout.write(progress + ' ' + filename + ' (' + formatBytes(originalSize) + ') → ');
 
-            // 備份原檔
-            if (!NO_BACKUP) {
+            // 備份原檔（僅非 from-backup 模式）
+            if (!FROM_BACKUP && !NO_BACKUP) {
                 const backupPath = path.join(BACKUP_DIR, filename);
                 if (!fs.existsSync(backupPath)) {
                     fs.copyFileSync(inputPath, backupPath);
                 }
             }
 
-            // 讀取圖片基本資訊
+            // 讀取並處理圖片
             const metadata = await sharp(inputPath).metadata();
             const needResize = metadata.width && metadata.width > MAX_WIDTH;
-
-            // 動態品質調整：大檔案用較低品質以達到目標大小
-            let quality = INIT_QUALITY;
             const TARGET_BYTES = TARGET_KB * 1024;
 
-            // 第一次壓縮
-            let pipeline = sharp(inputPath);
-            if (needResize) {
-                pipeline = pipeline.resize({ width: MAX_WIDTH, withoutEnlargement: true });
-            }
+            // 第一次壓縮（使用初始品質）
+            let quality = INIT_QUALITY;
+            let outputBuffer = await compressImage(sharp, inputPath, {
+                needResize, maxWidth: MAX_WIDTH, quality, extLower, convertWebp: CONVERT_WEBP
+            });
 
-            let outputBuffer;
-            if (CONVERT_WEBP) {
-                outputBuffer = await pipeline.webp({ quality: quality, effort: 4 }).toBuffer();
-            } else if (ext === '.png') {
-                outputBuffer = await pipeline.png({ quality: quality, compressionLevel: 9 }).toBuffer();
-            } else {
-                outputBuffer = await pipeline.jpeg({ quality: quality, progressive: true, mozjpeg: true }).toBuffer();
-            }
-
-            // 如果超過目標大小，逐步降低品質（二分法）
-            if (outputBuffer.length > TARGET_BYTES && quality > 30) {
-                let lo = 20, hi = quality;
+            // 如果超過目標大小，用二分法降低品質（但不低於 MIN_QUALITY）
+            if (outputBuffer.length > TARGET_BYTES && quality > MIN_QUALITY) {
+                let lo = MIN_QUALITY;
+                let hi = quality;
                 let bestBuffer = outputBuffer;
+                let bestDiff = Math.abs(outputBuffer.length - TARGET_BYTES);
 
                 for (let attempt = 0; attempt < 5; attempt++) {
                     const midQ = Math.floor((lo + hi) / 2);
-                    let p2 = sharp(inputPath);
-                    if (needResize) {
-                        p2 = p2.resize({ width: MAX_WIDTH, withoutEnlargement: true });
-                    }
+                    if (midQ <= lo || midQ >= hi) break;
 
-                    let buf;
-                    if (CONVERT_WEBP) {
-                        buf = await p2.webp({ quality: midQ, effort: 4 }).toBuffer();
-                    } else if (ext === '.png') {
-                        buf = await p2.png({ quality: midQ, compressionLevel: 9 }).toBuffer();
-                    } else {
-                        buf = await p2.jpeg({ quality: midQ, progressive: true, mozjpeg: true }).toBuffer();
+                    const buf = await compressImage(sharp, inputPath, {
+                        needResize, maxWidth: MAX_WIDTH, quality: midQ, extLower, convertWebp: CONVERT_WEBP
+                    });
+
+                    const diff = Math.abs(buf.length - TARGET_BYTES);
+                    if (diff < bestDiff) {
+                        bestBuffer = buf;
+                        bestDiff = diff;
                     }
 
                     if (buf.length <= TARGET_BYTES) {
-                        bestBuffer = buf;
                         lo = midQ + 1;
                     } else {
                         hi = midQ - 1;
-                        bestBuffer = buf;
                     }
 
-                    if (Math.abs(buf.length - TARGET_BYTES) < TARGET_BYTES * 0.1) {
-                        bestBuffer = buf;
-                        break;
-                    }
+                    // 已接近目標（±10%），提早結束
+                    if (diff < TARGET_BYTES * 0.1) break;
                 }
                 outputBuffer = bestBuffer;
             }
 
-            // 寫入結果
-            if (CONVERT_WEBP && outputName !== filename) {
-                // WebP 模式：寫入新檔，刪除舊檔
-                fs.writeFileSync(outputPath, outputBuffer);
-                if (fs.existsSync(inputPath) && outputName !== filename) {
-                    fs.unlinkSync(inputPath);
+            // ─── 寫入檔案 + 處理副檔名大小寫 ───────
+            // macOS 是 case-insensitive 但 case-preserving
+            // 所以 file.JPG 和 file.jpg 是「同一個檔案」
+            // 需要先改臨時名再改目標名
+            if (outputName !== filename) {
+                // 副檔名有變（大小寫不同 或 轉 WebP）
+                const tmpPath = outputPath + '.tmp';
+                fs.writeFileSync(tmpPath, outputBuffer);
+
+                // 刪除舊檔（如果存在且名稱不同）
+                if (fs.existsSync(oldPathInImg)) {
+                    fs.unlinkSync(oldPathInImg);
                 }
+
+                // 臨時檔改名為最終名稱
+                fs.renameSync(tmpPath, outputPath);
+
                 renamedFiles.push({ oldName: filename, newName: outputName });
             } else {
-                // 原格式模式：覆蓋原檔
-                fs.writeFileSync(inputPath, outputBuffer);
+                // 檔名完全相同，直接覆蓋
+                fs.writeFileSync(outputPath, outputBuffer);
             }
 
             const newSize = outputBuffer.length;
@@ -263,6 +256,7 @@ async function main() {
         }
     }
 
+    // ─── 結果報告 ───────────────────────────────────
     console.log('');
     console.log('═'.repeat(55));
     console.log('');
@@ -272,88 +266,79 @@ async function main() {
     console.log('   📁 壓縮前：  ' + formatBytes(totalOriginalBytes));
     console.log('   📦 壓縮後：  ' + formatBytes(totalNewBytes));
     console.log('   📉 節省：    ' + formatBytes(totalOriginalBytes - totalNewBytes) + ' (' + Math.round((1 - totalNewBytes / totalOriginalBytes) * 100) + '%)');
-    if (!NO_BACKUP) {
-        console.log('   💾 原檔備份：img-original/');
-    }
 
-    // WebP 模式：更新程式碼引用
-    if (CONVERT_WEBP && renamedFiles.length > 0) {
+    // ─── 自動更新副檔名引用 ─────────────────────────
+    if (renamedFiles.length > 0) {
         console.log('');
-        console.log('📝 已重新命名 ' + renamedFiles.length + ' 張圖片為 .webp');
-
-        if (UPDATE_REFS) {
-            console.log('');
-            console.log('🔄 正在更新程式碼引用...');
-            updateCodeReferences(renamedFiles);
-        } else {
-            console.log('');
-            console.log('⚠️  程式碼中的圖片路徑尚未更新！');
-            console.log('   請執行以下命令自動更新：');
-            console.log('   node scripts/optimize-images.js --webp --update-refs');
-            console.log('');
-            console.log('   或手動將 app.js 中的 .JPG / .jpg / .PNG / .png 替換為 .webp');
-        }
-    }
-
-    // 提醒執行 update-photos.js
-    if (CONVERT_WEBP) {
+        console.log('📝 已重新命名 ' + renamedFiles.length + ' 張圖片的副檔名');
         console.log('');
-        console.log('💡 下一步：執行 node update-photos.js 更新照片清單');
+        console.log('🔄 正在更新程式碼引用...');
+        updateCodeReferences(renamedFiles);
     }
+
+    // 重新生成 photos.js
+    console.log('');
+    console.log('📋 重新生成照片清單...');
+    regeneratePhotosJs();
 
     console.log('');
+    console.log('✅ 全部完成！');
+    console.log('');
+}
+
+// ─── 壓縮圖片（支援 JPG / PNG / WebP）──────────────
+async function compressImage(sharp, inputPath, opts) {
+    let pipeline = sharp(inputPath);
+    if (opts.needResize) {
+        pipeline = pipeline.resize({ width: opts.maxWidth, withoutEnlargement: true });
+    }
+
+    if (opts.convertWebp) {
+        return pipeline.webp({ quality: opts.quality, effort: 4 }).toBuffer();
+    } else if (opts.extLower === '.png') {
+        return pipeline.png({ quality: opts.quality, compressionLevel: 9 }).toBuffer();
+    } else {
+        return pipeline.jpeg({ quality: opts.quality, progressive: true, mozjpeg: true }).toBuffer();
+    }
 }
 
 // ─── 更新程式碼中的圖片路徑引用 ─────────────────────
 function updateCodeReferences(renamedFiles) {
-    const filesToUpdate = [APP_JS];
+    if (!fs.existsSync(APP_JS)) return;
 
-    // 建立 oldName → newName 映射
-    const renameMap = {};
+    let content = fs.readFileSync(APP_JS, 'utf-8');
+    const originalContent = content;
+    let replacements = 0;
+
+    // 策略 1：精確替換每個已重新命名的檔案
     renamedFiles.forEach(function(r) {
-        renameMap[r.oldName] = r.newName;
+        const patterns = [
+            r.oldName,
+            encodeURIComponent(r.oldName).replace(/%2F/g, '/'),
+        ];
+        patterns.forEach(function(oldPattern) {
+            const newBase = r.newName.replace(/\.[^.]+$/, '');
+            const newExt = path.extname(r.newName);
+            const newPattern = oldPattern.replace(/\.[^.]+$/, newExt);
+            while (content.indexOf(oldPattern) !== -1) {
+                content = content.split(oldPattern).join(newPattern);
+                replacements++;
+            }
+        });
     });
 
-    filesToUpdate.forEach(function(filePath) {
-        if (!fs.existsSync(filePath)) return;
-
-        let content = fs.readFileSync(filePath, 'utf-8');
-        const originalContent = content;
-        let replacements = 0;
-
-        // 策略 1：精確替換已知的重新命名檔案
-        renamedFiles.forEach(function(r) {
-            // 替換各種可能的引用格式
-            const patterns = [
-                r.oldName,                                              // 完整檔名
-                encodeURIComponent(r.oldName).replace(/%2F/g, '/'),    // URL 編碼版本
-            ];
-            patterns.forEach(function(oldPattern) {
-                const newPattern = oldPattern.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-                if (content.indexOf(oldPattern) !== -1) {
-                    content = content.split(oldPattern).join(newPattern);
-                    replacements++;
-                }
-            });
-        });
-
-        // 策略 2：通用替換 img/ 路徑中的副檔名
-        // 匹配 img/ 開頭、非引號結尾的圖片路徑中的 .jpg/.JPG/.png/.PNG
-        content = content.replace(/(img\/[^'")\s]*)\.(jpg|jpeg|png|JPG|JPEG|PNG)(?=['"\s\)])/g, function(match, base, ext) {
-            replacements++;
-            return base + '.webp';
-        });
-
-        if (content !== originalContent) {
-            fs.writeFileSync(filePath, content, 'utf-8');
-            console.log('   ✓ ' + path.basename(filePath) + '：更新 ' + replacements + ' 處引用');
-        } else {
-            console.log('   - ' + path.basename(filePath) + '：無需更新');
-        }
+    // 策略 2：通用掃描 — 將 app.js 中所有 img/ 路徑的副檔名統一為小寫
+    content = content.replace(/(img\/[^'")\s,]*)\.(JPG|JPEG|PNG)(?=['"\s\),])/g, function(match, base, ext) {
+        replacements++;
+        return base + '.' + ext.toLowerCase();
     });
 
-    // 重新生成 photos.js（呼叫 update-photos.js 的邏輯）
-    regeneratePhotosJs();
+    if (content !== originalContent) {
+        fs.writeFileSync(APP_JS, content, 'utf-8');
+        console.log('   ✓ app.js：更新 ' + replacements + ' 處引用');
+    } else {
+        console.log('   - app.js：無需更新');
+    }
 }
 
 // ─── 重新生成 photos.js ─────────────────────────────
@@ -378,18 +363,22 @@ function regeneratePhotosJs() {
     const lines = [
         '/**',
         ' * photos.js — 照片清單（自動產生）',
-        ' * ⚠️ 此檔案由 optimize-images.js 自動重新產生',
+        ' * ⚠️ 此檔案由 optimize-images.js 自動產生，請勿手動編輯！',
+        ' *',
+        ' * 更新方式：新增照片到 img/ 後，在終端機執行：',
+        ' *   node update-photos.js',
+        ' *',
         ' * 最後更新：' + now,
         ' * 實穿照 (Gallery_): ' + galleryFiles.length + ' 張',
         ' * 型錄照 (Plan_):    ' + planFiles.length + ' 張',
         ' */',
         '',
-        '// ====== 實穿照（Gallery_方案_日期_顏色.ext）======',
+        '// ====== 實穿照（Gallery_方案_日期_顏色.jpg）======',
         'window.galleryFiles = [',
         galleryEntries,
         '];',
         '',
-        '// ====== 型錄照（Plan_方案_顏色.ext）======',
+        '// ====== 型錄照（Plan_方案_顏色.jpg）======',
         'window.planFiles = [',
         planEntries,
         '];',

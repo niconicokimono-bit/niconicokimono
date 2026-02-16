@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "optimize": "node scripts/optimize-images.js",
+    "optimize:recompress": "node scripts/optimize-images.js --from-backup",
     "optimize:preview": "node scripts/optimize-images.js --dry-run",
     "optimize:webp": "node scripts/optimize-images.js --webp --update-refs",
     "update-photos": "node update-photos.js",
