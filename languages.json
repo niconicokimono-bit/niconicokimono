@@ -1902,5 +1902,54 @@
   "無論是個人寫真、情侶照、還是家庭照，我們都能用鏡頭捕捉您最真實、最動人的一面。": {
     "ja": "ソロ写真、カップル、ご家族での撮影など、どのようなシーンでも、お客様の最も輝く瞬間をレンズで捉えます。",
     "en": "Whether solo, couple, or family portraits — our lens captures your most genuine, radiant self."
+  },
+
+  "和服介紹": {
+    "ja": "着物紹介",
+    "en": "About"
+  },
+  "方案包含：": {
+    "ja": "プラン内容：",
+    "en": "Includes:"
+  },
+  "照片參考": {
+    "ja": "写真ギャラリー",
+    "en": "Gallery"
+  },
+  "可提前預留款式": {
+    "ja": "事前に款式のご予約可能",
+    "en": "Advance style reservation available"
+  },
+  "當日17:30前需歸還": {
+    "ja": "当日17:30までにご返却ください",
+    "en": "Return by 17:30 on the same day"
+  },
+  "免費隔日中午12:00前歸還（需付押金¥10,000）": {
+    "ja": "翌日12:00までの返却無料（保証金¥10,000が必要）",
+    "en": "Free next-day return by 12:00 PM (¥10,000 deposit required)"
+  },
+  "情侶套餐介紹": {
+    "ja": "カップル専用の着物プラン。お二人で一緒に伝統的な日本文化を体験しましょう。款式はすべて普通小紋で、差額をお支払いいただければ他の款式に変更可能です。詳しくはお問い合わせください",
+    "en": "A kimono plan designed for couples to experience traditional Japanese culture together. Includes standard Komon kimono; upgrades available for an additional fee. For details, please contact"
+  },
+  "女士小紋 ¥5,500 一套": {
+    "ja": "レディース小紋 ¥5,500（1セット）",
+    "en": "Ladies' Komon ¥5,500 (1 set)"
+  },
+  "男士和服 ¥6,600 一套": {
+    "ja": "メンズ着物 ¥6,600（1セット）",
+    "en": "Men's Kimono ¥6,600 (1 set)"
+  },
+  "腰帶、髮型(女士)": {
+    "ja": "帯・ヘアセット（女性）",
+    "en": "Obi belt & hair styling (ladies)"
+  },
+  "分趾襪、草履、手提包": {
+    "ja": "足袋・草履・バッグ",
+    "en": "Tabi socks, sandals & bag"
+  },
+  "可免費租借拍攝道具（雨傘、扇子）": {
+    "ja": "撮影小物（傘・扇子）無料レンタル",
+    "en": "Free rental of photo props (umbrella, fan)"
   }
 }

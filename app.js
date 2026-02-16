@@ -890,30 +890,30 @@
                 shortDesc: '⋈*｡ 款式皆為普通小紋,到店後可換款補差價',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
-                    <p class="mb-4 text-main">專為情侶設計的和服套餐，讓您與伴侶一同體驗傳統日式文化。款式皆為普通小紋，可補差價換款，詳情請詢問 <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" style="color: #859A93; text-decoration: underline;">@Niconico_kimono</a></p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
+                    <p class="mb-4 text-main">${t('情侶套餐介紹')} <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" style="color: #859A93; text-decoration: underline;">@Niconico_kimono</a></p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁女士小紋 ¥5,500 一套</li>
-                        <li>⌁男士和服 ¥6,600 一套</li>
-                        <li>⌁腰帶、髮型(女士)</li>
-                        <li>⌁分趾襪、草履、手提包</li>
-                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
+                        <li>⌁${t('女士小紋 ¥5,500 一套')}</li>
+                        <li>⌁${t('男士和服 ¥6,600 一套')}</li>
+                        <li>⌁${t('腰帶、髮型(女士)')}</li>
+                        <li>⌁${t('分趾襪、草履、手提包')}</li>
+                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
-                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
+                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. 照片參考₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
+                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
                         </h2>
                     </div>
                 `,
