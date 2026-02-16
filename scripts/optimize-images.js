@@ -292,6 +292,8 @@ async function compressImage(sharp, inputPath, opts) {
     if (opts.needResize) {
         pipeline = pipeline.resize({ width: opts.maxWidth, withoutEnlargement: true });
     }
+    // 保留 ICC 色彩描述檔，避免壓縮後顏色偏移
+    pipeline = pipeline.withMetadata();
 
     if (opts.convertWebp) {
         return pipeline.webp({ quality: opts.quality, effort: 4 }).toBuffer();
