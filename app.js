@@ -65,8 +65,11 @@
 
         // 翻譯函數（支援 zh-TW / ja / en 三語系）
         function t(text) {
+            if (currentLang === 'zh-TW') return text;
             const entry = translations[text];
-            if (entry && entry[currentLang]) return entry[currentLang];
+            if (entry && entry[currentLang]) {
+                return entry[currentLang];
+            }
             return text;
         }
 
@@ -151,7 +154,7 @@
         // ====================================================
         // Cloudinary 雲端圖床系統 + 響應式圖片優化
         // ====================================================
-
+        
         const _cloudCfg = window.CLOUDINARY_CONFIG || {};
 
         /**
@@ -165,7 +168,7 @@
          * 將本地 img/ 路徑轉為 Cloudinary CDN URL
          * 當 Cloudinary 未啟用時，原樣回傳本地路徑
          *
-         * @param {string} localPath - 本地路徑（如 'img/cover1.jpg'）
+         * @param {string} localPath - 本地路徑（如 'img/封面照1.jpg'）
          * @param {object} opts
          * @param {number} opts.width   - 指定寬度（px）
          * @param {number} opts.height  - 指定高度（px）
@@ -212,7 +215,7 @@
                 return cloudImg(localPath, { width: w, crop: 'limit' }) + ' ' + w + 'w';
             }).join(', ');
         }
-
+        
         /**
          * 頁面渲染後自動攔截所有 <img src="img/..."> 並轉為 Cloudinary URL
          * 透過 MutationObserver 實現，無需手動修改每個 img 標籤
@@ -288,291 +291,291 @@
             // --- 女士方案 (已排序) ---
             {
                 id: 'plan1',
-                name: `${t('【女士】小紋套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】小紋套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('小紋套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">以細緻優雅的「全面花紋」為特色，適合各種場合。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('小紋 ¥5,500 一套')}</li>
-                        <li>⌁${t('半幅腰帶 / 兵兒帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁小紋 ¥5,500 一套</li>
+                        <li>⌁半幅腰帶 / 兵兒帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/cover3.png',
-                price: `${t('¥5,500（含稅）')}`,
+                image: 'img/封面照3.png',
+                price: '¥5,500（含稅）',
                 photos: [
-                    'img/cover1.jpg',
-                    'img/cover2.jpg',
-                    'img/cover4.jpg'
+                    'img/封面照1.jpg',
+                    'img/封面照2.jpg',
+                    'img/封面照4.jpg'
                 ]
             },
             /* { // 浴衣 - 已註解
                 id: 'plan9',
-                name: `${t('【女士】浴衣套餐（6月-9月）')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】浴衣套餐（6月-9月）',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('浴衣套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">夏季限定（6月至9月）！浴衣材質輕薄涼爽，花色繽紛，是參加夏日祭典與觀賞煙火的最佳選擇。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('浴衣一套')}</li>
-                        <li>⌁${t('肌襦袢（內襯衣）')}</li>
-                        <li>⌁${t('精美髮型')}</li>
-                        <li>⌁${t('草履、手提包')}</li>
+                        <li>⌁浴衣一套</li>
+                        <li>⌁肌襦袢（內襯衣）</li>
+                        <li>⌁精美髮型</li>
+                        <li>⌁草履、手提包</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Cdefs%3E%3ClinearGradient id='bg6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ecfeff'/%3E%3Cstop offset='100%25' style='stop-color:%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='450' fill='url(%23bg6)'/%3E%3Ctext x='300' y='170' text-anchor='middle' font-size='70'%3E🌺%3C/text%3E%3Ctext x='300' y='255' text-anchor='middle' fill='%230891b2' font-size='28' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='300' y='300' text-anchor='middle' fill='%230891b2' font-size='24' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E",
-                price: `${t('¥5,500（含稅）')}`,
+                price: '¥5,500（含稅）',
                 photos: []
             },
             */
             {
                 id: 'plan2',
-                name: `${t('【女士】高級小紋套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】高級小紋套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('高級小紋套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">材質與設計更高級的小紋和服，適合追求更高質感與獨特花紋的您。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('高級小紋 ¥7,700 一套')}</li>
-                        <li>⌁${t('半幅腰帶 / 兵兒帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁高級小紋 ¥7,700 一套</li>
+                        <li>⌁半幅腰帶 / 兵兒帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/cover5.jpg',
-                price: `${t('¥7,700（含稅）')}`,
+                image: 'img/封面照5.jpg',
+                price: '¥7,700（含稅）',
                 photos: [
-                    'img/cover6.jpg',
-                    'img/cover7.jpg'
+                    'img/封面照6.jpg',
+                    'img/封面照7.jpg'
                 ]
             },
             {
                 id: 'plan3',
-                name: `${t('【女士】蕾絲套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】蕾絲套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('蕾絲套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">近年來人氣爆棚的款式！結合日式傳統與西方蕾絲元素，打造獨一無二的甜美或復古風格。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('蕾絲 ¥7,700 一套')}</li>
-                        <li>⌁${t('半幅腰帶 / 兵兒帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁蕾絲 ¥7,700 一套</li>
+                        <li>⌁半幅腰帶 / 兵兒帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/white_lace3.jpg',
-                price: `${t('¥7,700（含稅）')}`,
+                image: 'img/白蕾絲3.jpg',
+                price: '¥7,700（含稅）',
                 photos: [
-                    'img/white_lace1.jpg',
-                    'img/white_lace3.jpg',
-                    'img/white_lace4.jpg',
-                    'img/white_lace5.jpg'
+                    'img/白蕾絲1.jpg',
+                    'img/白蕾絲3.jpg',
+                    'img/白蕾絲4.jpg',
+                    'img/白蕾絲5.jpg'
                 ]
             },
             {
                 id: 'plan4',
-                name: `${t('【女士】二尺袖套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】二尺袖套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('二尺袖套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">「二尺袖」是充滿活力的「中袖長」款式。花紋通常色彩鮮明、圖案大方，推薦給喜歡鮮豔色彩的您。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('二尺袖 ¥8,800 一套')}</li>
-                        <li>⌁${t('半幅腰帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁二尺袖 ¥8,800 一套</li>
+                        <li>⌁半幅腰帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/pink_nishaku3.jpg',
-                price: `${t('¥8,800（含稅）')}`,
+                image: 'img/粉二尺袖3.jpg',
+                price: '¥8,800（含稅）',
                 photos: [
-                    'img/pink_nishaku4.jpg',
-                    'img/pink_nishaku5.jpg'
+                    'img/粉二尺袖4.jpg',
+                    'img/粉二尺袖5.jpg'
                 ]
             },
             {
                 id: 'plan5',
-                name: `${t('【女士】訪問服套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】訪問服套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('訪問服套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">「訪問服」是高雅的準禮服，不論已婚或未婚皆可穿著。適合參加朋友婚宴、派對、茶會等正式場合。本套餐包含一般訪問服與高級訪問服，使用頂級絲綢與手工刺繡的高級訪問服，無論是布料、染色或圖案，皆為上乘之選，適合最重要的時刻。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('訪問服 ¥11,000~¥16,500 一套')}</li>
-                        <li>⌁${t('名古屋帶 / 二重太鼓帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁訪問服 ¥11,000~¥16,500 一套</li>
+                        <li>⌁名古屋帶 / 二重太鼓帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                         
                         <!-- 相簿封面 -->
                         <div class="mt-6 not-prose flex gap-4 flex-wrap">
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/beige_premium_houmongi1.jpg', 'img/beige_premium_houmongi2.jpg', 'img/beige_premium_houmongi3.jpg', 'img/beige_premium_houmongi5.jpg', 'img/beige_premium_houmongi6.jpg'], 0)">
-                                <img src="img/beige_premium_houmongi1.jpg" alt="${t('高級訪問服相簿')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/米高級訪問服1.jpg', 'img/米高級訪問服2.jpg', 'img/米高級訪問服3.jpg', 'img/米高級訪問服5.jpg', 'img/米高級訪問服6.jpg'], 0)">
+                                <img src="img/米高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/premium_houmongi1.jpg', 'img/premium_houmongi2.jpg', 'img/premium_houmongi3.jpg', 'img/premium_houmongi4.jpg', 'img/premium_houmongi5.jpg'], 0)">
-                                <img src="img/premium_houmongi1.jpg" alt="${t('高級訪問服相簿')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/高級訪問服1.jpg', 'img/高級訪問服2.jpg', 'img/高級訪問服3.jpg', 'img/高級訪問服4.jpg', 'img/高級訪問服5.jpg'], 0)">
+                                <img src="img/高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
                         </div>
                     </div>
                 `,
-                image: 'img/premium_houmongi1.jpg',
-                price: `${t('¥11,000~16,500（含稅）')}`,
+                image: 'img/高級訪問服1.jpg',
+                price: '¥11,000~16,500（含稅）',
                 photos: [
-                    'img/premium_houmongi2.jpg',
-                    'img/premium_houmongi3.jpg',
-                    'img/premium_houmongi4.jpg',
-                    'img/premium_houmongi5.jpg'
+                    'img/高級訪問服2.jpg',
+                    'img/高級訪問服3.jpg',
+                    'img/高級訪問服4.jpg',
+                    'img/高級訪問服5.jpg'
                 ]
             },
             {
                 id: 'plan7',
-                name: `${t('【女士】黑留袖套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】黑留袖套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('黑留袖套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">「黑留袖」是已婚女士的第一禮服，通常在婚禮等最莊重的场合穿著。圖案集中在下擺，展現極致的格調與品味。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('黑留袖 ¥11,000 一套')}</li>
-                        <li>⌁${t('名古屋帶 / 二重太鼓帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁黑留袖 ¥11,000 一套</li>
+                        <li>⌁名古屋帶 / 二重太鼓帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: 'img/kimi5.jpg',
-                price: `${t('¥11,000（含稅）')}`,
+                price: '¥11,000（含稅）',
                 photos: [
                     'img/kimi2.jpg',
                     'img/kimi7.jpg'
@@ -580,92 +583,92 @@
             },
             /* { // 高級訪問服 - 已註解
                 id: 'plan6',
-                name: `${t('【女士】高級訪問服套餐')}`,
+                name: '【女士】高級訪問服套餐',
                 // ... content ...
             }, */
             {
                 id: 'plan13',
-                name: `${t('【女士】袴套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】袴套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('袴套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">「袴」是日本傳統的褲裙式服裝，結合和服上衣與袴褲，展現優雅而現代的日式風格。適合畢業典禮、成人式或特殊場合穿著，既傳統又時尚。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('袴+和服 ¥11,000~30,000 一套')}</li>
-                        <li>⌁${t('半幅帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁袴+和服 ¥11,000~30,000 一套</li>
+                        <li>⌁半幅帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fdf2f8'/%3E%3Cstop offset='50%25' style='stop-color:%23fce7f3'/%3E%3Cstop offset='100%25' style='stop-color:%23fbcfe8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='450' fill='url(%23bg)'/%3E%3Ctext x='300' y='170' text-anchor='middle' font-size='70'%3E🌸%3C/text%3E%3Ctext x='300' y='255' text-anchor='middle' fill='%23be185d' font-size='28' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='300' y='300' text-anchor='middle' fill='%23be185d' font-size='24' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E",
-                price: `${t('¥11,000~（含稅）')}`,
+                price: '¥11,000~（含稅）',
                 photos: []
             },
             {
                 id: 'plan8',
-                name: `${t('【女士】振袖套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【女士】振袖套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('振袖套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">「振袖」是未婚女士的最高級禮服，以華麗的長袖為特徵。適合畢業典禮、成人式或拍攝紀念照。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('振袖 ¥9,900~27,500 一套')}</li>
-                        <li>⌁${t('袋帶')}</li>
-                        <li>⌁${t('免費髮型 / 髮飾')}</li>
-                        <li>⌁${t('內搭、分趾襪、草履、日式提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁振袖 ¥9,900~27,500 一套</li>
+                        <li>⌁袋帶</li>
+                        <li>⌁免費髮型 / 髮飾</li>
+                        <li>⌁內搭、分趾襪、草履、日式提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                         
                         <!-- 振袖價位分類 -->
                         <div class="mt-6 mb-6 p-4 bg-white rounded-xl border border-gray-200">
                             <div class="flex flex-wrap gap-3 justify-center">
                                 <button class="furisode-category-btn active" onclick="filterFurisode('all')" style="cursor: pointer; padding: 0.75rem 1.5rem; border: 2px solid #859A93; border-radius: 0.5rem; background-color: #859A93; color: white; font-weight: 500; transition: all 0.3s ease;">
-                                    ${t('全部振袖')}
+                                    全部振袖
                                 </button>
                                 <button class="furisode-category-btn" onclick="filterFurisode('premium')" style="cursor: pointer; padding: 0.75rem 1.5rem; border: 2px solid #859A93; border-radius: 0.5rem; background-color: white; color: #859A93; font-weight: 500; transition: all 0.3s ease;">
-                                    ${t('精品振袖 ¥9,900')}
+                                    精品振袖 ¥9,900
                                 </button>
                                 <button class="furisode-category-btn" onclick="filterFurisode('gold')" style="cursor: pointer; padding: 0.75rem 1.5rem; border: 2px solid #859A93; border-radius: 0.5rem; background-color: white; color: #859A93; font-weight: 500; transition: all 0.3s ease;">
-                                    ${t('金絲振袖 ¥16,500')}
+                                    金絲振袖 ¥16,500
                                 </button>
                                 <button class="furisode-category-btn" onclick="filterFurisode('couture')" style="cursor: pointer; padding: 0.75rem 1.5rem; border: 2px solid #859A93; border-radius: 0.5rem; background-color: white; color: #859A93; font-weight: 500; transition: all 0.3s ease;">
-                                    ${t('高訂振袖 ¥27,500')}
+                                    高訂振袖 ¥27,500
                                 </button>
                             </div>
                         </div>
@@ -678,90 +681,90 @@
                             <div class="furisode-photo rounded-lg overflow-hidden shadow-md" data-furisode-type="premium">
                                 <div style="width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;">
                                     <span style="font-size: 3.5rem;">🌸</span>
-                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">${t('請稍候～')}<br>${t('馬上就要上傳照片了！')}</span>
+                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">請稍候～<br>馬上就要上傳照片了！</span>
                                 </div>
                             </div>
                             <div class="furisode-photo rounded-lg overflow-hidden shadow-md" data-furisode-type="premium">
                                 <div style="width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;">
                                     <span style="font-size: 3.5rem;">✨</span>
-                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">${t('請稍候～')}<br>${t('馬上就要上傳照片了！')}</span>
+                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">請稍候～<br>馬上就要上傳照片了！</span>
                                 </div>
                             </div>
                             <div class="furisode-photo rounded-lg overflow-hidden shadow-md" data-furisode-type="premium">
                                 <div style="width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;">
                                     <span style="font-size: 3.5rem;">💕</span>
-                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">${t('請稍候～')}<br>${t('馬上就要上傳照片了！')}</span>
+                                    <span style="color: #be185d; font-size: 1.1rem; font-weight: 600; text-align: center; line-height: 1.8; font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;">請稍候～<br>馬上就要上傳照片了！</span>
                                 </div>
                             </div>
                             
                             <!-- 金絲振袖照片 - 紫金絲振袖相簿 -->
                             <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/Gallery_Gold_Furisode_241124_red1.jpg', 'img/Gallery_Gold_Furisode_241124_red2.jpg', 'img/Gallery_Gold_Furisode_241124_red3.jpg', 'img/Gallery_Gold_Furisode_241124_red4.jpg', 'img/Gallery_Gold_Furisode_241124_red5.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/Gallery_Gold_Furisode_241124_red1.jpg" alt="${t('金絲振袖相簿')}" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
+                                <img src="img/Gallery_Gold_Furisode_241124_red1.jpg" alt="金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
                             </div>
                             <!-- 金絲振袖照片 - 藍金絲振袖相簿 -->
                             <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/Gallery_Gold_Furisode_20260215_blue1.jpg', 'img/Gallery_Gold_Furisode_20260215_blue2.jpg', 'img/Gallery_Gold_Furisode_20260215_blue3.jpg', 'img/Gallery_Gold_Furisode_20260215_blue4.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/Gallery_Gold_Furisode_20260215_blue1.jpg" alt="${t('金絲振袖相簿')}" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
+                                <img src="img/Gallery_Gold_Furisode_20260215_blue1.jpg" alt="金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 白金振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/white_gold_furisode4.jpg', 'img/white_gold_furisode1.jpg', 'img/white_gold_furisode2.jpg', 'img/white_gold_furisode3.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/white_gold_furisode4.jpg" alt="${t('白金振袖相簿')}" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/白金振袖4.jpg', 'img/白金振袖1.jpg', 'img/白金振袖2.jpg', 'img/白金振袖3.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/白金振袖4.jpg" alt="白金振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 綠振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/green_furisode1.jpg', 'img/green_furisode3.jpg', 'img/green_furisode4.jpg', 'img/green_furisode6.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/green_furisode1.jpg" alt="${t('綠振袖相簿')}" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/綠振袖1.jpg', 'img/綠振袖3.jpg', 'img/綠振袖4.jpg', 'img/綠振袖6.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/綠振袖1.jpg" alt="綠振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 紫高訂振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/purple_luxury_furisode2.jpg', 'img/purple_luxury_furisode3.jpg', 'img/purple_luxury_furisode4.jpg', 'img/purple_luxury_furisode5.jpg', 'img/purple_luxury_furisode6.jpg', 'img/purple_luxury_furisode7.jpg', 'img/purple_luxury_furisode8.jpg'], 4)" style="cursor: pointer;">
-                                <img src="img/purple_luxury_furisode6.jpg" alt="${t('紫高訂振袖相簿')}" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/紫高訂振袖2.jpg', 'img/紫高訂振袖3.jpg', 'img/紫高訂振袖4.jpg', 'img/紫高訂振袖5.jpg', 'img/紫高訂振袖6.jpg', 'img/紫高訂振袖7.jpg', 'img/紫高訂振袖8.jpg'], 4)" style="cursor: pointer;">
+                                <img src="img/紫高訂振袖6.jpg" alt="紫高訂振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                         </div>
                     </div>
                 `,
-                image: 'img/white_standard_furisode1.jpg',
-                price: `${t('¥9,900~27,500（含稅）')}`,
+                image: 'img/白精品振袖1.jpg',
+                price: '¥9,900~27,500（含稅）',
                 photos: [
-                    'img/white_standard_furisode2.jpg',
-                    'img/white_standard_furisode3.jpg'
+                    'img/白精品振袖2.jpg',
+                    'img/白精品振袖3.jpg'
                 ]
             },
             
             // --- 男士方案 (已排序) ---
             {
                 id: 'plan10',
-                name: `${t('【男士】和服套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、草履、手提包')}`,
+                name: '【男士】和服套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('男士和服套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">低調而帥氣的男士專屬方案，體驗傳統日本風格。我們提供多種尺寸和顏色的男士和服，風格沉穩，適合與伴侶一同漫步京都。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('普通和服 ¥5,500 一套')}</li>
-                        <li>⌁${t('另加購羽織 ¥1,100')}</li>
-                        <li>⌁${t('腰帶、分趾襪、草履、手提包')}</li>
+                        <li>⌁普通和服 ¥5,500 一套</li>
+                        <li>⌁另加購羽織 ¥1,100</li>
+                        <li>⌁腰帶、分趾襪、草履、手提包</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e0f2fe'/%3E%3Cstop offset='50%25' style='stop-color:%23bae6fd'/%3E%3Cstop offset='100%25' style='stop-color:%2393c5fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='450' fill='url(%23bg2)'/%3E%3Ctext x='300' y='170' text-anchor='middle' font-size='70'%3E✨%3C/text%3E%3Ctext x='300' y='255' text-anchor='middle' fill='%230369a1' font-size='28' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='300' y='300' text-anchor='middle' fill='%230369a1' font-size='24' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E",
-                price: `${t('¥5,500~8,800（含稅）')}`,
+                price: '¥5,500~8,800（含稅）',
                 photos: [
                     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='bg3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e0f2fe'/%3E%3Cstop offset='100%25' style='stop-color:%2393c5fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23bg3)'/%3E%3Ctext x='200' y='110' text-anchor='middle' font-size='50'%3E🎀%3C/text%3E%3Ctext x='200' y='175' text-anchor='middle' fill='%230369a1' font-size='22' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%230369a1' font-size='18' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E",
                     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='bg4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e0f2fe'/%3E%3Cstop offset='100%25' style='stop-color:%2393c5fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23bg4)'/%3E%3Ctext x='200' y='110' text-anchor='middle' font-size='50'%3E💕%3C/text%3E%3Ctext x='200' y='175' text-anchor='middle' fill='%230369a1' font-size='22' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%230369a1' font-size='18' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E"
@@ -770,158 +773,158 @@
             /*
             { // 男士浴衣 - 已註解
                 id: 'plan12',
-                name: `${t('【男士】浴衣套餐（6月-9月）')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、草履、手提包')}`,
+                name: '【男士】浴衣套餐（6月-9月）',
+                shortDesc: '⋈*｡ 價格含腰帶、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('男士浴衣套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">夏季限定（6月至9月）！男士浴衣同樣輕便有型，適合在炎熱的天氣中帥氣地漫步京都。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('男士浴衣一套')}</li>
-                        <li>⌁${t('內襯、腰帶')}</li>
-                        <li>⌁${t('二趾襪、草履、手提包')}</li>
+                        <li>⌁男士浴衣一套</li>
+                        <li>⌁內襯、腰帶</li>
+                        <li>⌁二趾襪、草履、手提包</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Cdefs%3E%3ClinearGradient id='bg7' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ecfeff'/%3E%3Cstop offset='100%25' style='stop-color:%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='450' fill='url(%23bg7)'/%3E%3Ctext x='300' y='170' text-anchor='middle' font-size='70'%3E🎐%3C/text%3E%3Ctext x='300' y='255' text-anchor='middle' fill='%230891b2' font-size='28' font-weight='600'%3E請稍候～%3C/text%3E%3Ctext x='300' y='300' text-anchor='middle' fill='%230891b2' font-size='24' font-weight='500'%3E馬上就要上傳照片了！%3C/text%3E%3C/svg%3E",
-                price: `${t('¥5,500（含稅）')}`,
+                price: '¥5,500（含稅）',
                 photos: []
             },
             */
             {
                 id: 'plan11',
-                name: `${t('【男士】高級武士服套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、草履、手提包')}`,
+                name: '【男士】高級武士服套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('高級武士服套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">體驗更正式的男士服飾「袴」或高品質的和服。此方案提供更精緻的布料與設計，展現武士般的氣勢與品味。</p>
 
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('高級和服+羽織+袴 ¥16,500 一套')}</li>
-                        <li>⌁${t('腰帶、分趾襪、草履、手提包')}</li>
+                        <li>⌁高級和服+羽織+袴 ¥16,500 一套</li>
+                        <li>⌁腰帶、分趾襪、草履、手提包</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/samurai1.jpg',
-                price: `${t('¥16,500（含稅）')}`,
+                image: 'img/高級武士服1.jpg',
+                price: '¥16,500（含稅）',
                 photos: [
-                    'img/samurai2.jpg',
-                    'img/samurai3.jpg',
-                    'img/samurai4.jpg',
-                    'img/samurai5.jpg'
+                    'img/高級武士服2.jpg',
+                    'img/高級武士服3.jpg',
+                    'img/高級武士服4.jpg',
+                    'img/高級武士服5.jpg'
                 ]
             },
             
             // --- 小孩方案 ---
             {
                 id: 'plan14',
-                name: `${t('【小孩】和服套餐')}`,
-                shortDesc: `${t('⋈*｡ 價格含腰帶、髮型、草履、手提包')}`,
+                name: '【小孩】和服套餐',
+                shortDesc: '⋈*｡ 價格含腰帶、髮型、草履、手提包',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('小孩和服套餐介紹')}</p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">專為小朋友設計的和服套餐，讓孩子也能體驗傳統日式文化。我們提供多種可愛的款式和顏色，讓小朋友在京都留下美好的回憶。</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('兒童和服 ¥5,500 一套')}</li>
-                        <li>⌁${t('腰帶、分趾襪、草履、手提包')}</li>
+                        <li>⌁兒童和服 ¥5,500 一套</li>
+                        <li>⌁腰帶、分趾襪、草履、手提包</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
                 image: "img/Gallery_Kids_240102_red1.jpg",
-                price: `${t('¥5,500（含稅）')}`,
+                price: '¥5,500（含稅）',
                 photos: []
             },
             
             // --- 情侶方案 ---
             {
                 id: 'plan15',
-                name: `【${t('情侶')}】${t('和服套餐')}`,
-                shortDesc: `⋈*｡ ${t('款式皆為普通小紋,到店後可換款補差價')}`,
+                name: '【情侶】和服套餐',
+                shortDesc: '⋈*｡ 款式皆為普通小紋,到店後可換款補差價',
                 longDesc: `
                     <!-- ✿和服介紹 -->
-                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿${t('和服介紹')}</h2>
-                    <p class="mb-4 text-main">${t('情侶套餐介紹')} <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" style="color: #859A93; text-decoration: underline;">@Niconico_kimono</a></p>
+                    <h2 class="text-2xl font-bold text-main mb-3" style="font-weight: 600;">✿和服介紹</h2>
+                    <p class="mb-4 text-main">專為情侶設計的和服套餐，讓您與伴侶一同體驗傳統日式文化。款式皆為普通小紋，可補差價換款，詳情請詢問 @Niconico_kimono</p>
                     
                     <!-- ✿方案包含： -->
-                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿${t('方案包含：')}</h2>
+                    <h2 class="text-2xl font-bold text-main mt-6 mb-3" style="font-weight: 600;">✿方案包含：</h2>
                     <ul class="list-none space-y-2 pl-0 text-main" style="padding-left: 0;">
-                        <li>⌁${t('女士小紋 ¥5,500 一套')}</li>
-                        <li>⌁${t('男士和服 ¥6,600 一套')}</li>
-                        <li>⌁${t('腰帶、髮型(女士)')}</li>
-                        <li>⌁${t('分趾襪、草履、手提包')}</li>
-                        <li>⌁${t('可免費租借拍攝道具（雨傘、扇子）')}</li>
+                        <li>⌁女士小紋 ¥5,500 一套</li>
+                        <li>⌁男士和服 ¥6,600 一套</li>
+                        <li>⌁腰帶、髮型(女士)</li>
+                        <li>⌁分趾襪、草履、手提包</li>
+                        <li>⌁可免費租借拍攝道具（雨傘、扇子）</li>
                     </ul>
                     
                     <!-- ✿歸還時間 -->
                     <div class="mt-6 border-t pt-4">
-                        <h3 class="text-xl font-bold text-red-600 mb-2">※${t('當日17:30前需歸還')}</h3>
-                        <h3 class="text-xl font-bold text-red-600">※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}</h3>
+                        <h3 class="text-xl font-bold text-red-600 mb-2">※當日17:30前需歸還</h3>
+                        <h3 class="text-xl font-bold text-red-600">※免費隔日中午12:00前歸還（需付押金¥10,000）</h3>
                     </div>
 
                     <!-- ⋆˚. 照片參考₊⊹ -->
                     <div class="mt-8">
                         <h2 class="text-2xl font-bold text-main mb-3 flex items-baseline" style="font-weight: 600;">
-                            <span>⋆˚. ${t('照片參考')}₊⊹</span>
-                            <span class="text-lg font-medium text-gray-600 ml-2">｜${t('可提前預留款式')}</span>
+                            <span>⋆˚. 照片參考₊⊹</span>
+                            <span class="text-lg font-medium text-gray-600 ml-2">｜可提前預留款式</span>
                         </h2>
                     </div>
                 `,
-                image: 'img/couple1.jpg',
-                price: `${t('¥9,900~（含稅）')}`,
+                image: 'img/情侶套餐1.jpg',
+                price: '¥9,900~（含稅）',
                 photos: [
-                    'img/couple2.jpg',
-                    'img/couple3.jpg',
-                    'img/couple4.jpg',
-                    'img/samurai1.jpg',
-                    'img/samurai2.jpg'
+                    'img/情侶套餐2.jpg',
+                    'img/情侶套餐3.jpg',
+                    'img/情侶套餐4.jpg',
+                    'img/高級武士服1.jpg',
+                    'img/高級武士服2.jpg'
                 ]
             }
         ];
@@ -1213,16 +1216,16 @@
                     <div class="hero-right">
                         <div class="hero-image-grid">
                             <div class="hero-image-item">
-                                <img src="img/cover1.jpg" alt="${t('封面照1')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
+                                <img src="img/封面照1.jpg" alt="${t('封面照1')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
                     </div>
                             <div class="hero-image-item">
-                                <img src="img/cover2.jpg" alt="${t('封面照2')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
+                                <img src="img/封面照2.jpg" alt="${t('封面照2')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/cover3.png" alt="${t('封面照3')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
+                                <img src="img/封面照3.png" alt="${t('封面照3')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/cover4.jpg" alt="${t('封面照4')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
+                                <img src="img/封面照4.jpg" alt="${t('封面照4')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
                             </div>
                         </div>
                     </div>
@@ -1234,7 +1237,9 @@
                             ${t('京都和服租借')} Niconico Kyoto｜${t('京都和服體驗・攝影・茶室')}
                         </h1>
                         <div class="hero-main-text">
-                            ${(function(){ const s = t('京都で、ニコニコ笑顔の物語を'); return s.replace('京都で、', '京都で、<br>').replace('ニコニコ笑顔の', 'ニコニコ笑顔の<br>'); })()}
+                            京都で、<br>
+                            ニコニコ笑顔の<br>
+                            物語を
                         </div>
                         <div class="hero-sub-text">
                             In Kyoto,<br>
@@ -1294,7 +1299,7 @@
                                 <!-- Events 1 -->
                                 <div style="cursor: pointer;" onclick="location.hash='tea-room';">
                                     <div style="aspect-ratio: 4/3; overflow: hidden; margin-bottom: 0.75rem;">
-                                        <img src="img/tearoom_cover.jpg" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/tearoom1.jpg'">
+                                        <img src="img/茶室體驗封面.jpg" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/茶室1.jpg'">
                                     </div>
                                     <p style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.25rem;">${t('茶室體驗')}</p>
                                     <p style="font-size: 0.875rem; color: #544739; font-weight: 500;">${t('抹茶體驗 NEW OPEN')}</p>
@@ -1302,7 +1307,7 @@
                                 <!-- Events 2 -->
                                 <div style="cursor: pointer;" onclick="location.hash='photo-plans';">
                                     <div style="aspect-ratio: 4/3; overflow: hidden; margin-bottom: 0.75rem;">
-                                        <img src="img/closeup1.jpg" alt="${t('攝影方案')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/cover1.jpg'">
+                                        <img src="img/近景1.jpg" alt="${t('攝影方案')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/封面照1.jpg'">
                                     </div>
                                     <p style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.25rem;">${t('攝影服務')}</p>
                                     <p style="font-size: 0.875rem; color: #544739; font-weight: 500;">${t('專業外拍方案')}</p>
@@ -1328,9 +1333,9 @@
                             <!-- 1. 蕾絲 -->
                             <div class="top5-card" onclick="location.hash='plan/plan3';" data-card="lace">
                                 <div class="top5-card-image">
-                                    <img src="img/top5_lace1.jpg" alt="${t('蕾絲套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
-                                    <img src="img/top5_lace2.jpg" alt="${t('蕾絲套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
-                                    <img src="img/top5_lace3.jpg" alt="${t('蕾絲套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/TOP5蕾絲1.jpg" alt="${t('蕾絲套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/TOP5蕾絲2.jpg" alt="${t('蕾絲套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/TOP5蕾絲3.jpg" alt="${t('蕾絲套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
                                     <div class="top5-badge">1</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1349,9 +1354,9 @@
                             <!-- 2. 訪問服 -->
                             <div class="top5-card" onclick="location.hash='plan/plan5';" data-card="houmongi">
                                 <div class="top5-card-image">
-                                    <img src="img/top5_houmongi1.jpg" alt="${t('訪問服套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
-                                    <img src="img/top5_houmongi2.jpg" alt="${t('訪問服套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
-                                    <img src="img/top5_houmongi3.jpg" alt="${t('訪問服套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/TOP5訪問服1.jpg" alt="${t('訪問服套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/TOP5訪問服2.jpg" alt="${t('訪問服套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/TOP5訪問服3.jpg" alt="${t('訪問服套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
                                     <div class="top5-badge">2</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1370,9 +1375,9 @@
                             <!-- 3. 高定振袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan8';" data-card="furisode">
                                 <div class="top5-card-image">
-                                    <img src="img/top5_luxury_furisode1.jpg" alt="${t('高定振袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
-                                    <img src="img/top5_luxury_furisode2.jpg" alt="${t('高定振袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
-                                    <img src="img/top5_luxury_furisode3.jpg" alt="${t('高定振袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/TOP5高定振袖1.jpg" alt="${t('高定振袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/TOP5高定振袖2.jpg" alt="${t('高定振袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/TOP5高定振袖3.jpg" alt="${t('高定振袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
                                     <div class="top5-badge">3</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1391,9 +1396,9 @@
                             <!-- 4. 黑留袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan7';" data-card="tomesode">
                                 <div class="top5-card-image">
-                                    <img src="img/top5_kurotomesode1.jpg" alt="${t('黑留袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
-                                    <img src="img/top5_kurotomesode2.jpg" alt="${t('黑留袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
-                                    <img src="img/top5_kurotomesode3.jpg" alt="${t('黑留袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/TOP5黑留袖1.jpg" alt="${t('黑留袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/TOP5黑留袖2.jpg" alt="${t('黑留袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/TOP5黑留袖3.jpg" alt="${t('黑留袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
                                     <div class="top5-badge">4</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1412,9 +1417,9 @@
                             <!-- 5. 二尺袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan4';" data-card="nishaku">
                                 <div class="top5-card-image">
-                                    <img src="img/top5_nishaku1.jpg" alt="${t('二尺袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
-                                    <img src="img/top5_nishaku2.jpg" alt="${t('二尺袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
-                                    <img src="img/top5_nishaku3.jpg" alt="${t('二尺袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/TOP5二尺袖1.jpg" alt="${t('二尺袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/TOP5二尺袖2.jpg" alt="${t('二尺袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/TOP5二尺袖3.jpg" alt="${t('二尺袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
                                     <div class="top5-badge">5</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1707,17 +1712,17 @@
                         <div class="magazine-photos-layout">
                             <!-- 封面照5 - 左側大圖 -->
                             <div class="magazine-photo-item magazine-photo-5">
-                                <img src="img/cover5.jpg" alt="${t('封面照5')}" onerror="this.src='https://placehold.co/700x500/F5E6D3/000000?text=${encodeURIComponent(t('封面照5'))}';">
+                                <img src="img/封面照5.jpg" alt="${t('封面照5')}" onerror="this.src='https://placehold.co/700x500/F5E6D3/000000?text=${encodeURIComponent(t('封面照5'))}';">
                             </div>
 
                             <!-- 封面照6 - 右上小圖 -->
                             <div class="magazine-photo-item magazine-photo-6">
-                                <img src="img/cover6.jpg" alt="${t('封面照6')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照6'))}';">
+                                <img src="img/封面照6.jpg" alt="${t('封面照6')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照6'))}';">
                             </div>
 
                             <!-- 封面照7 - 右下小圖 -->
                             <div class="magazine-photo-item magazine-photo-7">
-                                <img src="img/cover7.jpg" alt="${t('封面照7')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照7'))}';">
+                                <img src="img/封面照7.jpg" alt="${t('封面照7')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照7'))}';">
 
                             </div>
                         
@@ -1737,7 +1742,7 @@
 
                         <!-- 右側垂直文字 -->
                         <div class="magazine-vertical-text">
-                            ${(function(){ const s = t('京都で、あなたの物語を着物で彩る。'); return s.replace('京都で、', '京都で、<br>').replace('あなたの物語を', 'あなたの物語を<br>').replace('着物で彩る。', '着物で彩る。'); })()}
+                            京都で、<br>あなたの物語を<br>着物で彩る。
                         </div>
                     </div>
                     </div>
@@ -1791,8 +1796,8 @@
 
             kimonoPlans.forEach(plan => {
                 if (plan.id && ['plan1','plan2','plan3','plan4','plan5','plan7','plan13','plan8'].includes(plan.id)) {
-                    const displayName = t(plan.name).replace(/【.*?】/g, '');
-                    const priceNum = t(plan.price).replace(/（.*?）/g, '');
+                    const displayName = t(plan.name.replace('【女士】', ''));
+                    const priceNum = t(plan.price).replace('（含稅）', '').replace('（税込）', '');
                     const isPopular = plan.id === 'plan2' || plan.id === 'plan3';
                     html += `
                             <div class="km-item" onclick="location.hash='plan/${plan.id}';">
@@ -1814,11 +1819,11 @@
                                             <line x1="28" y1="20" x2="36" y2="20"/>
                                         </svg>
                                 </div>
-                                    <span class="km-tag">Ladies</span>
+                                    <span class="km-tag">${t('女士')}</span>
                                     <h3 class="km-name">${displayName}</h3>
                                     <p class="km-desc">${t(plan.shortDesc)}</p>
                                     <p class="km-price">${priceNum}</p>
-                                    <a href="#plan/${plan.id}" class="km-link">View Details <span class="km-arrow">→</span></a>
+                                    <a href="#plan/${plan.id}" class="km-link">${t('查看詳情')} <span class="km-arrow">→</span></a>
                                 </div>
                                 <div class="km-divider"></div>
                             </div>
@@ -1838,11 +1843,11 @@
 
             kimonoPlans.forEach(plan => {
                 if (plan.id && ['plan10','plan11','plan14','plan15'].includes(plan.id)) {
-                    let tag = 'Men';
-                    if (plan.id === 'plan14') tag = 'Kids';
-                    if (plan.id === 'plan15') tag = 'Couple';
-                    const displayName = t(plan.name).replace(/【.*?】/g, '');
-                    const priceNum = t(plan.price).replace(/（.*?）/g, '');
+                    let tag = t('男士');
+                    if (plan.id === 'plan14') tag = t('小孩');
+                    if (plan.id === 'plan15') tag = t('情侶');
+                    const displayName = t(plan.name.replace('【男士】', '').replace('【小孩】', '').replace('【情侶】', ''));
+                    const priceNum = t(plan.price).replace('（含稅）', '').replace('（税込）', '');
                     const isPopular = plan.id === 'plan15';
                     
                     html += `
@@ -1869,7 +1874,7 @@
                                     <h3 class="km-name">${displayName}</h3>
                                     <p class="km-desc">${t(plan.shortDesc)}</p>
                                     <p class="km-price">${priceNum}</p>
-                                    <a href="#plan/${plan.id}" class="km-link">View Details <span class="km-arrow">→</span></a>
+                                    <a href="#plan/${plan.id}" class="km-link">${t('查看詳情')} <span class="km-arrow">→</span></a>
                                 </div>
                                 <div class="km-divider"></div>
                             </div>
@@ -2086,7 +2091,7 @@
                         <div class="our-service-grid">
                             <a href="#kimono-plans" class="our-service-card group" onclick="location.hash='kimono-plans'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/closeup1.jpg" alt="${t('和服租借')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=KIMONO'">
+                                    <img src="img/近景1.jpg" alt="${t('和服租借')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=KIMONO'">
                             </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">KIMONO RENTAL</h3>
@@ -2096,7 +2101,7 @@
                             </a>
                             <a href="#photo-plans" class="our-service-card group" onclick="location.hash='photo-plans'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/photo_cover_small.jpg" alt="${t('專業攝影')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=PHOTO'">
+                                    <img src="img/攝影封.jpg" alt="${t('專業攝影')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=PHOTO'">
                         </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">PHOTOGRAPHY</h3>
@@ -2106,7 +2111,7 @@
                             </a>
                             <a href="#tea-room" class="our-service-card group" onclick="location.hash='tea-room'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/tearoom_experience2.jpg" alt="${t('茶室體驗')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=TEA'">
+                                    <img src="img/茶室體驗2.jpg" alt="${t('茶室體驗')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=TEA'">
                         </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">TEA ROOM</h3>
@@ -2144,7 +2149,7 @@
             
             const img = document.getElementById('tearoom-carousel-img');
             const dots = carousel.querySelectorAll('.tearoom-dot');
-            const tearoomImages = ['img/tearoom_experience1.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'];
+            const tearoomImages = ['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'];
             let currentIndex = 0;
             
             // 點擊小點切換圖片
@@ -2271,16 +2276,16 @@
             kimonoPlans.forEach(plan => {
                 // Skip commented out plans
                 if (plan.id && plan.id.startsWith('plan')) {
-                    // 判斷分類（依 plan.id 避免依賴翻譯後名稱）
+                    // 判斷分類
                     let category = 'other';
-                    if (['plan1','plan2','plan3','plan4','plan5','plan7','plan8','plan13'].includes(plan.id)) {
+                    if (plan.name.includes('女士')) {
                         category = 'ladies';
-                    } else if (['plan10','plan11'].includes(plan.id)) {
+                    } else if (plan.name.includes('男士')) {
                         category = 'men';
-                    } else if (['plan14'].includes(plan.id)) {
+                    } else if (plan.name.includes('小孩')) {
                         category = 'kids';
-                    } else if (['plan15'].includes(plan.id)) {
-                        category = 'couple';
+                    } else if (plan.name.includes('情侶')) {
+                        category = 'other';
                     }
                     
                     const isPopular = plan.id === 'plan2' || plan.id === 'plan3' || plan.id === 'plan15';
@@ -2397,9 +2402,9 @@
         function getReferencePhotoGallery(planId) {
             // ====== 英文顏色 → 中文 ======
             const colorMap = {
-                white: t('白'), beige: t('米'), red: t('紅'), orange: t('橘'),
-                yellow: t('黃'), green: t('綠'), blue: t('藍'), purple: t('紫'),
-                pink: t('粉'), black: t('黑'), grey: t('其他'), gray: t('其他'), other: t('其他')
+                white: '白', beige: '米', red: '紅', orange: '橘',
+                yellow: '黃', green: '綠', blue: '藍', purple: '紫',
+                pink: '粉', black: '黑', grey: '其他', gray: '其他', other: '其他'
             };
             function parseColor(filename) {
                 const base = filename.replace(/\.[^.]+$/, '').replace(/\d+$/, '');
@@ -2416,18 +2421,18 @@
                 'plan5': {
                     gridId: 'houmongi-gallery-grid',
                     buttons: [
-                        { price: 'all', label: t('全部') },
-                        { price: '11000', label: t('訪問服 ¥11,000') },
-                        { price: '16500', label: t('高級訪問服 ¥16,500') }
+                        { price: 'all', label: '全部' },
+                        { price: '11000', label: '訪問服 ¥11,000' },
+                        { price: '16500', label: '高級訪問服 ¥16,500' }
                     ]
                 },
                 'plan8': {
                     gridId: 'furisode-gallery-grid',
                     buttons: [
-                        { price: 'all', label: t('全部') },
-                        { price: '9900', label: t('精品振袖 ¥9,900') },
-                        { price: '16500', label: t('金絲振袖 ¥16,500') },
-                        { price: '27500', label: t('高訂振袖 ¥27,500') }
+                        { price: 'all', label: '全部' },
+                        { price: '9900', label: '精品振袖 ¥9,900' },
+                        { price: '16500', label: '金絲振袖 ¥16,500' },
+                        { price: '27500', label: '高訂振袖 ¥27,500' }
                     ]
                 }
             };
@@ -2473,14 +2478,14 @@
 
             const needColorFilter = !noFilterPlans.includes(planId);
             const availColors = [...new Set(photosEnriched.map(function(p) { return p.color; }))];
-            const colorOrder = [t('白'),t('米'),t('紅'),t('橘'),t('黃'),t('綠'),t('藍'),t('紫'),t('粉'),t('黑'),t('其他')];
+            const colorOrder = ['白','米','紅','橘','黃','綠','藍','紫','粉','黑','其他'];
             const sortedColors = colorOrder.filter(function(c) { return availColors.includes(c); });
             const btnStyle = 'cursor:pointer;padding:0.5rem 1.25rem;border:1.5px solid #859A93;border-radius:0.375rem;font-size:0.875rem;font-weight:500;transition:all 0.3s ease;';
 
             // === 價格分類方案（plan5 訪問服、plan8 振袖）＋顏色過濾 ===
             if (priceButtonConfigs[planId]) {
                 const cfg = priceButtonConfigs[planId];
-                return `
+            return `
                     <div class="reference-photo-gallery" style="max-width: 1400px; margin: 0 auto;">
                         <!-- 價格篩選 -->
                         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 1rem;">
@@ -2510,7 +2515,7 @@
                         <div class="reference-photo-gallery-grid" id="${cfg.gridId}">
                             ${photosEnriched.map(p => `
                                 <div class="reference-photo-item gallery-photo" data-price="${p.price}" data-color="${p.color}" style="transition: opacity 0.4s ease, transform 0.4s ease;">
-                                    <img src="${p.src}" ${p.srcset ? `srcset="${p.srcset}" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"` : ''} alt="${p.alt || t('京都和服租借 Niconico Kyoto - 款式型錄')}" loading="lazy" style="width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;" data-cloudified="${p.srcset ? 'true' : ''}" onerror="this.parentElement.style.display='none'">
+                                    <img src="${p.src}" ${p.srcset ? `srcset="${p.srcset}" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"` : ''} alt="${p.alt || '京都和服租借 Niconico Kyoto - 款式型錄'}" loading="lazy" style="width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;" data-cloudified="${p.srcset ? 'true' : ''}" onerror="this.parentElement.style.display='none'">
                                 </div>
                             `).join('')}
                         </div>
@@ -2542,7 +2547,7 @@
                             <div class="reference-photo-item catalog-clickable" data-index="${index}" data-color="${p.color}" style="cursor: pointer; aspect-ratio: 3/4; overflow: hidden; transition: opacity 0.4s ease, transform 0.4s ease;">
                                 <img src="${p.src}" 
                                      ${p.srcset ? `srcset="${p.srcset}" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"` : ''}
-                                     alt="${p.alt || t('京都和服租借 Niconico Kyoto - 款式型錄')}" 
+                                     alt="${p.alt || '京都和服租借 Niconico Kyoto - 款式型錄'}" 
                                      class="reference-photo active"
                                      loading="lazy"
                                      style="width: 100%; height: 100%; object-fit: cover;"
@@ -2609,16 +2614,16 @@
 
         // 顏色英文 → 中文映射
         const galleryColorMap = {
-            white: t('白'), beige: t('米'), red: t('紅'), orange: t('橘'),
-            yellow: t('黃'), green: t('綠'), blue: t('藍'), purple: t('紫'),
-            pink: t('粉'), black: t('黑'), grey: t('其他'), gray: t('其他'), other: t('其他')
+            white: '白', beige: '米', red: '紅', orange: '橘',
+            yellow: '黃', green: '綠', blue: '藍', purple: '紫',
+            pink: '粉', black: '黑', grey: '其他', gray: '其他', other: '其他'
         };
 
-        // 顏色 → 色碼 (用於顏色圓點)，鍵用 t() 以配合翻譯後顏色名
+        // 顏色 → 色碼 (用於顏色圓點)
         const colorDotHex = {
-            [t('白')]: '#f5f5f0', [t('米')]: '#d4c5a9', [t('紅')]: '#c0392b', [t('橘')]: '#e67e22',
-            [t('黃')]: '#f1c40f', [t('綠')]: '#27ae60', [t('藍')]: '#2980b9', [t('紫')]: '#8e44ad',
-            [t('粉')]: '#e8a0bf', [t('黑')]: '#2c2c2c', [t('其他')]: '#aaa'
+            '白': '#f5f5f0', '米': '#d4c5a9', '紅': '#c0392b', '橘': '#e67e22',
+            '黃': '#f1c40f', '綠': '#27ae60', '藍': '#2980b9', '紫': '#8e44ad',
+            '粉': '#e8a0bf', '黑': '#2c2c2c', '其他': '#aaa'
         };
 
         // planId → 中文方案名稱 + 英文方案名稱（SEO alt 用）
@@ -2629,10 +2634,10 @@
             plan13: 'Hakama', plan14: 'Kids Kimono', plan15: 'Couple'
         };
         const planIdToZhName = {
-            plan1: t('小紋'), plan2: t('高級小紋'), plan3: t('蕾絲'),
-            plan4: t('二尺袖'), plan5: t('訪問服'), plan7: t('黑留袖'),
-            plan8: t('振袖'), plan10: t('男士和服'), plan11: t('高級武士服'),
-            plan13: t('袴'), plan14: t('小孩和服'), plan15: t('情侶')
+            plan1: '小紋', plan2: '高級小紋', plan3: '蕾絲',
+            plan4: '二尺袖', plan5: '訪問服', plan7: '黑留袖',
+            plan8: '振袖', plan10: '男士和服', plan11: '高級武士服',
+            plan13: '袴', plan14: '小孩和服', plan15: '情侶'
         };
 
         /**
@@ -2645,31 +2650,31 @@
          */
         function parseGalleryFile(filename) {
             try {
-                // 找 planId
-                let planId = null, price = null;
-                const normalized = filename.replace(/\s+/g, '_'); // 處理空格
-                for (const m of galleryPlanMapping) {
-                    if (normalized.indexOf(m.keyword) !== -1) {
-                        planId = m.planId;
-                        price = m.price || null;
-                        break;
-                    }
+            // 找 planId
+            let planId = null, price = null;
+            const normalized = filename.replace(/\s+/g, '_'); // 處理空格
+            for (const m of galleryPlanMapping) {
+                if (normalized.indexOf(m.keyword) !== -1) {
+                    planId = m.planId;
+                    price = m.price || null;
+                    break;
                 }
+            }
                 if (!planId) return null; // 無法識別方案 → 安靜跳過
 
-                // 解析顏色：去副檔名 → 去 macOS 複製後綴 " 2" → 去結尾數字 → 取最後段
-                const base = filename.replace(/\.[^.]+$/, '');
-                const cleaned = base.replace(/\s+\d+$/, '').replace(/\d+$/, '');
-                const parts = cleaned.split(/[_\s]+/).filter(Boolean);
-                const lastPart = (parts[parts.length - 1] || '').toLowerCase();
-                const color = galleryColorMap[lastPart] || '其他';
+            // 解析顏色：去副檔名 → 去 macOS 複製後綴 " 2" → 去結尾數字 → 取最後段
+            const base = filename.replace(/\.[^.]+$/, '');
+            const cleaned = base.replace(/\s+\d+$/, '').replace(/\d+$/, '');
+            const parts = cleaned.split(/[_\s]+/).filter(Boolean);
+            const lastPart = (parts[parts.length - 1] || '').toLowerCase();
+            const color = galleryColorMap[lastPart] || '其他';
 
-                // 處理檔名中的空格（URL 編碼）
+            // 處理檔名中的空格（URL 編碼）
                 const localSrc = 'img/' + encodeURIComponent(filename).replace(/%2F/g, '/');
                 // SEO alt 屬性（含中英文關鍵字）
                 const planNameEn = planIdToEnName[planId] || 'Kimono';
-                const planNameZh = planIdToZhName[planId] || t('和服');
-                const alt = t('京都和服租借 Niconico Kyoto - ') + planNameZh + t('實穿參考') + ' ' + planNameEn + ' Guest Photo';
+                const planNameZh = planIdToZhName[planId] || '和服';
+                const alt = '京都和服租借 Niconico Kyoto - ' + planNameZh + '實穿參考 ' + planNameEn + ' Guest Photo';
                 // Cloudinary 響應式 URL（未啟用時 src = localSrc, srcset = ''）
                 const src = cloudImg(localSrc, { width: 800, crop: 'limit' });
                 const srcset = cloudSrcSet(localSrc);
@@ -2723,8 +2728,8 @@
                 var localSrc = 'img/' + encodeURIComponent(filename).replace(/%2F/g, '/');
                 // SEO alt 屬性（含中英文關鍵字）
                 var planNameEn = planIdToEnName[planId] || 'Kimono';
-                var planNameZh = planIdToZhName[planId] || t('和服');
-                var alt = t('京都和服租借 Niconico Kyoto - ') + planNameZh + t('款式型錄') + ' ' + planNameEn + ' Style';
+                var planNameZh = planIdToZhName[planId] || '和服';
+                var alt = '京都和服租借 Niconico Kyoto - ' + planNameZh + '款式型錄 ' + planNameEn + ' Style';
                 // Cloudinary 響應式 URL（未啟用時 src = localSrc, srcset = ''）
                 var src = cloudImg(localSrc, { width: 800, crop: 'limit' });
                 var srcset = cloudSrcSet(localSrc);
@@ -2752,7 +2757,7 @@
             if (photos.length === 0) return '';
 
             // 提取可用顏色（去重、排序）
-            const colorOrder = [t('白'),t('米'),t('紅'),t('橘'),t('黃'),t('綠'),t('藍'),t('紫'),t('粉'),t('黑'),t('其他')];
+            const colorOrder = ['白','米','紅','橘','黃','綠','藍','紫','粉','黑','其他'];
             const availColors = [...new Set(photos.map(p => p.color))];
             const sortedColors = colorOrder.filter(c => availColors.includes(c));
 
@@ -2760,15 +2765,15 @@
             const hasPriceFilter = ['plan5', 'plan8'].includes(planId);
             const priceLabels = {
                 'plan5': [
-                    { price: 'all', label: t('全部') },
-                    { price: '11000', label: t('訪問服 ¥11,000') },
-                    { price: '16500', label: t('高級訪問服 ¥16,500') }
+                    { price: 'all', label: '全部' },
+                    { price: '11000', label: '訪問服 ¥11,000' },
+                    { price: '16500', label: '高級訪問服 ¥16,500' }
                 ],
                 'plan8': [
-                    { price: 'all', label: t('全部') },
-                    { price: '9900', label: t('精品振袖 ¥9,900') },
-                    { price: '16500', label: t('金絲振袖 ¥16,500') },
-                    { price: '27500', label: t('高訂振袖 ¥27,500') }
+                    { price: 'all', label: '全部' },
+                    { price: '9900', label: '精品振袖 ¥9,900' },
+                    { price: '16500', label: '金絲振袖 ¥16,500' },
+                    { price: '27500', label: '高訂振袖 ¥27,500' }
                 ]
             };
 
@@ -2802,7 +2807,7 @@
                     <div id="customer-gallery-grid" class="reference-photo-gallery-grid">
                         ${photos.map((p, i) => `
                             <div class="reference-photo-item cg-photo" data-color="${p.color}" ${p.price ? `data-price="${p.price}"` : ''} style="cursor:pointer;aspect-ratio:3/4;overflow:hidden;transition:opacity 0.4s ease,transform 0.4s ease;" onclick="openCustomerGalleryLightbox(${i})">
-                                <img src="${p.src}" ${p.srcset ? `srcset="${p.srcset}" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"` : ''} alt="${p.alt || t('京都和服租借 Niconico Kyoto - 實穿參考')}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" data-cloudified="${p.srcset ? 'true' : ''}" onerror="this.parentElement.style.display='none'">
+                                <img src="${p.src}" ${p.srcset ? `srcset="${p.srcset}" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"` : ''} alt="${p.alt || '京都和服租借 Niconico Kyoto - 實穿參考'}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" data-cloudified="${p.srcset ? 'true' : ''}" onerror="this.parentElement.style.display='none'">
                             </div>
                         `).join('')}
                     </div>
@@ -3076,29 +3081,29 @@
                 `;
             }
 
-            // 判斷方案類型（依 plan.id 避免依賴翻譯後名稱）
-            const isLadiesOrChildren = ['plan1','plan2','plan3','plan4','plan5','plan7','plan8','plan13','plan14','plan15'].includes(plan.id);
-            const isMen = ['plan10','plan11'].includes(plan.id);
+            // 判斷方案類型
+            const isLadiesOrChildren = plan.name.includes('女士') || plan.name.includes('小孩') || plan.name.includes('情侶');
+            const isMen = plan.name.includes('男士');
             
             // 套餐內容項目（移除和服，讓圖示能在一排顯示）
             const ladiesItems = [
-                { name: t('腰帶'), icon: 'obi' },
-                { name: t('髮型'), icon: 'hair' },
-                { name: t('內搭'), icon: 'underwear' },
-                { name: t('長襦袢'), icon: 'nagajuban' },
-                { name: t('草履'), icon: 'zori' },
-                { name: t('日式提包'), icon: 'bag' },
-                { name: t('分趾襪'), icon: 'tabi' },
-                { name: t('髮飾'), icon: 'hairpin' }
+                { name: '腰帶', icon: 'obi' },
+                { name: '髮型', icon: 'hair' },
+                { name: '內搭', icon: 'underwear' },
+                { name: '長襦袢', icon: 'nagajuban' },
+                { name: '草履', icon: 'zori' },
+                { name: '日式提包', icon: 'bag' },
+                { name: '分趾襪', icon: 'tabi' },
+                { name: '髮飾', icon: 'hairpin' }
             ];
             
             const menItems = [
-                { name: t('腰帶'), icon: 'obi' },
-                { name: t('內搭'), icon: 'underwear' },
-                { name: t('長襦袢'), icon: 'nagajuban' },
-                { name: t('草履'), icon: 'zori' },
-                { name: t('日式提包'), icon: 'bag' },
-                { name: t('分趾襪'), icon: 'tabi' }
+                { name: '腰帶', icon: 'obi' },
+                { name: '內搭', icon: 'underwear' },
+                { name: '長襦袢', icon: 'nagajuban' },
+                { name: '草履', icon: 'zori' },
+                { name: '日式提包', icon: 'bag' },
+                { name: '分趾襪', icon: 'tabi' }
             ];
             
             const planItems = isLadiesOrChildren ? ladiesItems : menItems;
@@ -3106,14 +3111,14 @@
             // 圖示對應圖片路徑（透明背景 PNG）
             function getIconImage(iconType) {
                 const iconImages = {
-                    obi: 'img/plan_obi.png',
-                    hair: 'img/plan_hairstyle.png',
-                    underwear: 'img/plan_innerwear.png',
-                    nagajuban: 'img/plan_nagajuban.png',
-                    zori: 'img/plan_geta.png',
-                    bag: 'img/plan_bag.png',
-                    tabi: 'img/plan_tabi.png',
-                    hairpin: 'img/plan_hair_accessory.png'
+                    obi: 'img/和服方案_腰帶.png',
+                    hair: 'img/和服方案_髮型.png',
+                    underwear: 'img/和服方案_內搭.png',
+                    nagajuban: 'img/和服方案_長乳半.png',
+                    zori: 'img/和服方案_木屐.png',
+                    bag: 'img/和服方案_包包.png',
+                    tabi: 'img/和服方案_分趾襪.png',
+                    hairpin: 'img/和服方案_髮飾.png'
                 };
                 return iconImages[iconType] || '';
             }
@@ -3141,8 +3146,8 @@
             
             // 提取歸還時間
             const returnMatch = longDescStr.match(/<!-- ✿歸還時間 -->[\s\S]*?<h3[^>]*>([^<]+)<\/h3>[\s\S]*?<h3[^>]*>([^<]+)<\/h3>/);
-            const returnTime1 = returnMatch ? returnMatch[1].trim() : `※${t('當日17:30前需歸還')}`;
-            const returnTime2 = returnMatch ? returnMatch[2].trim() : `※${t('免費隔日中午12:00前歸還（需付押金¥10,000）')}`;
+            const returnTime1 = returnMatch ? returnMatch[1].trim() : '※當日17:30前需歸還';
+            const returnTime2 = returnMatch ? returnMatch[2].trim() : '※免費隔日中午12:00前歸還（需付押金¥10,000）';
             
             // 生成套餐內容 HTML（使用透明背景 PNG 圖示）
             const planItemsHTML = planItems.map(item => `
@@ -3596,14 +3601,14 @@
         function renderHairstyle() {
             // 八種免費髮型
             const freeStyles = [
-                { id: '01', name: t('日系盤髮'), nameEn: 'Japanese Updo', category: 'classic', image: 'img/hairstyle_updo.jpg', size: 'tall' },
-                { id: '02', name: t('日系盤髮2'), nameEn: 'Japanese Updo II', category: 'classic', image: 'img/hairstyle_updo2.jpg', size: 'square' },
-                { id: '03', name: t('日系低盤'), nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/hairstyle_low_updo.jpg', size: 'wide' },
-                { id: '04', name: t('雙馬尾造型'), nameEn: 'Twin Tails', category: 'cute', image: 'img/hairstyle_twin_tails.jpg', size: 'tall' },
-                { id: '05', name: t('日系馬尾'), nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/hairstyle_ponytail.jpg', size: 'square' },
-                { id: '06', name: t('短髮盤髮'), nameEn: 'Short Hair Updo', category: 'classic', image: 'img/hairstyle_short_updo.jpg', size: 'square' },
-                { id: '07', name: t('假髮造型'), nameEn: 'Wig Style', category: 'classic', image: 'img/hairstyle_wig.jpg', size: 'wide' },
-                { id: '08', name: t('丸子造型'), nameEn: 'Bun Style', category: 'cute', image: 'img/hairstyle_bun.jpg', size: 'tall' }
+                { id: '01', name: '日系盤髮', nameEn: 'Japanese Updo', category: 'classic', image: 'img/免費髮型_日系盤髮.jpg', size: 'tall' },
+                { id: '02', name: '日系盤髮2', nameEn: 'Japanese Updo II', category: 'classic', image: 'img/免費髮型_日系盤髮2.jpg', size: 'square' },
+                { id: '03', name: '日系低盤', nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/免費髮型_日系低盤.jpg', size: 'wide' },
+                { id: '04', name: '雙馬尾造型', nameEn: 'Twin Tails', category: 'cute', image: 'img/免費髮型_雙馬尾造型.jpg', size: 'tall' },
+                { id: '05', name: '日系馬尾', nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/免費髮型_日系馬尾.jpg', size: 'square' },
+                { id: '06', name: '短髮盤髮', nameEn: 'Short Hair Updo', category: 'classic', image: 'img/免費髮型_短髮盤髮.jpg', size: 'square' },
+                { id: '07', name: '假髮造型', nameEn: 'Wig Style', category: 'classic', image: 'img/免費髮型_假髮造型.jpg', size: 'wide' },
+                { id: '08', name: '丸子造型', nameEn: 'Bun Style', category: 'cute', image: 'img/免費髮型_丸子造型.jpg', size: 'tall' }
             ];
             
             const content = `
@@ -3628,10 +3633,10 @@
                                 <span class="hair-mag-hero-en">Hair Design</span>
                                 <div class="hair-mag-hero-line"></div>
                                 <h1 class="hair-mag-hero-title">${t('髮型設計')}</h1>
-                                <p class="hair-mag-hero-sub">${t('ニコニコ着物')}</p>
+                                <p class="hair-mag-hero-sub">ニコニコ着物</p>
                             </div>
                             <div class="hair-mag-hero-img">
-                                <img src="img/hairstyle_cover.jpg" alt="${t('髮型設計')}" onerror="this.style.opacity='0'">
+                                <img src="img/髮型設計封面.jpg" alt="${t('髮型設計')}" onerror="this.style.opacity='0'">
                             </div>
                         </div>
                         <!-- 右側：文字介紹 -->
@@ -3697,7 +3702,7 @@
                                 </ul>
                 </div>
                             <div class="hair-mag-premium-img" onclick="openHairLightbox(8)">
-                                <img src="img/premium_hairstyle1.jpg" alt="${t('新日本髮')}" onerror="this.src='https://placehold.co/500x650/F9F8F6/444444?text=${encodeURIComponent(t('新日本髮'))}'">
+                                <img src="img/收費髮型1.jpg" alt="${t('新日本髮')}" onerror="this.src='https://placehold.co/500x650/F9F8F6/444444?text=${encodeURIComponent(t('新日本髮'))}'">
                         </div>
                     </div>
                     </section>
@@ -3733,7 +3738,7 @@
             // 設定 Lightbox 圖片
             window.hairLightboxImages = [
                 ...freeStyles.map(s => s.image),
-                'img/premium_hairstyle1.jpg'
+                'img/收費髮型1.jpg'
             ];
             
             getContentDiv().innerHTML = content + getFooterHTML();
@@ -3826,7 +3831,7 @@
                             </div>
                             <div class="si-hero-sub-wrap">
                                 <span class="si-hero-sub-line"></span>
-                                <p class="si-hero-sub">${t('京都の伝統美を、心ゆくまで。')}</p>
+                                <p class="si-hero-sub">京都の伝統美を、心ゆくまで。</p>
                                 <span class="si-hero-sub-line"></span>
                             </div>
                         </div>
@@ -3849,7 +3854,7 @@
                                     <span class="si-card-label">KIMONO SELECT</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/reception_area.jpg" alt="${t('挑選和服')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
+                                    <img src="img/寬敞明亮接待區.jpg" alt="${t('挑選和服')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
                                 </div>
                                 <h3 class="si-card-title">${t('挑選和服')}</h3>
                                 <p class="si-card-desc">${t('數百套和服任您挑選，')}<br>${t('從日常小紋到華麗振袖，')}<br>${t('找到最適合您的京都之美。')}</p>
@@ -3862,7 +3867,7 @@
                                     <span class="si-card-label">STYLING AREA</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/shop_interior10.jpg" alt="${t('髮型著裝區')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=02'">
+                                    <img src="img/店內10.jpg" alt="${t('髮型著裝區')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=02'">
                                 </div>
                                 <h3 class="si-card-title">${t('髮型著裝區')}</h3>
                                 <p class="si-card-desc">${t('專業造型師為您打造')}<br>${t('精緻日式髮型，')}<br>${t('多款免費造型可供選擇。')}</p>
@@ -3875,7 +3880,7 @@
                                     <span class="si-card-label">TEA ROOM</span>
                                     </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/tearoom1.jpg" alt="${t('茶室租借')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=03'">
+                                    <img src="img/茶室1.jpg" alt="${t('茶室租借')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=03'">
                                 </div>
                                 <h3 class="si-card-title">${t('茶室租借')}</h3>
                                 <p class="si-card-desc">${t('附設傳統日式茶室，')}<br>${t('可拍照留念或搭配抹茶體驗，')}<br>${t('在靜謐空間中留下珍貴回憶。')}</p>
@@ -3888,7 +3893,7 @@
                                     <span class="si-card-label">FRIENDLY SERVICE</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/friendly_service.jpg" alt="${t('服務親切')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
+                                    <img src="img/服務親切.jpg" alt="${t('服務親切')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
                             </div>
                                 <h3 class="si-card-title">${t('服務親切')}</h3>
                                 <p class="si-card-desc">${t('中文、英文、日文對應，')}<br>${t('耐心協助挑選搭配和服，')}<br>${t('讓您安心享受京都之旅。')}</p>
@@ -3906,7 +3911,7 @@
                     <!-- 底部版權 -->
                     <footer class="si-footer">
                         <div class="si-footer-line"></div>
-                        <p class="si-footer-text">${t('ニコニコ着物レンタル')} &copy; ${t('Kyoto')}</p>
+                        <p class="si-footer-text">Niconico Kimono Rental &copy; Kyoto</p>
                     </footer>
                 </div>
 
@@ -3946,10 +3951,10 @@
                                 <span class="hair-mag-hero-en">Tea Room</span>
                                 <div class="hair-mag-hero-line"></div>
                                 <h1 class="hair-mag-hero-title">${t('茶室')}</h1>
-                                <p class="hair-mag-hero-sub">${t('ニコニコ着物')}</p>
+                                <p class="hair-mag-hero-sub">ニコニコ着物</p>
                     </div>
                             <div class="hair-mag-hero-img" style="max-width: 720px;">
-                                <img src="img/tearoom_cover2.jpg" alt="${t('茶室')}" onerror="this.style.opacity='0'">
+                                <img src="img/茶室體驗封面2.jpg" alt="${t('茶室')}" onerror="this.style.opacity='0'">
                     </div>
                         </div>
                         <!-- 右側：文字介紹 -->
@@ -3980,7 +3985,7 @@
                                 <div style="position: absolute; top: 0; left: -20px; width: 160px; height: 120%; background: #BFC7B3; z-index: -1;"></div>
                                 
                                 <!-- 主圖片（自然呈現，不被色塊推擠） -->
-                                <img src="img/tearoom_experience5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=' + encodeURIComponent(t('茶室體驗5'))">
+                                <img src="img/茶室體驗5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
                     </div>
                             
                             <!-- 右側：文字區塊（垂直置中） -->
@@ -4033,7 +4038,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                         </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/tearoom_experience.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/茶室體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4059,7 +4064,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                         </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/matcha_experience.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/抹茶體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4085,7 +4090,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                 </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/kimono_matcha.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/和服抹茶體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4119,16 +4124,16 @@
                             <!-- 四張小圖網格（3:4 比例，錯落排列） -->
                             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; position: relative; z-index: 1; padding-bottom: 24px;" class="tea-room-images-grid">
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; transform: translateY(-20px);">
-                                    <img src="img/tearoom_experience1.jpg" alt="${t('茶室體驗1')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/tearoom_experience1.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 0); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗1'))}'">
+                                    <img src="img/茶室體驗1.jpg" alt="${t('茶室體驗1')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 0); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗1'))}'">
                             </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;">
-                                    <img src="img/tearoom_experience2.jpg" alt="${t('茶室體驗2')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/tearoom_experience1.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 1); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗2'))}'">
+                                    <img src="img/茶室體驗2.jpg" alt="${t('茶室體驗2')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 1); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗2'))}'">
                             </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; transform: translateY(-20px);">
-                                    <img src="img/tearoom_experience3.jpg" alt="${t('茶室體驗3')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/tearoom_experience1.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 2); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗3'))}'">
+                                    <img src="img/茶室體驗3.jpg" alt="${t('茶室體驗3')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 2); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗3'))}'">
                                 </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;">
-                                    <img src="img/tearoom_experience4.jpg" alt="${t('茶室體驗4')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/tearoom_experience1.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 3); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗4'))}'">
+                                    <img src="img/茶室體驗4.jpg" alt="${t('茶室體驗4')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 3); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗4'))}'">
                                 </div>
                             </div>
                         </div>
@@ -4303,7 +4308,7 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/gallery_cover.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
+                            <img src="img/照片庫封面.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
                     </div>
                         <!-- 極淡黑色漸層（確保文字清晰） -->
                         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.08) 60%, rgba(0,0,0,0.3) 100%); z-index: 3; pointer-events: none;"></div>
@@ -4377,7 +4382,7 @@
                             <!-- 1. 小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_komon.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/gallery_komon.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
+                                    <img src="img/小紋_照片庫.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4386,14 +4391,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #1a1a1a;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('小紋套餐')} ｜ Komon plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥5,500')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥5,500</div>
                         </div>
                     </div>
 
                             <!-- 2. 高級小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_premium_komon.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_premium_komon2.jpg'" onmouseout="this.src='img/gallery_premium_komon.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
+                                    <img src="img/高級小紋_照片庫.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級小紋_照片庫2.jpg'" onmouseout="this.src='img/高級小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4402,14 +4407,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #fbbf24;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('高級小紋套餐')} ｜ Premium Komon</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥7,700')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥7,700</div>
                         </div>
                     </div>
 
                             <!-- 3. 蕾絲套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/lace'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_lace.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_lace2.jpg'" onmouseout="this.src='img/gallery_lace.jpg'" onerror="this.src='img/white_lace3.jpg'">
+                                    <img src="img/蕾絲_照片庫.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/蕾絲_照片庫2.jpg'" onmouseout="this.src='img/蕾絲_照片庫.jpg'" onerror="this.src='img/白蕾絲3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4418,14 +4423,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #1a1a1a;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('蕾絲套餐')} ｜ Lace plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥7,700')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥7,700</div>
                         </div>
                     </div>
 
                             <!-- 4. 二尺袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/nishaku-sode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_nishaku.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_nishaku2.jpg'" onmouseout="this.src='img/gallery_nishaku.jpg'" onerror="this.src='img/pink_nishaku3.jpg'">
+                                    <img src="img/二尺袖_照片庫.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/二尺袖_照片庫2.jpg'" onmouseout="this.src='img/二尺袖_照片庫.jpg'" onerror="this.src='img/粉二尺袖3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4434,14 +4439,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #be185d;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('二尺袖套餐')} ｜ Nishaku-sode plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥8,800')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥8,800</div>
                         </div>
                     </div>
 
                             <!-- 5. 訪問服套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/houmongi'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_houmongi.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_houmongi2.jpg'" onmouseout="this.src='img/gallery_houmongi.jpg'" onerror="this.src='img/premium_houmongi1.jpg'">
+                                    <img src="img/訪問服_照片庫.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/訪問服_照片庫2.jpg'" onmouseout="this.src='img/訪問服_照片庫.jpg'" onerror="this.src='img/高級訪問服1.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4450,14 +4455,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #fbbf24;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('訪問服套餐')} ｜ Houmongi plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥11,000~16,500')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥11,000~16,500</div>
                         </div>
                     </div>
 
                             <!-- 6. 黑留袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/kurotomesode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_kurotomesode.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_kurotomesode2.jpg'" onmouseout="this.src='img/gallery_kurotomesode.jpg'" onerror="this.src='img/kimi5.jpg'">
+                                    <img src="img/黑留袖_照片庫.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/黑留袖_照片庫2.jpg'" onmouseout="this.src='img/黑留袖_照片庫.jpg'" onerror="this.src='img/kimi5.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4466,14 +4471,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #1e3a8a;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('黑留袖套餐')} ｜ Kurotomesode plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥11,000')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥11,000</div>
                     </div>
                 </div>
 
                             <!-- 8. 袴套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/hakama'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_hakama.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
+                                    <img src="img/袴_照片庫.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4482,14 +4487,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #7c3aed;"></div>
                 </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('袴套餐')} ｜ Hakama plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥11,000~')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥11,000~</div>
                     </div>
                 </div>
 
                             <!-- 9. 振袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/furisode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_furisode.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_furisode2.jpg'" onmouseout="this.src='img/gallery_furisode.jpg'" onerror="this.src='img/white_standard_furisode1.jpg'">
+                                    <img src="img/振袖_照片庫.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/振袖_照片庫2.jpg'" onmouseout="this.src='img/振袖_照片庫.jpg'" onerror="this.src='img/白精品振袖1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4498,7 +4503,7 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #d946ef;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('振袖套餐')} ｜ Furisode plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥9,900~')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥9,900~</div>
                     </div>
                     </div>
 
@@ -4514,14 +4519,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #3b82f6;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('男士和服套餐')} ｜ Men's kimono plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥5,500~8,800')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥5,500~8,800</div>
                         </div>
                     </div>
 
                             <!-- 11. 高級武士服套餐 -->
                             <div class="top-12-card" data-gender="male" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-samurai'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_samurai.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_samurai2.jpg'" onmouseout="this.src='img/gallery_samurai.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
+                                    <img src="img/高級武士服_照片庫.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級武士服_照片庫2.jpg'" onmouseout="this.src='img/高級武士服_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4530,14 +4535,14 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #1e3a8a;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('高級武士服套餐')} ｜ Premium Samurai</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥16,500')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥16,500</div>
                         </div>
                     </div>
 
                             <!-- 12. 情侶套餐 -->
                             <div class="top-12-card" data-gender="other" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/couple'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/gallery_couple.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_couple2.jpg'" onmouseout="this.src='img/gallery_couple.jpg'" onerror="this.src='img/couple1.jpg'">
+                                    <img src="img/情侶套餐_照片庫.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/情侶套餐_照片庫2.jpg'" onmouseout="this.src='img/情侶套餐_照片庫.jpg'" onerror="this.src='img/情侶套餐1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4546,7 +4551,7 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #e91e63;"></div>
                         </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('情侶套餐')} ｜ Couple plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥9,900~')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥9,900~</div>
                         </div>
                     </div>
 
@@ -4562,7 +4567,7 @@
                                         <div style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #d97706;"></div>
                     </div>
                                     <div style="font-size: 1rem; font-weight: 500; color: #544739; margin-bottom: 0.5rem;">${t('小孩和服套餐')} ｜ Child kimono plan</div>
-                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">${t('¥5,500')}</div>
+                                    <div style="font-size: 1.125rem; font-weight: 500; color: #544739; font-family: 'EB Garamond', serif;">¥5,500</div>
                     </div>
                         </div>
                     </div>
@@ -4688,9 +4693,9 @@
                     title: '訪問服', titleEn: 'Houmongi', filePrefix: '訪問服',
                     colorFilterType: 'full',
                     priceFilter: [
-                        { price: 'all', label: t('全部') },
-                        { price: '11000', label: t('訪問服 ¥11,000') },
-                        { price: '16500', label: t('高級訪問服 ¥16,500') }
+                        { price: 'all', label: '全部' },
+                        { price: '11000', label: '訪問服 ¥11,000' },
+                        { price: '16500', label: '高級訪問服 ¥16,500' }
                     ],
                     photos: []
                 },
@@ -4706,10 +4711,10 @@
                     title: '振袖', titleEn: 'Furisode', filePrefix: '振袖',
                     colorFilterType: 'full',
                     priceFilter: [
-                        { price: 'all', label: t('全部') },
-                        { price: '9900', label: t('精品振袖 ¥9,900') },
-                        { price: '16500', label: t('金絲振袖 ¥16,500') },
-                        { price: '27500', label: t('高訂振袖 ¥27,500') }
+                        { price: 'all', label: '全部' },
+                        { price: '9900', label: '精品振袖 ¥9,900' },
+                        { price: '16500', label: '金絲振袖 ¥16,500' },
+                        { price: '27500', label: '高訂振袖 ¥27,500' }
                     ],
                     photos: []
                 },
@@ -4740,7 +4745,7 @@
 
             const filePrefix = album.filePrefix;
             const allPhotos = [...album.photos];
-
+            
             // ====== 自動合併 Gallery_ 實穿照（依檔名規則 Gallery_方案_日期_顏色）======
             const albumToPlanId = {
                 'komon': 'plan1', 'premium-komon': 'plan2', 'lace': 'plan3',
@@ -4812,8 +4817,8 @@
 
             // 將 group key 轉為友善顯示標籤
             function getGroupLabel(key) {
-                // 1. 處理手動命名照片（Gallery_方案_顏色 格式，與 photos.js 一致）
-                var clean = key.replace('Gallery_' + filePrefix + '_', '');
+                // 1. 處理手動命名照片（照片庫_方案_顏色 格式）
+                var clean = key.replace('照片庫_' + filePrefix + '_', '');
                 if (clean !== key) return clean;
 
                 // 2. 處理 Gallery_ 自動分類照片
@@ -4825,23 +4830,23 @@
                     var d = m[1]; // YYMMDD (6碼) 或 YYYYMMDD (8碼)
                     var colorPart = (m[2] || '').replace(/_$/, '').replace(/_/g, ' ').trim();
                     var colorTranslate = {
-                        white: t('白'), beige: t('米'), red: t('紅'), orange: t('橘'), yellow: t('黃'),
-                        green: t('綠'), blue: t('藍'), purple: t('紫'), pink: t('粉'), black: t('黑'),
-                        grey: t('其他'), gray: t('其他')
+                        white:'白',beige:'米',red:'紅',orange:'橘',yellow:'黃',
+                        green:'綠',blue:'藍',purple:'紫',pink:'粉',black:'黑',
+                        grey:'其他',gray:'其他'
                     };
-                    var colorCN = colorTranslate[colorPart.toLowerCase()] || (colorPart ? t(colorPart) : t('其他'));
+                    var colorCN = colorTranslate[colorPart.toLowerCase()] || colorPart || '其他';
                     var dateStr;
                     if (d.length === 8) {
                         dateStr = d.substring(0,4) + '.' + d.substring(4,6) + '.' + d.substring(6,8);
                     } else {
                         dateStr = '20' + d.substring(0,2) + '.' + d.substring(2,4) + '.' + d.substring(4,6);
                     }
-                    return dateStr + ' — ' + colorCN;
+                    return dateStr + ' — ' + t(colorCN);
                 }
 
                 return decoded || key;
             }
-
+            
             // 生成封面卡片 HTML
             function generateCoverHTML(groups) {
                 if (groups.length === 0) {
@@ -4912,7 +4917,7 @@
                             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 1rem;">
                                 ${album.priceFilter.map((b, i) => `
                                     <button class="album-price-btn ${i === 0 ? 'active' : ''}" data-price="${b.price}" onclick="filterAlbumByPrice('${b.price}', this)" style="cursor:pointer; padding: 0.55rem 1.4rem; border: 1.5px solid #859A93; border-radius: 50px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; transition: all 0.3s ease; background-color:${i === 0 ? '#859A93' : 'white'}; color:${i === 0 ? 'white' : '#859A93'}; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
-                                        ${b.label}
+                                        ${t(b.label)}
                                     </button>
                                 `).join('')}
                             </div>
@@ -5058,10 +5063,10 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/photo_plan_cover1.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/攝影方案封面1.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                     </div>
                         <div class="mySlides fade">
-                            <img src="img/photo_plan_cover2.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/攝影方案封面2.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                 </div>
                         <button class="prev" onclick="plusSlides(-1)"></button>
                         <button class="next" onclick="plusSlides(1)"></button>
@@ -5079,7 +5084,7 @@
                     <div class="photo-plans-about-container" style="display: grid; grid-template-columns: 0.8fr 2.2fr; gap: 10rem; align-items: stretch; max-width: 1200px; margin: 0 auto;">
                         <!-- Left: Image -->
                         <div class="photo-plans-about-image" style="display: flex; align-items: stretch; justify-content: flex-start;">
-                            <img src="img/intro.jpg" alt="${t('攝影介紹')}" class="photo-plans-about-img" style="width: 100%; height: 100%; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" onerror="this.src='https://placehold.co/600x800/cccccc/000000?text=' + encodeURIComponent(t('介紹'))">
+                            <img src="img/介紹.jpg" alt="${t('攝影介紹')}" class="photo-plans-about-img" style="width: 100%; height: 100%; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" onerror="this.src='https://placehold.co/600x800/cccccc/000000?text=介紹'">
                 </div>
 
                         <!-- Right: Text Content -->
@@ -5222,15 +5227,15 @@
                         <div class="photo-portfolio-carousel-container" style="position: relative; margin-bottom: 3rem;">
                             <div class="photo-portfolio-carousel" style="display: flex; overflow-x: auto; gap: 2rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
                                 <!-- 原有作品 -->
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/blue_nishaku1.jpg', 'img/blue_nishaku2.jpg', 'img/blue_nishaku3.jpg', 'img/blue_nishaku4.jpg'], 0)">
-                                    <img src="img/blue_nishaku1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
-                                </div>
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/white_standard_furisode1.jpg', 'img/white_standard_furisode2.jpg', 'img/white_standard_furisode3.jpg'], 0)">
-                                    <img src="img/white_standard_furisode1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
-                                </div>
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/premium_houmongi1.jpg', 'img/premium_houmongi2.jpg', 'img/premium_houmongi3.jpg', 'img/premium_houmongi4.jpg', 'img/premium_houmongi5.jpg'], 0)">
-                                    <img src="img/premium_houmongi1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
-                                </div>
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/藍二尺袖1.jpg', 'img/藍二尺袖2.jpg', 'img/藍二尺袖3.jpg', 'img/藍二尺袖4.jpg'], 0)">
+                                    <img src="img/藍二尺袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                            </div>
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/白精品振袖1.jpg', 'img/白精品振袖2.jpg', 'img/白精品振袖3.jpg'], 0)">
+                                    <img src="img/白精品振袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                        </div>
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/高級訪問服1.jpg', 'img/高級訪問服2.jpg', 'img/高級訪問服3.jpg', 'img/高級訪問服4.jpg', 'img/高級訪問服5.jpg'], 0)">
+                                    <img src="img/高級訪問服1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                        </div>
                                 <!-- Gallery 作品集 -->
                                 <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/Gallery_Lace_240731_white1.jpg', 'img/Gallery_Lace_240731_white2.jpg', 'img/Gallery_Lace_240731_white3.jpg', 'img/Gallery_Lace_240731_white4.jpg', 'img/Gallery_Lace_240731_white5.jpg'], 0)">
                                     <img src="img/Gallery_Lace_240731_white1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
@@ -5258,8 +5263,8 @@
                                 </div>
                                 <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/Gallery_Couple_260202_1.jpg', 'img/Gallery_Couple_260202_2.jpg', 'img/Gallery_Couple_260202_3.jpg'], 0)">
                                     <img src="img/Gallery_Couple_260202_1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
-                                </div>
-                            </div>
+                    </div>
+                </div>
                             <style>
                                 .photo-portfolio-carousel::-webkit-scrollbar {
                                     display: none;
@@ -5331,28 +5336,28 @@
                         <div class="photo-bottom-carousel-container" style="position: relative; overflow: hidden; width: 100%; margin: 0; padding: 0;">
                                 <div class="photo-bottom-carousel-track" style="display: flex; transition: transform 0.5s ease-in-out; will-change: transform; width: 100%; margin: 0; padding: 0;">
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel2.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播2.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel3.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播3.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel4.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播4.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel5.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播5.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel6.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播6.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel7.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播7.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/photo_carousel8.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/攝影底下輪播8.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                             </div>
                         </div>
@@ -5484,7 +5489,7 @@
             // 顯示/隱藏分類
             const sections = document.querySelectorAll('.faq-category-section');
             sections.forEach(section => {
-                if (category === t('全部') || section.dataset.category === category) {
+                if (category === '全部' || section.dataset.category === category) {
                     section.style.display = 'block';
                 } else {
                     section.style.display = 'none';
@@ -5620,19 +5625,19 @@
 
         function getCategoryName(category) {
             const categoryNames = {
-                'plan1': t('小紋'),
-                'plan2': t('高級小紋'),
-                'plan3': t('蕾絲'),
-                'plan4': t('二尺袖'),
-                'plan5': t('訪問服'),
-                'plan7': t('黑留袖'),
-                'plan8': t('振袖'),
-                'plan10': t('男士'),
-                'plan11': t('高級武士服'),
-                'plan13': t('袴'),
-                'plan14': t('小孩')
+                'plan1': '小紋',
+                'plan2': '高級小紋',
+                'plan3': '蕾絲',
+                'plan4': '二尺袖',
+                'plan5': '訪問服',
+                'plan7': '黑留袖',
+                'plan8': '振袖',
+                'plan10': '男士',
+                'plan11': '高級武士服',
+                'plan13': '袴',
+                'plan14': '小孩'
             };
-            return categoryNames[category] || '';
+            return categoryNames[category] ? t(categoryNames[category]) : '';
         }
 
         // 振袖子分類篩選功能
@@ -5862,7 +5867,7 @@
                             <!-- 左側：品牌資訊 -->
                             <div>
                                 <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.75rem; margin-bottom: 1rem; color: #FFFCF7;">
-                                    ${t('ニコニコ着物レンタル')}<br><span style="font-size: 0.6em; font-weight: 400;">｜${t('Niconico kimono rental')}</span>
+                                    ニコニコ着物レンタル<br><span style="font-size: 0.6em; font-weight: 400;">｜Niconico kimono rental</span>
                                 </h3>
                             </div>
                             
@@ -5929,7 +5934,7 @@
                                 
                                 <!-- 版權資訊 -->
                                 <div style="font-size: 0.875rem; color: #FFFCF7; opacity: 0.8;">
-                                    ${t('© 2025 Niconico Kimono Rental. All rights reserved.')}
+                                    © 2025 Niconico Kimono Rental. All rights reserved.
                                 </div>
                             </div>
                         </div>
@@ -6082,20 +6087,20 @@
                     <!-- 分類選擇按鈕 -->
                     <div class="faq-sidebar">
                         <div class="faq-category-filter">
-                            <button class="faq-filter-btn active" data-category="${t('全部')}" onclick="filterFaqCategory(t('全部'))">${t('全部')}</button>
-                            <button class="faq-filter-btn" data-category="${t('預約相關資訊')}" onclick="filterFaqCategory(t('預約相關資訊'))">${t('預約相關資訊')}</button>
-                            <button class="faq-filter-btn" data-category="${t('和服及髮型設計')}" onclick="filterFaqCategory(t('和服及髮型設計'))">${t('和服及髮型設計')}</button>
-                            <button class="faq-filter-btn" data-category="${t('歸還相關資訊')}" onclick="filterFaqCategory(t('歸還相關資訊'))">${t('歸還相關資訊')}</button>
-                            <button class="faq-filter-btn" data-category="${t('其他常見問題')}" onclick="filterFaqCategory(t('其他常見問題'))">${t('其他常見問題')}</button>
+                            <button class="faq-filter-btn active" data-category="全部" onclick="filterFaqCategory('全部')">${t('全部')}</button>
+                            <button class="faq-filter-btn" data-category="預約相關資訊" onclick="filterFaqCategory('預約相關資訊')">${t('預約相關資訊')}</button>
+                            <button class="faq-filter-btn" data-category="和服及髮型設計" onclick="filterFaqCategory('和服及髮型設計')">${t('和服及髮型設計')}</button>
+                            <button class="faq-filter-btn" data-category="歸還相關資訊" onclick="filterFaqCategory('歸還相關資訊')">${t('歸還相關資訊')}</button>
+                            <button class="faq-filter-btn" data-category="其他常見問題" onclick="filterFaqCategory('其他常見問題')">${t('其他常見問題')}</button>
                                 </div>
                                 </div>
                     
                     <div class="faq-list">
                         <div class="faq-content">
                     <!-- 預約相關資訊 -->
-                        <div class="faq-category-section" data-category="${t('預約相關資訊')}">
+                        <div class="faq-category-section" data-category="預約相關資訊">
                             <h2 style="font-size: 1.25rem; font-weight: 600; color: #544739; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; text-align: center;">${t('預約相關資訊')}</h2>
-                            <div class="faq-item-wrapper" data-category="${t('預約相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="預約相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6107,7 +6112,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('建議提前預約！但若當天有空檔，也可接受預約。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('預約相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="預約相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6119,7 +6124,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('非常歡迎！您可以提前預約並預留喜歡的和服款式。建議提前聯繫我們以確保您心儀的款式可用。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('預約相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="預約相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6131,7 +6136,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('我們最早可接受早上6:00的預約。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('預約相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="預約相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6143,7 +6148,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('提前24小時取消預約不會收取費用。但當日取消將酌收部分費用。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('預約相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="預約相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6158,9 +6163,9 @@
                                 </div>
 
                         <!-- 和服及髮型設計 -->
-                        <div class="faq-category-section" data-category="${t('和服及髮型設計')}">
+                        <div class="faq-category-section" data-category="和服及髮型設計">
                             <h2 style="font-size: 1.25rem; font-weight: 600; color: #544739; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; text-align: center;">${t('和服及髮型設計')}</h2>
-                            <div class="faq-item-wrapper" data-category="${t('和服及髮型設計')}">
+                            <div class="faq-item-wrapper" data-category="和服及髮型設計">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6172,7 +6177,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('穿著和服以及髮型設計約需1小時左右。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('和服及髮型設計')}">
+                            <div class="faq-item-wrapper" data-category="和服及髮型設計">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6184,7 +6189,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('不需要特別準備！冬天建議可以穿著 V/U領發熱衣 及 七分發熱褲。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('和服及髮型設計')}">
+                            <div class="faq-item-wrapper" data-category="和服及髮型設計">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6196,7 +6201,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('本店提供8種免費髮型，也有需要額外加購的日本髮型，如需加購請提前預約。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('和服及髮型設計')}">
+                            <div class="faq-item-wrapper" data-category="和服及髮型設計">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6208,7 +6213,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('請在歸還和服時告知工作人員，如有輕微污漬，我們會協助處理。若造成嚴重損壞或無法清除的污漬，可能需要支付清潔費或賠償費用。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('和服及髮型設計')}">
+                            <div class="faq-item-wrapper" data-category="和服及髮型設計">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6223,9 +6228,9 @@
                                 </div>
 
                         <!-- 歸還相關資訊 -->
-                        <div class="faq-category-section" data-category="${t('歸還相關資訊')}">
+                        <div class="faq-category-section" data-category="歸還相關資訊">
                             <h2 style="font-size: 1.25rem; font-weight: 600; color: #544739; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; text-align: center;">${t('歸還相關資訊')}</h2>
-                            <div class="faq-item-wrapper" data-category="${t('歸還相關資訊')}" id="return-time-faq">
+                            <div class="faq-item-wrapper" data-category="歸還相關資訊" id="return-time-faq">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6237,7 +6242,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('當日17:30前需歸還。如需隔日歸還，可免費隔日中午12:00前歸還（需付押金¥10,000）。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('歸還相關資訊')}" id="cross-store-return-faq">
+                            <div class="faq-item-wrapper" data-category="歸還相關資訊" id="cross-store-return-faq">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6249,7 +6254,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('可以！')}<a href="#access" onclick="renderAccess(); return false;" style="color: #7d2e2e; text-decoration: underline; font-weight: 700;">${t('祇園店')}</a>${t('和')}<a href="#access" onclick="renderAccess(); return false;" style="color: #7d2e2e; text-decoration: underline; font-weight: 700;">${t('清水寺店')}</a>${t('皆可歸還，讓您的行程安排更自由。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('歸還相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="歸還相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6261,7 +6266,7 @@
                                     <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6; margin: 0;">${t('若超過歸還時間未歸還且未提前聯繫，可能會收取延遲費用。請務必提前聯繫我們安排延遲歸還。')}</p>
                                 </div>
                             </div>
-                            <div class="faq-item-wrapper" data-category="${t('歸還相關資訊')}">
+                            <div class="faq-item-wrapper" data-category="歸還相關資訊">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>
@@ -6276,9 +6281,9 @@
                                 </div>
                         
                         <!-- 其他常見問題 -->
-                        <div class="faq-category-section" data-category="${t('其他常見問題')}">
+                        <div class="faq-category-section" data-category="其他常見問題">
                             <h2 style="font-size: 1.25rem; font-weight: 600; color: #544739; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; text-align: center;">${t('其他常見問題')}</h2>
-                            <div class="faq-item-wrapper" data-category="${t('其他常見問題')}">
+                            <div class="faq-item-wrapper" data-category="其他常見問題">
                                 <div class="faq-card" onclick="toggleFaqCard(this)">
                                     <div class="faq-card-content">
                                         <div class="faq-q-icon">Q</div>

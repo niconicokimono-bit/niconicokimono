@@ -360,7 +360,8 @@ body {
 /* 多層級導航菜單樣式 */
 .nav-item {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 .dropdown-menu {
     position: absolute;
@@ -1869,6 +1870,9 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
 }
 .km-item-info {
     padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 .km-kamon {
     width: 24px;
@@ -1899,12 +1903,14 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
     line-height: 1.5;
 }
 .km-desc {
+    font-family: 'Noto Serif TC', serif;
     font-size: 0.68rem;
     color: #999;
     letter-spacing: 0.1em;
     line-height: 1.8;
     margin-bottom: 0.75rem;
-    white-space: nowrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 .km-price {
     font-family: 'EB Garamond', serif;
@@ -2308,8 +2314,10 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    font-family: 'Noto Serif TC', serif;
 }
 .kimono-plan-card-title {
+    font-family: 'Noto Serif TC', serif;
     font-size: 0.875rem;
     font-weight: 500;
     color: #544739;
@@ -3839,7 +3847,7 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
     position: relative;
     width: 100%;
     min-height: 60vh;
-    background-image: url('img/cover1.jpg');
+    background-image: url('img/封面照1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
