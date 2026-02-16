@@ -4080,8 +4080,8 @@
                                 <h3 style="font-size: 1.25rem; font-weight: 300; color: #544739; margin: 0 0 0.5rem 0; text-align: center; letter-spacing: 0.1em;">
                                     ${t('和服抹茶體驗')}
                                 </h3>
-                                <p style="font-size: clamp(0.65rem, 2.5vw, 0.875rem); color: #6b7280; margin: 0 0 1.5rem 0; text-align: center; white-space: nowrap;">
-                                    45-minute Kimono &amp; Matcha Experience
+                                <p style="font-size: 0.875rem; color: #6b7280; margin: 0 0 1.5rem 0; text-align: center; white-space: nowrap;">
+                                    45-minute Kimono & Matcha Experience
                                 </p>
                                 <div style="color: #374151; line-height: 1.8; font-size: ${currentLang === 'zh-TW' ? '0.95rem' : '0.85rem'}; margin-bottom: 2rem; flex-grow: 1;">
                                     <p style="margin-bottom: 1rem;">
@@ -5062,17 +5062,24 @@
             console.log('📝 開始渲染攝影方案...');
             const content = `
                 
-                <!-- Hero Section -->
+                <!-- Hero Section with Carousel and Overlay Text -->
                 <div class="photo-plans-hero-fullwidth">
-                    <div class="photo-plans-hero-container" style="position: relative;">
-                        <img src="img/photo_plan_cover2.jpg" alt="${t('京都八阪神社和服攝影 - NicoNico 專業隨拍服務')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                    <div class="slideshow-container photo-plans-hero-container">
+                        <div class="mySlides fade">
+                            <img src="img/photo_plan_cover1.jpg" alt="${t('京都清水寺和服攝影 - NicoNico 專業攝影方案')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                    </div>
+                        <div class="mySlides fade">
+                            <img src="img/photo_plan_cover2.jpg" alt="${t('京都八阪神社和服攝影 - NicoNico 專業隨拍服務')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                </div>
+                        <button class="prev" onclick="plusSlides(-1)"></button>
+                        <button class="next" onclick="plusSlides(1)"></button>
                         <!-- Overlay Text -->
                         <div class="photo-plans-hero-overlay">
                             <h1 class="photo-plans-hero-title">${t('攝影方案')}</h1>
                             <p class="photo-plans-hero-subtitle">Photography Plan</p>
                         </div>
+                        </div>
                     </div>
-                </div>
 
                 <!-- About Section -->
                 <div class="photo-plans-about-section" style="background: white; padding: 4rem 1.5rem; position: relative; overflow: hidden;">
