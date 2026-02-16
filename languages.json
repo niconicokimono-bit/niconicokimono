@@ -424,12 +424,12 @@
     "en": "Children's Kimono ¥5,500 (tax incl.) per set"
   },
   "女士小紋 ¥5,500 一套": {
-    "ja": "レディース小紋 ¥5,500（一式）",
-    "en": "Ladies' Komon ¥5,500 (tax incl.) per set"
+    "ja": "レディース小紋 ¥5,500（1セット）",
+    "en": "Ladies' Komon ¥5,500 (1 set)"
   },
   "男士和服 ¥6,600 一套": {
-    "ja": "メンズ着物 ¥6,600（一式）",
-    "en": "Men's Kimono ¥6,600 (tax incl.) per set"
+    "ja": "メンズ着物 ¥6,600（1セット）",
+    "en": "Men's Kimono ¥6,600 (1 set)"
   },
   "半幅腰帶 / 兵兒帶": {
     "ja": "半幅帯 / 兵児帯",
@@ -468,16 +468,16 @@
     "en": "Obi belt, tabi socks, zori sandals & bag"
   },
   "腰帶、髮型(女士)": {
-    "ja": "帯・ヘアセット（レディース）",
-    "en": "Obi belt & hairstyling (ladies)"
+    "ja": "帯・ヘアセット（女性）",
+    "en": "Obi belt & hair styling (ladies)"
   },
   "可免費租借拍攝道具（雨傘、扇子）": {
-    "ja": "撮影小物の無料レンタル（傘・扇子）",
+    "ja": "撮影小物（傘・扇子）無料レンタル",
     "en": "Free rental of photo props (umbrella, fan)"
   },
   "分趾襪、草履、手提包": {
     "ja": "足袋・草履・バッグ",
-    "en": "Tabi socks, zori sandals & bag"
+    "en": "Tabi socks, sandals & bag"
   },
   "浴衣一套": {
     "ja": "浴衣一式",
@@ -501,10 +501,10 @@
   },
   "當日17:30前需歸還": {
     "ja": "当日17:30までにご返却ください",
-    "en": "Return by 5:30 PM on the same day"
+    "en": "Return by 17:30 on the same day"
   },
   "免費隔日中午12:00前歸還（需付押金¥10,000）": {
-    "ja": "翌日12:00までの無料返却可（デポジット¥10,000）",
+    "ja": "翌日12:00までの返却無料（保証金¥10,000が必要）",
     "en": "Free next-day return by 12:00 PM (¥10,000 deposit required)"
   },
   "※當日17:30前需歸還": {
@@ -1903,7 +1903,6 @@
     "ja": "ソロ写真、カップル、ご家族での撮影など、どのようなシーンでも、お客様の最も輝く瞬間をレンズで捉えます。",
     "en": "Whether solo, couple, or family portraits — our lens captures your most genuine, radiant self."
   },
-
   "和服介紹": {
     "ja": "着物紹介",
     "en": "About"
@@ -1920,36 +1919,216 @@
     "ja": "事前に款式のご予約可能",
     "en": "Advance style reservation available"
   },
-  "當日17:30前需歸還": {
-    "ja": "当日17:30までにご返却ください",
-    "en": "Return by 17:30 on the same day"
-  },
-  "免費隔日中午12:00前歸還（需付押金¥10,000）": {
-    "ja": "翌日12:00までの返却無料（保証金¥10,000が必要）",
-    "en": "Free next-day return by 12:00 PM (¥10,000 deposit required)"
-  },
   "情侶套餐介紹": {
+    "zh-TW": "專為情侶設計的和服套餐，讓您與伴侶一同體驗傳統日式文化。款式皆為普通小紋，可補差價換款，詳情請詢問",
     "ja": "カップル専用の着物プラン。お二人で一緒に伝統的な日本文化を体験しましょう。款式はすべて普通小紋で、差額をお支払いいただければ他の款式に変更可能です。詳しくはお問い合わせください",
     "en": "A kimono plan designed for couples to experience traditional Japanese culture together. Includes standard Komon kimono; upgrades available for an additional fee. For details, please contact"
   },
-  "女士小紋 ¥5,500 一套": {
-    "ja": "レディース小紋 ¥5,500（1セット）",
-    "en": "Ladies' Komon ¥5,500 (1 set)"
+  "小紋套餐介紹": {
+    "zh-TW": "以細緻優雅的「全面花紋」為特色，適合各種場合。",
+    "ja": "全体に繊細で優雅な文様が施された小紋は、あらゆるシーンにぴったりです。",
+    "en": "Featuring elegant, all-over patterns, the Komon kimono is perfect for any occasion."
   },
-  "男士和服 ¥6,600 一套": {
-    "ja": "メンズ着物 ¥6,600（1セット）",
-    "en": "Men's Kimono ¥6,600 (1 set)"
+  "浴衣套餐介紹": {
+    "zh-TW": "夏季限定（6月至9月）！浴衣材質輕薄涼爽，花色繽紛，是參加夏日祭典與觀賞煙火的最佳選擇。",
+    "ja": "夏季限定（6月〜9月）！涼しくて軽い浴衣は、夏祭りや花火大会にぴったりです。",
+    "en": "Summer only (Jun–Sep)! Light and breezy yukata — perfect for festivals and fireworks."
   },
-  "腰帶、髮型(女士)": {
-    "ja": "帯・ヘアセット（女性）",
-    "en": "Obi belt & hair styling (ladies)"
+  "高級小紋套餐介紹": {
+    "zh-TW": "材質與設計更高級的小紋和服，適合追求更高質感與獨特花紋的您。",
+    "ja": "より上質な素材とデザインのプレミアム小紋。高品質と個性的な柄をお求めの方に。",
+    "en": "Premium Komon with superior fabrics and unique patterns for those seeking extra quality."
   },
-  "分趾襪、草履、手提包": {
-    "ja": "足袋・草履・バッグ",
-    "en": "Tabi socks, sandals & bag"
+  "蕾絲套餐介紹": {
+    "zh-TW": "近年來人氣爆棚的款式！結合日式傳統與西方蕾絲元素，打造獨一無二的甜美或復古風格。",
+    "ja": "近年大人気のスタイル！日本の伝統と西洋レースを融合した、唯一無二のスウィート＆レトロな装い。",
+    "en": "Trending style! A unique blend of Japanese tradition and Western lace for a sweet or retro look."
   },
-  "可免費租借拍攝道具（雨傘、扇子）": {
-    "ja": "撮影小物（傘・扇子）無料レンタル",
-    "en": "Free rental of photo props (umbrella, fan)"
+  "二尺袖套餐介紹": {
+    "zh-TW": "「二尺袖」是充滿活力的「中袖長」款式。花紋通常色彩鮮明、圖案大方，推薦給喜歡鮮豔色彩的您。",
+    "ja": "「二尺袖」は活力あふれる中振袖スタイル。鮮やかな色合いと大胆な柄が特徴で、華やかな装いをお好みの方におすすめです。",
+    "en": "Nishaku-sode features vibrant mid-length sleeves with bold patterns — recommended for those who love vivid colors."
+  },
+  "訪問服套餐介紹": {
+    "zh-TW": "「訪問服」是高雅的準禮服，不論已婚或未婚皆可穿著。適合參加朋友婚宴、派對、茶會等正式場合。本套餐包含一般訪問服與高級訪問服，使用頂級絲綢與手工刺繡的高級訪問服，無論是布料、染色或圖案，皆為上乘之選，適合最重要的時刻。",
+    "ja": "「訪問着」は上品な準礼装で、既婚・未婚を問わず着用できます。結婚式やパーティー、茶会などフォーマルな場にぴったり。本プランには一般訪問着とプレミアム訪問着が含まれ、最高級の絹と手刺繍を使用したプレミアム訪問着は、大切な場面にふさわしい逸品です。",
+    "en": "Houmongi is an elegant semi-formal kimono suitable for weddings, parties, and tea ceremonies. This plan includes both standard and premium options — the premium features top-grade silk and hand embroidery for your most special occasions."
+  },
+  "黑留袖套餐介紹": {
+    "zh-TW": "「黑留袖」是已婚女士的第一禮服，通常在婚禮等最莊重的场合穿著。圖案集中在下擺，展現極致的格調與品味。",
+    "ja": "「黒留袖」は既婚女性の第一礼装で、結婚式など最も格式高い場面で着用されます。裾に集中した文様が、最高の品格と気品を表現します。",
+    "en": "Kuro-tomesode is the most formal kimono for married women, worn at weddings and ceremonies. Patterns on the lower hem showcase ultimate elegance and refinement."
+  },
+  "振袖套餐介紹": {
+    "zh-TW": "「振袖」是未婚女士的最高級禮服，以華麗的長袖為特徵。適合畢業典禮、成人式或拍攝紀念照。",
+    "ja": "「振袖」は未婚女性の最高格の礼装で、華やかな長いお袖が特徴です。卒業式や成人式、記念撮影にぴったりのお着物です。",
+    "en": "Furisode is the most formal kimono for unmarried women, distinguished by its gorgeous long sleeves. Ideal for graduations, coming-of-age ceremonies, or commemorative photos."
+  },
+  "Kyoto": {
+    "ja": "京都",
+    "en": "Kyoto"
+  },
+  "Niconico kimono rental": {
+    "ja": "ニコニコ着物レンタル",
+    "en": "Niconico Kimono Rental"
+  },
+  "¥5,500": {
+    "ja": "¥5,500",
+    "en": "¥5,500"
+  },
+  "¥7,700": {
+    "ja": "¥7,700",
+    "en": "¥7,700"
+  },
+  "¥8,800": {
+    "ja": "¥8,800",
+    "en": "¥8,800"
+  },
+  "¥9,900~": {
+    "ja": "¥9,900~",
+    "en": "¥9,900~"
+  },
+  "¥11,000": {
+    "ja": "¥11,000",
+    "en": "¥11,000"
+  },
+  "¥11,000~": {
+    "ja": "¥11,000~",
+    "en": "¥11,000~"
+  },
+  "¥11,000~16,500": {
+    "ja": "¥11,000~16,500",
+    "en": "¥11,000~16,500"
+  },
+  "¥16,500": {
+    "ja": "¥16,500",
+    "en": "¥16,500"
+  },
+  "¥5,500~8,800": {
+    "ja": "¥5,500~8,800",
+    "en": "¥5,500~8,800"
+  },
+  "© 2025 Niconico Kimono Rental. All rights reserved.": {
+    "ja": "© 2025 Niconico Kimono Rental. All rights reserved.",
+    "en": "© 2025 Niconico Kimono Rental. All rights reserved."
+  },
+  "【女士】浴衣套餐（6月-9月）": {
+    "zh-TW": "【女士】浴衣套餐（6月-9月）",
+    "ja": "【レディース】浴衣プラン（6月〜9月）",
+    "en": "[Ladies] Yukata Plan (Jun–Sep)"
+  },
+  "【女士】高級訪問服套餐": {
+    "zh-TW": "【女士】高級訪問服套餐",
+    "ja": "【レディース】プレミアム訪問着プラン",
+    "en": "[Ladies] Premium Houmongi Plan"
+  },
+  "【男士】浴衣套餐（6月-9月）": {
+    "zh-TW": "【男士】浴衣套餐（6月-9月）",
+    "ja": "【メンズ】浴衣プラン（6月〜9月）",
+    "en": "[Men] Yukata Plan (Jun–Sep)"
+  },
+  "ニコニコ着物": {
+    "ja": "ニコニコ着物",
+    "en": "Niconico Kimono",
+    "zh-TW": "Niconico 和服"
+  },
+  "ニコニコ着物レンタル": {
+    "ja": "ニコニコ着物レンタル",
+    "en": "Niconico Kimono Rental",
+    "zh-TW": "Niconico 和服租借"
+  },
+  "京都で、あなたの物語を着物で彩る。": {
+    "ja": "京都で、<br>あなたの物語を<br>着物で彩る。",
+    "en": "In Kyoto,<br>color your story<br>with kimono.",
+    "zh-TW": "在京都，<br>用和服<br>為你的故事增添色彩。"
+  },
+  "京都で、ニコニコ笑顔の物語を": {
+    "ja": "京都で、<br>ニコニコ笑顔の<br>物語を",
+    "en": "In Kyoto,<br>a story of<br>smiling faces",
+    "zh-TW": "在京都，<br>綻放笑容的<br>故事"
+  },
+  "京都の伝統美を、心ゆくまで。": {
+    "ja": "京都の伝統美を、心ゆくまで。",
+    "en": "Experience the timeless beauty of Kyoto.",
+    "zh-TW": "盡情感受京都的傳統之美。"
+  },
+  "京都和服租借 Niconico Kyoto - ": {
+    "ja": "京都着物レンタル Niconico Kyoto - ",
+    "en": "Kyoto Kimono Rental Niconico Kyoto - "
+  },
+  "京都和服租借 Niconico Kyoto - 實穿參考": {
+    "ja": "京都着物レンタル Niconico Kyoto - お客様フォト",
+    "en": "Kyoto Kimono Rental Niconico Kyoto - Guest Photos"
+  },
+  "京都和服租借 Niconico Kyoto - 款式型錄": {
+    "ja": "京都着物レンタル Niconico Kyoto - スタイルカタログ",
+    "en": "Kyoto Kimono Rental Niconico Kyoto - Style Catalog"
+  },
+  "介紹": {
+    "ja": "紹介",
+    "en": "About"
+  },
+  "作品集": {
+    "ja": "ポートフォリオ",
+    "en": "Portfolio"
+  },
+  "實穿參考": {
+    "ja": "お客様フォト",
+    "en": "Guest Photos"
+  },
+  "小孩和服套餐介紹": {
+    "zh-TW": "專為小朋友設計的可愛和服體驗，尺寸從100cm到150cm皆可對應。",
+    "ja": "お子様向けの可愛い着物体験。100cm〜150cmまで対応しています。",
+    "en": "A cute kimono experience designed for kids, available in sizes 100cm to 150cm."
+  },
+  "攝影師": {
+    "ja": "カメラマン",
+    "en": "Photographer"
+  },
+  "方案": {
+    "ja": "プラン",
+    "en": "Plan"
+  },
+  "款式型錄": {
+    "ja": "スタイルカタログ",
+    "en": "Style Catalog"
+  },
+  "款式皆為普通小紋,到店後可換款補差價": {
+    "zh-TW": "款式皆為普通小紋,到店後可換款補差價",
+    "ja": "スタイルは小紋が基本。ご来店後に差額で変更可能",
+    "en": "Standard Komon style included; upgrade available in store for a fee"
+  },
+  "男士和服套餐介紹": {
+    "zh-TW": "男士和服一套，簡約俐落的設計，展現日式男子風範。",
+    "ja": "メンズ着物プラン。シンプルで洗練されたデザインで、日本の男性美を体現。",
+    "en": "Men's kimono plan featuring a clean, refined design that embodies Japanese masculine elegance."
+  },
+  "男士浴衣一套": {
+    "zh-TW": "男士浴衣一套",
+    "ja": "メンズ浴衣1セット",
+    "en": "Men's Yukata 1 set"
+  },
+  "男士浴衣套餐介紹": {
+    "zh-TW": "夏季限定的男士浴衣，涼爽舒適，適合夏日祭典。",
+    "ja": "夏季限定のメンズ浴衣。涼しく快適で、夏祭りにぴったり。",
+    "en": "Summer-only men's yukata — cool, comfortable, and perfect for summer festivals."
+  },
+  "袴套餐介紹": {
+    "zh-TW": "袴是日本傳統正裝，常見於畢業典禮、成人式等場合。搭配和服穿著，展現端莊氣質。",
+    "ja": "袴は日本の伝統的なフォーマルウェアで、卒業式や成人式でよく着用されます。着物と合わせて、品格ある装いに。",
+    "en": "Hakama is traditional Japanese formal wear, commonly seen at graduations and coming-of-age ceremonies. Paired with kimono for a dignified look."
+  },
+  "茶室體驗5": {
+    "ja": "茶室体験5",
+    "en": "Tea Room 5"
+  },
+  "金絲振袖相簿": {
+    "ja": "金糸振袖アルバム",
+    "en": "Gold Thread Furisode Album"
+  },
+  "高級武士服套餐介紹": {
+    "zh-TW": "高級武士服套餐，包含和服、羽織與袴的完整組合，展現武士風範。",
+    "ja": "プレミアム武士服プラン。着物・羽織・袴のフルセットで、武士の風格を体現。",
+    "en": "Premium Samurai plan with a full set of kimono, haori jacket, and hakama for an authentic samurai look."
   }
 }
