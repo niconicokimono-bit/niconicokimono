@@ -84,9 +84,9 @@
             document.body.dataset.lang = lang;
             // 動態更新 SEO 標題與描述
             const seoData = {
-                'zh-TW': { title: 'Niconico Kyoto｜京都和服租借・攝影方案 - 近清水寺、八阪神社', desc: 'Niconico Kyoto 提供專業京都和服租借與攝影服務。位於清水寺附近，提供小紋、蕾絲、振袖等多元套餐，價格 ¥4,400 起，內含專業髮型設計。立即預約體驗最道地的京都風情。' },
-                'ja': { title: 'Niconico Kyoto｜京都着物レンタル・撮影プラン - 清水寺・八坂神社近く', desc: '京都の着物レンタル専門店 Niconico Kyoto。清水寺・八坂神社近く、小紋・レース・振袖など多彩なプランをご用意。¥4,400～、ヘアセット込み。プロカメラマンによる撮影プランも。ご予約はこちら。' },
-                'en': { title: 'Niconico Kyoto｜Kimono Rental & Photography in Kyoto - Near Kiyomizu-dera', desc: 'Premium kimono rental in Kyoto near Kiyomizu-dera & Yasaka Shrine. Komon, lace, furisode & more from ¥4,400. Includes professional hair styling. Book your authentic Kyoto kimono experience today.' }
+                'zh-TW': { title: 'NicoNico Kimono | 京都和服租借：免費髮型設計，近清水寺、八阪神社', desc: '京都 NicoNico 和服租借，步行至清水寺、八阪神社僅需數分鐘。我們提供全套餐包含【免費專業髮型設計】、多樣化蕾絲和服與振袖，並提供專業攝影方案。讓您的京都散策從精緻造型開始！' },
+                'ja': { title: 'NicoNico Kimono | 京都着物レンタル：無料ヘアセット付き、清水寺・八坂神社近く', desc: '京都の着物レンタル専門店 NicoNico Kimono。清水寺・八坂神社まで徒歩数分。全プラン【無料プロヘアセット付き】、レース着物・振袖など多彩なプランをご用意。プロ撮影プランも。ご予約はこちら。' },
+                'en': { title: 'NicoNico Kimono | Kyoto Kimono Rental: Free Hair Styling, Near Kiyomizu-dera & Yasaka Shrine', desc: 'NicoNico Kimono rental in Kyoto, just minutes walk to Kiyomizu-dera & Yasaka Shrine. All plans include FREE professional hair styling. Lace kimono, furisode & more. Professional photography plans available. Start your Kyoto stroll in style!' }
             };
             const seo = seoData[lang] || seoData['zh-TW'];
             document.title = seo.title;
@@ -1216,25 +1216,25 @@
                     <div class="hero-right">
                         <div class="hero-image-grid">
                             <div class="hero-image-item">
-                                <img src="img/cover1.jpg" alt="${t('封面照1')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
+                                <img src="img/cover1.jpg" alt="${t('京都清水寺和服體驗 - NicoNico 免費髮型服務')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
                     </div>
                             <div class="hero-image-item">
-                                <img src="img/cover2.jpg" alt="${t('封面照2')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
+                                <img src="img/cover2.jpg" alt="${t('京都和服租借 - NicoNico Kimono 專業造型')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/cover3.png" alt="${t('封面照3')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
+                                <img src="img/cover3.png" alt="${t('京都清水寺和服體驗 - NicoNico 蕾絲和服振袖')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/cover4.jpg" alt="${t('封面照4')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
+                                <img src="img/cover4.jpg" alt="${t('京都八阪神社和服散策 - NicoNico Kimono')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
                             </div>
                         </div>
                     </div>
                     
                     <!-- 右側文字區 -->
                     <div class="hero-left">
-                        <!-- SEO H1：含「京都和服租借」關鍵字，視覺隱藏但搜尋引擎可讀 -->
+                        <!-- SEO H1：含核心關鍵字，視覺隱藏但搜尋引擎可讀 -->
                         <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-                            ${t('京都和服租借')} Niconico Kyoto｜${t('京都和服體驗・攝影・茶室')}
+                            ${t('京都清水寺旁，提供免費髮型設計的專業和服租借')} - NicoNico Kimono
                         </h1>
                         <div class="hero-main-text">
                             京都で、<br>
@@ -3854,7 +3854,7 @@
                                     <span class="si-card-label">KIMONO SELECT</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/reception_area.jpg" alt="${t('挑選和服')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
+                                    <img src="img/reception_area.jpg" alt="${t('NicoNico Kimono 鄰近八阪神社與清水寺 - 店內和服挑選區')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
                                 </div>
                                 <h3 class="si-card-title">${t('挑選和服')}</h3>
                                 <p class="si-card-desc">${t('數百套和服任您挑選，')}<br>${t('從日常小紋到華麗振袖，')}<br>${t('找到最適合您的京都之美。')}</p>
@@ -3893,7 +3893,7 @@
                                     <span class="si-card-label">FRIENDLY SERVICE</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/friendly_service.jpg" alt="${t('服務親切')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
+                                    <img src="img/friendly_service.jpg" alt="${t('NicoNico Kimono 鄰近八阪神社與清水寺 - 親切中日英三語服務')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
                             </div>
                                 <h3 class="si-card-title">${t('服務親切')}</h3>
                                 <p class="si-card-desc">${t('中文、英文、日文對應，')}<br>${t('耐心協助挑選搭配和服，')}<br>${t('讓您安心享受京都之旅。')}</p>
@@ -5063,10 +5063,10 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/photo_plan_cover1.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/photo_plan_cover1.jpg" alt="${t('京都清水寺和服攝影 - NicoNico 專業攝影方案')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                     </div>
                         <div class="mySlides fade">
-                            <img src="img/photo_plan_cover2.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/photo_plan_cover2.jpg" alt="${t('京都八阪神社和服攝影 - NicoNico 專業隨拍服務')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                 </div>
                         <button class="prev" onclick="plusSlides(-1)"></button>
                         <button class="next" onclick="plusSlides(1)"></button>
@@ -5105,6 +5105,9 @@
                                 <p style="margin-bottom: 1.5rem;">
                                     ${t('擅長日系風格攝影，以清新、自然、溫暖的色調，為您記錄下最美好的回憶。')}<br>
                                     ${t('無論是個人寫真、情侶照、還是家庭照，我們都能用鏡頭捕捉您最真實、最動人的一面。')}
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    ${t('專業攝影隨拍，記錄清水寺與八阪神社的美麗瞬間')}
                                 </p>
                                 <p style="margin-bottom: 1.5rem;">
                                     ${t('我們的攝影師擁有豐富的經驗，能夠以親切、耐心的方式引導您，讓您在拍攝過程中感到輕鬆自在。')}
@@ -6317,6 +6320,10 @@
             console.log('📝 開始渲染交通資訊...');
             const content = `
                 
+
+                <p style="text-align: center; font-size: 0.95rem; color: #544739; margin-bottom: 2.5rem; line-height: 2; font-family: 'Noto Serif TC', serif; letter-spacing: 0.05em;">
+                    ${t('距離清水寺、八阪神社、二年坂、三年坂步行皆可達，地理位置極佳')}
+                </p>
 
                 <div class="access-card">
                     <div class="access-card-title">${t('【祇園店】')}</div>
