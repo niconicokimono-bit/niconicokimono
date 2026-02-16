@@ -523,11 +523,11 @@
                         
                         <!-- 相簿封面 -->
                         <div class="mt-6 not-prose flex gap-4 flex-wrap">
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/米高級訪問服1.jpg', 'img/米高級訪問服2.jpg', 'img/米高級訪問服3.jpg', 'img/米高級訪問服5.jpg', 'img/米高級訪問服6.jpg', 'img/高級武士x高級訪問1.jpg'], 0)">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/米高級訪問服1.jpg', 'img/米高級訪問服2.jpg', 'img/米高級訪問服3.jpg', 'img/米高級訪問服5.jpg', 'img/米高級訪問服6.jpg'], 0)">
                                 <img src="img/米高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/蝴蝶訪問服1.jpg', 'img/蝴蝶訪問服2.jpg', 'img/蝴蝶訪問服3.jpg', 'img/蝴蝶訪問服4.jpg'], 0)">
-                                <img src="img/蝴蝶訪問服2.jpg" alt="蝴蝶訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/高級訪問服1.jpg', 'img/高級訪問服2.jpg', 'img/高級訪問服3.jpg', 'img/高級訪問服4.jpg', 'img/高級訪問服5.jpg'], 0)">
+                                <img src="img/高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
                         </div>
                     </div>
@@ -698,12 +698,12 @@
                             </div>
                             
                             <!-- 金絲振袖照片 - 紫金絲振袖相簿 -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/紫:金絲振袖1.jpg', 'img/紫:金絲振袖2.jpg', 'img/紫:金絲振袖3.jpg', 'img/紫:金絲振袖4.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/紫:金絲振袖1.jpg" alt="紫金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/Gallery_Gold_Furisode_241124_red1.jpg', 'img/Gallery_Gold_Furisode_241124_red2.jpg', 'img/Gallery_Gold_Furisode_241124_red3.jpg', 'img/Gallery_Gold_Furisode_241124_red4.jpg', 'img/Gallery_Gold_Furisode_241124_red5.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/Gallery_Gold_Furisode_241124_red1.jpg" alt="金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
                             </div>
-                            <!-- 金絲振袖照片 - 紅金絲振袖相簿 -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/紅:金絲振袖1.jpg', 'img/紅:金絲振袖2.jpg', 'img/紅:金絲振袖3.jpg', 'img/紅:金絲振袖4.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/紅:金絲振袖1.jpg" alt="紅金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
+                            <!-- 金絲振袖照片 - 藍金絲振袖相簿 -->
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="gold" onclick="openLightbox(['img/Gallery_Gold_Furisode_20260215_blue1.jpg', 'img/Gallery_Gold_Furisode_20260215_blue2.jpg', 'img/Gallery_Gold_Furisode_20260215_blue3.jpg', 'img/Gallery_Gold_Furisode_20260215_blue4.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/Gallery_Gold_Furisode_20260215_blue1.jpg" alt="金絲振袖相簿" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=金絲振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 白金振袖相簿（封面） -->
@@ -923,8 +923,8 @@
                     'img/情侶套餐2.jpg',
                     'img/情侶套餐3.jpg',
                     'img/情侶套餐4.jpg',
-                    'img/高級武士x高級訪問4.jpg',
-                    'img/高級武士x高級訪問2.jpg'
+                    'img/高級武士服1.jpg',
+                    'img/高級武士服2.jpg'
                 ]
             }
         ];
@@ -2149,7 +2149,7 @@
             
             const img = document.getElementById('tearoom-carousel-img');
             const dots = carousel.querySelectorAll('.tearoom-dot');
-            const tearoomImages = ['img/茶室1.jpg', 'img/茶室2.jpg', 'img/茶室3.jpg', 'img/茶室4.jpg'];
+            const tearoomImages = ['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'];
             let currentIndex = 0;
             
             // 點擊小點切換圖片
@@ -2442,7 +2442,7 @@
 
             // 特殊靜態照片（非 Plan_ 命名但仍需顯示的例外）
             const staticExtras = {
-                'plan11': [{ src: 'img/型錄:高級武士服.jpg', price: null, color: '其他' }]
+                'plan11': [{ src: 'img/高級武士服:照片庫.jpg', price: null, color: '其他' }]
             };
 
             // 合併動態 + 靜態照片
@@ -4510,7 +4510,7 @@
                             <!-- 10. 男士和服套餐 -->
                             <div class="top-12-card" data-gender="male" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/mens-kimono'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/男士和服:照片庫.jpg" alt="${t('男士和服套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/3b82f6/ffffff?text=男士和服套餐'">
+                                    <img src="img/Gallery_Mens_Kimono_250101_black.jpg" alt="${t('男士和服套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/3b82f6/ffffff?text=男士和服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4558,7 +4558,7 @@
                             <!-- 13. 小孩和服套餐 -->
                             <div class="top-12-card" data-gender="other" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/child'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/小孩和服:照片庫.jpg" alt="${t('小孩和服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/小孩和服:照片庫2.jpg'" onmouseout="this.src='img/小孩和服:照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/fbbf24/ffffff?text=小孩和服套餐'">
+                                    <img src="img/Gallery_Kids_240102_red1.jpg" alt="${t('小孩和服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Kids_240102_red2.jpg'" onmouseout="this.src='img/Gallery_Kids_240102_red1.jpg'" onerror="this.src='https://placehold.co/400x500/fbbf24/ffffff?text=小孩和服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
