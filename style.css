@@ -2,6 +2,9 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #FFFCF7; /* 淺米色 */
+}
+/* 將 overflow-x: hidden 移到 html 層級搭配 body，避免破壞 iOS Safari position: fixed */
+html {
     overflow-x: hidden;
 }
 /* 確保 #app 與 #content 不裁切滿版波浪（使用 visible 讓波浪可顯示） */
@@ -5566,11 +5569,11 @@ body[data-lang="en"] .kimono-plan-card {
 
 @media (max-width: 768px) {
     .mobile-booking-btn {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         z-index: 9999;
         background: #3d3d3d;
         color: #FFFCF7;
@@ -5587,6 +5590,10 @@ body[data-lang="en"] .kimono-plan-card {
         transition: background 0.3s ease;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
         font-family: 'Noto Serif TC', serif;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .mobile-booking-btn:hover,
     .mobile-booking-btn:active {

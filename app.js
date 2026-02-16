@@ -5066,7 +5066,7 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/photo_plan_cover1.jpg" alt="${t('京都清水寺和服攝影 - NicoNico 專業攝影方案')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/photo_plan_cover2.jpg" alt="${t('京都清水寺和服攝影 - NicoNico 專業攝影方案')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                     </div>
                         <!-- Overlay Text -->
                         <div class="photo-plans-hero-overlay">
