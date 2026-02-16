@@ -58,7 +58,7 @@ echo ""
 
 # ─── Step 4：推送到遠端 ─────────────────────────────
 echo -e "${YELLOW}[4/4]${NC} ☁️  推送到 GitHub..."
-git push
+git push -u origin main 2>/dev/null || git push
 echo ""
 
 # ─── 完成 ───────────────────────────────────────────
