@@ -2442,7 +2442,7 @@
 
             // 特殊靜態照片（非 Plan_ 命名但仍需顯示的例外）
             const staticExtras = {
-                'plan11': [{ src: 'img/高級武士服_照片庫.jpg', price: null, color: '其他' }]
+                'plan11': []
             };
 
             // 合併動態 + 靜態照片
