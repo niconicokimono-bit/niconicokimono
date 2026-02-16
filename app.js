@@ -94,6 +94,9 @@
             if (metaDesc) metaDesc.setAttribute('content', seo.desc);
             // 更新語言切換按鈕狀態
             updateLangToggleUI();
+            // 更新手機版預約按鈕文字
+            const mobileBookingText = document.getElementById('mobile-booking-text');
+            if (mobileBookingText) mobileBookingText.textContent = t('點 我 預 約');
             // 翻譯靜態 HTML 組件
             translateStaticComponents();
             // 標記為語系切換中（避免 render 函數滾動到頂部）
