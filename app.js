@@ -4077,7 +4077,7 @@
                                 <div style="font-size: 4rem; font-weight: 300; color: #544739; line-height: 1; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif;">
                                     C
                                 </div>
-                                <h3 style="font-size: 1.25rem; font-weight: 300; color: #544739; margin: 0 0 0.5rem 0; text-align: center; letter-spacing: 0.1em;">
+                                <h3 style="font-size: 1.25rem; font-weight: 300; color: #544739; margin: 0 0 0.5rem 0; text-align: center; letter-spacing: 0.1em; white-space: nowrap;">
                                     ${t('和服抹茶體驗')}
                                 </h3>
                                 <p style="font-size: 0.875rem; color: #6b7280; margin: 0 0 1.5rem 0; text-align: center; white-space: nowrap;">
@@ -5068,11 +5068,6 @@
                         <div class="mySlides fade">
                             <img src="img/photo_plan_cover1.jpg" alt="${t('京都清水寺和服攝影 - NicoNico 專業攝影方案')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                     </div>
-                        <div class="mySlides fade">
-                            <img src="img/photo_plan_cover2.jpg" alt="${t('京都八阪神社和服攝影 - NicoNico 專業隨拍服務')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
-                </div>
-                        <button class="prev" onclick="plusSlides(-1)"></button>
-                        <button class="next" onclick="plusSlides(1)"></button>
                         <!-- Overlay Text -->
                         <div class="photo-plans-hero-overlay">
                             <h1 class="photo-plans-hero-title">${t('攝影方案')}</h1>
