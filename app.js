@@ -880,7 +880,9 @@
                 `,
                 image: "img/Gallery_Kids_240102_red1.jpg",
                 price: '¥5,500（含稅）',
-                photos: []
+                photos: [
+                    'img/Plan_Kids_250101_pink.jpg'
+                ]
             },
             
             // --- 情侶方案 ---
@@ -4558,7 +4560,7 @@
                             <!-- 13. 小孩和服套餐 -->
                             <div class="top-12-card" data-gender="other" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/child'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/Gallery_Kids_240102_red1.jpg" alt="${t('小孩和服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Kids_240102_red2.jpg'" onmouseout="this.src='img/Gallery_Kids_240102_red1.jpg'" onerror="this.src='https://placehold.co/400x500/fbbf24/ffffff?text=小孩和服套餐'">
+                                    <img src="img/Plan_Kids_250101_pink.jpg" alt="${t('小孩和服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Kids_240102_red1.jpg'" onmouseout="this.src='img/Plan_Kids_250101_pink.jpg'" onerror="this.src='https://placehold.co/400x500/fbbf24/ffffff?text=小孩和服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
