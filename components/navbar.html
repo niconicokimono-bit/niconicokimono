@@ -63,30 +63,72 @@
             <a href="#" onclick="event.preventDefault(); openBookingModal(); return false;" class="nav-link text-sm uppercase tracking-wider transition duration-200" style="font-weight: 400; letter-spacing: 0.1em; color: #859A93; cursor: pointer; white-space: nowrap;" data-i18n="點我預約">點我預約</a>
         </div>
         
-        <!-- Social Media Icons: IG → LINE → 小紅書，統一莫蘭迪綠 36px -->
+        <!-- Social Media Icons (Desktop) -->
         <div class="hidden lg:flex items-center" style="gap: 0.6rem; flex-shrink: 0; margin-left: 2rem;">
-            <!-- Instagram -->
             <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <!-- LINE -->
             <a href="https://line.me/ti/p/@922yxvwt" target="_blank" rel="noopener noreferrer" aria-label="LINE" style="width: 36px; height: 36px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.028 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-                </svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.028 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
             </a>
-            <!-- 小紅書 -->
             <a href="https://xhslink.com/m/3AIAkChZ3Hd" target="_blank" rel="noopener noreferrer" aria-label="小紅書" style="width: 36px; height: 36px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                <svg width="18" height="18" viewBox="0 0 200 200" fill="white">
-                    <path d="M160 20H40C29 20 20 29 20 40V160C20 171 29 180 40 180H160C171 180 180 171 180 160V40C180 29 171 20 160 20ZM130 155H70C65 155 61 151 61 146V54C61 49 65 45 70 45H130C135 45 139 49 139 54V146C139 151 135 155 130 155Z"/>
-                    <line x1="100" y1="65" x2="100" y2="135" stroke="#879A94" stroke-width="10" stroke-linecap="round"/>
-                    <line x1="80" y1="100" x2="120" y2="100" stroke="#879A94" stroke-width="10" stroke-linecap="round"/>
-                </svg>
+                <svg width="18" height="18" viewBox="0 0 200 200" fill="white"><path d="M160 20H40C29 20 20 29 20 40V160C20 171 29 180 40 180H160C171 180 180 171 180 160V40C180 29 171 20 160 20ZM130 155H70C65 155 61 151 61 146V54C61 49 65 45 70 45H130C135 45 139 49 139 54V146C139 151 135 155 130 155Z"/><line x1="100" y1="65" x2="100" y2="135" stroke="#879A94" stroke-width="10" stroke-linecap="round"/><line x1="80" y1="100" x2="120" y2="100" stroke="#879A94" stroke-width="10" stroke-linecap="round"/></svg>
             </a>
         </div>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button id="mobile-menu-toggle" class="lg:hidden" onclick="toggleMobileMenu()" style="margin-left: auto; background: none; border: none; padding: 0.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0;">
+            <svg id="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#544739" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg id="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#544739" stroke-width="2" stroke-linecap="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
     </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" style="display: none; background: #FFFCF7; border-top: 1px solid rgba(84,71,57,0.1); max-height: calc(100vh - 56px); overflow-y: auto;">
+        <div style="padding: 1rem 2rem 2rem;">
+            <a href="#home" class="mobile-menu-link" data-i18n="首頁" onclick="closeMobileMenu()">首頁</a>
+            <a href="#store-intro" class="mobile-menu-link" data-i18n="店內介紹" onclick="closeMobileMenu()">店內介紹</a>
+            <a href="#kimono-plans" class="mobile-menu-link" data-i18n="和服方案" onclick="closeMobileMenu()">和服方案</a>
+            <a href="#hairstyle" class="mobile-menu-link" data-i18n="髮型設計" onclick="closeMobileMenu()">髮型設計</a>
+            <a href="#photo-plans" class="mobile-menu-link" data-i18n="攝影方案" onclick="closeMobileMenu()">攝影方案</a>
+            <a href="#tea-room" class="mobile-menu-link" data-i18n="茶室" onclick="closeMobileMenu()">茶室</a>
+            <a href="#reviews" class="mobile-menu-link" data-i18n="照片庫" onclick="closeMobileMenu()">照片庫</a>
+            <a href="#faq" class="mobile-menu-link" data-i18n="常見問題" onclick="closeMobileMenu()">常見問題</a>
+            <a href="#access" class="mobile-menu-link" data-i18n="交通資訊" onclick="closeMobileMenu()">交通資訊</a>
+            <a href="#" class="mobile-menu-link" style="color: #859A93; font-weight: 600;" data-i18n="點我預約" onclick="event.preventDefault(); closeMobileMenu(); if(typeof openBookingModal === 'function') openBookingModal();">點我預約</a>
+            <!-- Social Icons -->
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(84,71,57,0.1);">
+                <a href="https://www.instagram.com/Niconico_kimono" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://line.me/ti/p/@922yxvwt" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.028 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                </a>
+                <a href="https://xhslink.com/m/3AIAkChZ3Hd" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; border-radius: 50%; background: #879A94; display: flex; align-items: center; justify-content: center;">
+                    <svg width="18" height="18" viewBox="0 0 200 200" fill="white"><path d="M160 20H40C29 20 20 29 20 40V160C20 171 29 180 40 180H160C171 180 180 171 180 160V40C180 29 171 20 160 20ZM130 155H70C65 155 61 151 61 146V54C61 49 65 45 70 45H130C135 45 139 49 139 54V146C139 151 135 155 130 155Z"/><line x1="100" y1="65" x2="100" y2="135" stroke="#879A94" stroke-width="10" stroke-linecap="round"/><line x1="80" y1="100" x2="120" y2="100" stroke="#879A94" stroke-width="10" stroke-linecap="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
+
+<script>
+function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var hamburger = document.getElementById('hamburger-icon');
+    var closeIcon = document.getElementById('close-icon');
+    if (!menu) return;
+    var isOpen = menu.style.display !== 'none';
+    menu.style.display = isOpen ? 'none' : 'block';
+    if (hamburger) hamburger.style.display = isOpen ? 'block' : 'none';
+    if (closeIcon) closeIcon.style.display = isOpen ? 'none' : 'block';
+}
+function closeMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var hamburger = document.getElementById('hamburger-icon');
+    var closeIcon = document.getElementById('close-icon');
+    if (menu) menu.style.display = 'none';
+    if (hamburger) hamburger.style.display = 'block';
+    if (closeIcon) closeIcon.style.display = 'none';
+}
+</script>
