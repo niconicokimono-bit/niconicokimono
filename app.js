@@ -2442,7 +2442,7 @@
 
             // 特殊靜態照片（非 Plan_ 命名但仍需顯示的例外）
             const staticExtras = {
-                'plan11': [{ src: 'img/高級武士服:照片庫.jpg', price: null, color: '其他' }]
+                'plan11': [{ src: 'img/高級武士服_照片庫.jpg', price: null, color: '其他' }]
             };
 
             // 合併動態 + 靜態照片
@@ -3111,14 +3111,14 @@
             // 圖示對應圖片路徑（透明背景 PNG）
             function getIconImage(iconType) {
                 const iconImages = {
-                    obi: 'img/和服方案:腰帶.png',
-                    hair: 'img/和服方案:髮型.png',
-                    underwear: 'img/和服方案:內搭.png',
-                    nagajuban: 'img/和服方案:長乳半.png',
-                    zori: 'img/和服方案:木屐.png',
-                    bag: 'img/和服方案:包包.png',
-                    tabi: 'img/和服方案:分趾襪.png',
-                    hairpin: 'img/和服方案:髮飾.png'
+                    obi: 'img/和服方案_腰帶.png',
+                    hair: 'img/和服方案_髮型.png',
+                    underwear: 'img/和服方案_內搭.png',
+                    nagajuban: 'img/和服方案_長乳半.png',
+                    zori: 'img/和服方案_木屐.png',
+                    bag: 'img/和服方案_包包.png',
+                    tabi: 'img/和服方案_分趾襪.png',
+                    hairpin: 'img/和服方案_髮飾.png'
                 };
                 return iconImages[iconType] || '';
             }
@@ -3601,14 +3601,14 @@
         function renderHairstyle() {
             // 八種免費髮型
             const freeStyles = [
-                { id: '01', name: '日系盤髮', nameEn: 'Japanese Updo', category: 'classic', image: 'img/免費髮型:日系盤髮.jpg', size: 'tall' },
-                { id: '02', name: '日系盤髮2', nameEn: 'Japanese Updo II', category: 'classic', image: 'img/免費髮型:日系盤髮2.jpg', size: 'square' },
-                { id: '03', name: '日系低盤', nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/免費髮型:日系低盤.jpg', size: 'wide' },
-                { id: '04', name: '雙馬尾造型', nameEn: 'Twin Tails', category: 'cute', image: 'img/免費髮型:雙馬尾造型.jpg', size: 'tall' },
-                { id: '05', name: '日系馬尾', nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/免費髮型:日系馬尾.jpg', size: 'square' },
-                { id: '06', name: '短髮盤髮', nameEn: 'Short Hair Updo', category: 'classic', image: 'img/免費髮型:短髮盤髮.jpg', size: 'square' },
-                { id: '07', name: '假髮造型', nameEn: 'Wig Style', category: 'classic', image: 'img/免費髮型:假髮造型.jpg', size: 'wide' },
-                { id: '08', name: '丸子造型', nameEn: 'Bun Style', category: 'cute', image: 'img/免費髮型:丸子造型.jpg', size: 'tall' }
+                { id: '01', name: '日系盤髮', nameEn: 'Japanese Updo', category: 'classic', image: 'img/免費髮型_日系盤髮.jpg', size: 'tall' },
+                { id: '02', name: '日系盤髮2', nameEn: 'Japanese Updo II', category: 'classic', image: 'img/免費髮型_日系盤髮2.jpg', size: 'square' },
+                { id: '03', name: '日系低盤', nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/免費髮型_日系低盤.jpg', size: 'wide' },
+                { id: '04', name: '雙馬尾造型', nameEn: 'Twin Tails', category: 'cute', image: 'img/免費髮型_雙馬尾造型.jpg', size: 'tall' },
+                { id: '05', name: '日系馬尾', nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/免費髮型_日系馬尾.jpg', size: 'square' },
+                { id: '06', name: '短髮盤髮', nameEn: 'Short Hair Updo', category: 'classic', image: 'img/免費髮型_短髮盤髮.jpg', size: 'square' },
+                { id: '07', name: '假髮造型', nameEn: 'Wig Style', category: 'classic', image: 'img/免費髮型_假髮造型.jpg', size: 'wide' },
+                { id: '08', name: '丸子造型', nameEn: 'Bun Style', category: 'cute', image: 'img/免費髮型_丸子造型.jpg', size: 'tall' }
             ];
             
             const content = `
@@ -4382,7 +4382,7 @@
                             <!-- 1. 小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/小紋:照片庫.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/小紋:照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
+                                    <img src="img/小紋_照片庫.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4398,7 +4398,7 @@
                             <!-- 2. 高級小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/高級小紋:照片庫.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級小紋:照片庫2.jpg'" onmouseout="this.src='img/高級小紋:照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
+                                    <img src="img/高級小紋_照片庫.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級小紋_照片庫2.jpg'" onmouseout="this.src='img/高級小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4414,7 +4414,7 @@
                             <!-- 3. 蕾絲套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/lace'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/蕾絲:照片庫.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/蕾絲:照片庫2.jpg'" onmouseout="this.src='img/蕾絲:照片庫.jpg'" onerror="this.src='img/白蕾絲3.jpg'">
+                                    <img src="img/蕾絲_照片庫.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/蕾絲_照片庫2.jpg'" onmouseout="this.src='img/蕾絲_照片庫.jpg'" onerror="this.src='img/白蕾絲3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4430,7 +4430,7 @@
                             <!-- 4. 二尺袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/nishaku-sode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/二尺袖:照片庫.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/二尺袖:照片庫2.jpg'" onmouseout="this.src='img/二尺袖:照片庫.jpg'" onerror="this.src='img/粉二尺袖3.jpg'">
+                                    <img src="img/二尺袖_照片庫.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/二尺袖_照片庫2.jpg'" onmouseout="this.src='img/二尺袖_照片庫.jpg'" onerror="this.src='img/粉二尺袖3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4446,7 +4446,7 @@
                             <!-- 5. 訪問服套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/houmongi'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/訪問服:照片庫.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/訪問服:照片庫2.jpg'" onmouseout="this.src='img/訪問服:照片庫.jpg'" onerror="this.src='img/高級訪問服1.jpg'">
+                                    <img src="img/訪問服_照片庫.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/訪問服_照片庫2.jpg'" onmouseout="this.src='img/訪問服_照片庫.jpg'" onerror="this.src='img/高級訪問服1.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4462,7 +4462,7 @@
                             <!-- 6. 黑留袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/kurotomesode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/黑留袖:照片庫.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/黑留袖:照片庫2.jpg'" onmouseout="this.src='img/黑留袖:照片庫.jpg'" onerror="this.src='img/kimi5.jpg'">
+                                    <img src="img/黑留袖_照片庫.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/黑留袖_照片庫2.jpg'" onmouseout="this.src='img/黑留袖_照片庫.jpg'" onerror="this.src='img/kimi5.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4478,7 +4478,7 @@
                             <!-- 8. 袴套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/hakama'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/袴:照片庫.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
+                                    <img src="img/袴_照片庫.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4494,7 +4494,7 @@
                             <!-- 9. 振袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/furisode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/振袖:照片庫.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/振袖:照片庫2.jpg'" onmouseout="this.src='img/振袖:照片庫.jpg'" onerror="this.src='img/白精品振袖1.jpg'">
+                                    <img src="img/振袖_照片庫.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/振袖_照片庫2.jpg'" onmouseout="this.src='img/振袖_照片庫.jpg'" onerror="this.src='img/白精品振袖1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4526,7 +4526,7 @@
                             <!-- 11. 高級武士服套餐 -->
                             <div class="top-12-card" data-gender="male" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-samurai'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/高級武士服:照片庫.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級武士服:照片庫2.jpg'" onmouseout="this.src='img/高級武士服:照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
+                                    <img src="img/高級武士服_照片庫.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級武士服_照片庫2.jpg'" onmouseout="this.src='img/高級武士服_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4542,7 +4542,7 @@
                             <!-- 12. 情侶套餐 -->
                             <div class="top-12-card" data-gender="other" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/couple'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/情侶套餐:照片庫.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/情侶套餐:照片庫2.jpg'" onmouseout="this.src='img/情侶套餐:照片庫.jpg'" onerror="this.src='img/情侶套餐1.jpg'">
+                                    <img src="img/情侶套餐_照片庫.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/情侶套餐_照片庫2.jpg'" onmouseout="this.src='img/情侶套餐_照片庫.jpg'" onerror="this.src='img/情侶套餐1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -5227,8 +5227,8 @@
                         <div class="photo-portfolio-carousel-container" style="position: relative; margin-bottom: 3rem;">
                             <div class="photo-portfolio-carousel" style="display: flex; overflow-x: auto; gap: 2rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
                                 <!-- 原有作品 -->
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/藍二尺袖 1.jpg', 'img/藍二尺袖 2.jpg', 'img/藍二尺袖 3.jpg', 'img/藍二尺袖 4.jpg'], 0)">
-                                    <img src="img/藍二尺袖 1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/藍二尺袖1.jpg', 'img/藍二尺袖2.jpg', 'img/藍二尺袖3.jpg', 'img/藍二尺袖4.jpg'], 0)">
+                                    <img src="img/藍二尺袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
                                 </div>
                                 <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/白精品振袖1.jpg', 'img/白精品振袖2.jpg', 'img/白精品振袖3.jpg'], 0)">
                                     <img src="img/白精品振袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">

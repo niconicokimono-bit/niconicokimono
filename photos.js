@@ -5,15 +5,13 @@
  * 更新方式：新增照片到 img/ 後，在終端機執行：
  *   node update-photos.js
  *
- * 最後更新：2026/2/16 下午1:42:47
+ * 最後更新：2026/2/16 下午1:52:36
  * 實穿照 (Gallery_): 199 張
  * 型錄照 (Plan_):    45 張
  */
 
 // ====== 實穿照（Gallery_方案_日期_顏色.jpg）======
 window.galleryFiles = [
-    "Gallery_ Premium_Houmongi_260101_green1.jpg",
-    "Gallery_ Premium_Houmongi_260101_green2.jpg",
     "Gallery_Couple_251018_1.jpg",
     "Gallery_Couple_251018_2.jpg",
     "Gallery_Couple_260201_black.jpg",
@@ -188,6 +186,8 @@ window.galleryFiles = [
     "Gallery_Premium_Houmongi_240102_white2.jpg",
     "Gallery_Premium_Houmongi_250101_beige.jpg",
     "Gallery_Premium_Houmongi_251018_beige.jpg",
+    "Gallery_Premium_Houmongi_260101_green1.jpg",
+    "Gallery_Premium_Houmongi_260101_green2.jpg",
     "Gallery_Premium_Komon_260101_beige.jpg",
     "Gallery_Premium_Komon_260101_blue.jpg",
     "Gallery_Premium_Komon_260101_other1.jpg",
@@ -215,7 +215,7 @@ window.galleryFiles = [
 
 // ====== 型錄照（Plan_方案_顏色.jpg）======
 window.planFiles = [
-    "Plan_ Gold_Furisode_blue.jpg",
+    "Plan_Gold_Furisode_blue.jpg",
     "Plan_Gold_Furisode_orange.jpg",
     "Plan_Gold_Furisode_purple1.jpg",
     "Plan_Gold_Furisode_red1.jpg",
