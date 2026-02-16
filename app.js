@@ -168,7 +168,7 @@
          * 將本地 img/ 路徑轉為 Cloudinary CDN URL
          * 當 Cloudinary 未啟用時，原樣回傳本地路徑
          *
-         * @param {string} localPath - 本地路徑（如 'img/封面照1.jpg'）
+         * @param {string} localPath - 本地路徑（如 'img/cover1.jpg'）
          * @param {object} opts
          * @param {number} opts.width   - 指定寬度（px）
          * @param {number} opts.height  - 指定高度（px）
@@ -322,12 +322,12 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/封面照3.png',
+                image: 'img/cover3.png',
                 price: '¥5,500（含稅）',
                 photos: [
-                    'img/封面照1.jpg',
-                    'img/封面照2.jpg',
-                    'img/封面照4.jpg'
+                    'img/cover1.jpg',
+                    'img/cover2.jpg',
+                    'img/cover4.jpg'
                 ]
             },
             /* { // 浴衣 - 已註解
@@ -400,11 +400,11 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/封面照5.jpg',
+                image: 'img/cover5.jpg',
                 price: '¥7,700（含稅）',
                 photos: [
-                    'img/封面照6.jpg',
-                    'img/封面照7.jpg'
+                    'img/cover6.jpg',
+                    'img/cover7.jpg'
                 ]
             },
             {
@@ -440,13 +440,13 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/白蕾絲3.jpg',
+                image: 'img/white_lace3.jpg',
                 price: '¥7,700（含稅）',
                 photos: [
-                    'img/白蕾絲1.jpg',
-                    'img/白蕾絲3.jpg',
-                    'img/白蕾絲4.jpg',
-                    'img/白蕾絲5.jpg'
+                    'img/gallery_lace2.jpg',
+                    'img/white_lace3.jpg',
+                    'img/white_lace4.jpg',
+                    'img/white_lace5.jpg'
                 ]
             },
             {
@@ -482,11 +482,11 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/粉二尺袖3.jpg',
+                image: 'img/pink_nishaku3.jpg',
                 price: '¥8,800（含稅）',
                 photos: [
-                    'img/粉二尺袖4.jpg',
-                    'img/粉二尺袖5.jpg'
+                    'img/pink_nishaku4.jpg',
+                    'img/pink_nishaku5.jpg'
                 ]
             },
             {
@@ -523,22 +523,22 @@
                         
                         <!-- 相簿封面 -->
                         <div class="mt-6 not-prose flex gap-4 flex-wrap">
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/米高級訪問服1.jpg', 'img/米高級訪問服2.jpg', 'img/米高級訪問服3.jpg', 'img/米高級訪問服5.jpg', 'img/米高級訪問服6.jpg'], 0)">
-                                <img src="img/米高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/beige_premium_houmongi1.jpg', 'img/beige_premium_houmongi2.jpg', 'img/beige_premium_houmongi3.jpg', 'img/beige_premium_houmongi5.jpg', 'img/beige_premium_houmongi6.jpg'], 0)">
+                                <img src="img/beige_premium_houmongi1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
-                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/高級訪問服1.jpg', 'img/高級訪問服2.jpg', 'img/高級訪問服3.jpg', 'img/高級訪問服4.jpg', 'img/高級訪問服5.jpg'], 0)">
-                                <img src="img/高級訪問服1.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
+                            <div class="gallery-cover inline-block rounded-lg overflow-hidden shadow-md cursor-pointer" style="width: 300px; height: 400px;" onclick="openLightbox(['img/cover8.jpg', 'img/premium_houmongi2.jpg', 'img/premium_houmongi3.jpg', 'img/premium_houmongi4.jpg', 'img/cover9.jpg'], 0)">
+                                <img src="img/cover8.jpg" alt="高級訪問服相簿" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/300x400/6b21a8/ffffff?text=高級訪問服'">
                             </div>
                         </div>
                     </div>
                 `,
-                image: 'img/高級訪問服1.jpg',
+                image: 'img/cover8.jpg',
                 price: '¥11,000~16,500（含稅）',
                 photos: [
-                    'img/高級訪問服2.jpg',
-                    'img/高級訪問服3.jpg',
-                    'img/高級訪問服4.jpg',
-                    'img/高級訪問服5.jpg'
+                    'img/premium_houmongi2.jpg',
+                    'img/premium_houmongi3.jpg',
+                    'img/premium_houmongi4.jpg',
+                    'img/cover9.jpg'
                 ]
             },
             {
@@ -707,27 +707,27 @@
                             </div>
                             
                             <!-- 高訂振袖照片 - 白金振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/白金振袖4.jpg', 'img/白金振袖1.jpg', 'img/白金振袖2.jpg', 'img/白金振袖3.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/白金振袖4.jpg" alt="白金振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/white_gold_furisode4.jpg', 'img/white_gold_furisode1.jpg', 'img/white_gold_furisode2.jpg', 'img/white_gold_furisode3.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/white_gold_furisode4.jpg" alt="白金振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 綠振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/綠振袖1.jpg', 'img/綠振袖3.jpg', 'img/綠振袖4.jpg', 'img/綠振袖6.jpg'], 0)" style="cursor: pointer;">
-                                <img src="img/綠振袖1.jpg" alt="綠振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/green_furisode1.jpg', 'img/green_furisode3.jpg', 'img/green_furisode4.jpg', 'img/green_furisode6.jpg'], 0)" style="cursor: pointer;">
+                                <img src="img/green_furisode1.jpg" alt="綠振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                             
                             <!-- 高訂振袖照片 - 紫高訂振袖相簿（封面） -->
-                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/紫高訂振袖2.jpg', 'img/紫高訂振袖3.jpg', 'img/紫高訂振袖4.jpg', 'img/紫高訂振袖5.jpg', 'img/紫高訂振袖6.jpg', 'img/紫高訂振袖7.jpg', 'img/紫高訂振袖8.jpg'], 4)" style="cursor: pointer;">
-                                <img src="img/紫高訂振袖6.jpg" alt="紫高訂振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
+                            <div class="furisode-photo rounded-lg overflow-hidden shadow-md gallery-cover" data-furisode-type="couture" onclick="openLightbox(['img/purple_luxury_furisode2.jpg', 'img/purple_luxury_furisode3.jpg', 'img/purple_luxury_furisode4.jpg', 'img/purple_luxury_furisode5.jpg', 'img/purple_luxury_furisode6.jpg', 'img/purple_luxury_furisode7.jpg', 'img/purple_luxury_furisode8.jpg'], 4)" style="cursor: pointer;">
+                                <img src="img/purple_luxury_furisode6.jpg" alt="紫高訂振袖相簿" onerror="this.src='https://placehold.co/400x500/a21caf/ffffff?text=高訂振袖'">
                             </div>
                         </div>
                     </div>
                 `,
-                image: 'img/白精品振袖1.jpg',
+                image: 'img/white_standard_furisode1.jpg',
                 price: '¥9,900~27,500（含稅）',
                 photos: [
-                    'img/白精品振袖2.jpg',
-                    'img/白精品振袖3.jpg'
+                    'img/white_standard_furisode2.jpg',
+                    'img/white_standard_furisode3.jpg'
                 ]
             },
             
@@ -837,13 +837,13 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/高級武士服1.jpg',
+                image: 'img/samurai1.jpg',
                 price: '¥16,500（含稅）',
                 photos: [
-                    'img/高級武士服2.jpg',
-                    'img/高級武士服3.jpg',
-                    'img/高級武士服4.jpg',
-                    'img/高級武士服5.jpg'
+                    'img/samurai2.jpg',
+                    'img/samurai3.jpg',
+                    'img/samurai4.jpg',
+                    'img/samurai5.jpg'
                 ]
             },
             
@@ -917,14 +917,14 @@
                         </h2>
                     </div>
                 `,
-                image: 'img/情侶套餐1.jpg',
+                image: 'img/couple1.jpg',
                 price: '¥9,900~（含稅）',
                 photos: [
-                    'img/情侶套餐2.jpg',
-                    'img/情侶套餐3.jpg',
-                    'img/情侶套餐4.jpg',
-                    'img/高級武士服1.jpg',
-                    'img/高級武士服2.jpg'
+                    'img/couple2.jpg',
+                    'img/gallery_couple2.jpg',
+                    'img/couple4.jpg',
+                    'img/samurai1.jpg',
+                    'img/samurai2.jpg'
                 ]
             }
         ];
@@ -1216,16 +1216,16 @@
                     <div class="hero-right">
                         <div class="hero-image-grid">
                             <div class="hero-image-item">
-                                <img src="img/封面照1.jpg" alt="${t('封面照1')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
+                                <img src="img/cover1.jpg" alt="${t('封面照1')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照1'))}';">
                     </div>
                             <div class="hero-image-item">
-                                <img src="img/封面照2.jpg" alt="${t('封面照2')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
+                                <img src="img/cover2.jpg" alt="${t('封面照2')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照2'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/封面照3.png" alt="${t('封面照3')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
+                                <img src="img/cover3.png" alt="${t('封面照3')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照3'))}';">
                             </div>
                             <div class="hero-image-item">
-                                <img src="img/封面照4.jpg" alt="${t('封面照4')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
+                                <img src="img/cover4.jpg" alt="${t('封面照4')}" onerror="this.src='https://placehold.co/600x800/F5E6D3/000000?text=${encodeURIComponent(t('封面照4'))}';">
                             </div>
                         </div>
                     </div>
@@ -1299,7 +1299,7 @@
                                 <!-- Events 1 -->
                                 <div style="cursor: pointer;" onclick="location.hash='tea-room';">
                                     <div style="aspect-ratio: 4/3; overflow: hidden; margin-bottom: 0.75rem;">
-                                        <img src="img/茶室體驗封面.jpg" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/茶室1.jpg'">
+                                        <img src="img/tearoom_cover.jpg" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/tearoom1.jpg'">
                                     </div>
                                     <p style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.25rem;">${t('茶室體驗')}</p>
                                     <p style="font-size: 0.875rem; color: #544739; font-weight: 500;">${t('抹茶體驗 NEW OPEN')}</p>
@@ -1307,7 +1307,7 @@
                                 <!-- Events 2 -->
                                 <div style="cursor: pointer;" onclick="location.hash='photo-plans';">
                                     <div style="aspect-ratio: 4/3; overflow: hidden; margin-bottom: 0.75rem;">
-                                        <img src="img/近景1.jpg" alt="${t('攝影方案')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/封面照1.jpg'">
+                                        <img src="img/closeup1.jpg" alt="${t('攝影方案')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='img/cover1.jpg'">
                                     </div>
                                     <p style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.25rem;">${t('攝影服務')}</p>
                                     <p style="font-size: 0.875rem; color: #544739; font-weight: 500;">${t('專業外拍方案')}</p>
@@ -1333,9 +1333,9 @@
                             <!-- 1. 蕾絲 -->
                             <div class="top5-card" onclick="location.hash='plan/plan3';" data-card="lace">
                                 <div class="top5-card-image">
-                                    <img src="img/TOP5蕾絲1.jpg" alt="${t('蕾絲套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
-                                    <img src="img/TOP5蕾絲2.jpg" alt="${t('蕾絲套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
-                                    <img src="img/TOP5蕾絲3.jpg" alt="${t('蕾絲套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/top5_lace1.jpg" alt="${t('蕾絲套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/top5_lace2.jpg" alt="${t('蕾絲套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
+                                    <img src="img/top5_lace3.jpg" alt="${t('蕾絲套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/ec4899/ffffff?text=蕾絲套餐';">
                                     <div class="top5-badge">1</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1354,9 +1354,9 @@
                             <!-- 2. 訪問服 -->
                             <div class="top5-card" onclick="location.hash='plan/plan5';" data-card="houmongi">
                                 <div class="top5-card-image">
-                                    <img src="img/TOP5訪問服1.jpg" alt="${t('訪問服套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
-                                    <img src="img/TOP5訪問服2.jpg" alt="${t('訪問服套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
-                                    <img src="img/TOP5訪問服3.jpg" alt="${t('訪問服套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/top5_houmongi1.jpg" alt="${t('訪問服套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/top5_houmongi2.jpg" alt="${t('訪問服套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
+                                    <img src="img/top5_houmongi3.jpg" alt="${t('訪問服套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/34d399/ffffff?text=訪問服套餐';">
                                     <div class="top5-badge">2</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1375,9 +1375,9 @@
                             <!-- 3. 高定振袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan8';" data-card="furisode">
                                 <div class="top5-card-image">
-                                    <img src="img/TOP5高定振袖1.jpg" alt="${t('高定振袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
-                                    <img src="img/TOP5高定振袖2.jpg" alt="${t('高定振袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
-                                    <img src="img/TOP5高定振袖3.jpg" alt="${t('高定振袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/top5_luxury_furisode1.jpg" alt="${t('高定振袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/top5_luxury_furisode2.jpg" alt="${t('高定振袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
+                                    <img src="img/top5_luxury_furisode3.jpg" alt="${t('高定振袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/d946ef/ffffff?text=高定振袖套餐';">
                                     <div class="top5-badge">3</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1396,9 +1396,9 @@
                             <!-- 4. 黑留袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan7';" data-card="tomesode">
                                 <div class="top5-card-image">
-                                    <img src="img/TOP5黑留袖1.jpg" alt="${t('黑留袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
-                                    <img src="img/TOP5黑留袖2.jpg" alt="${t('黑留袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
-                                    <img src="img/TOP5黑留袖3.jpg" alt="${t('黑留袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/top5_kurotomesode1.jpg" alt="${t('黑留袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/top5_kurotomesode2.jpg" alt="${t('黑留袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
+                                    <img src="img/top5_kurotomesode3.jpg" alt="${t('黑留袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/1c1917/ffffff?text=黑留袖套餐';">
                                     <div class="top5-badge">4</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1417,9 +1417,9 @@
                             <!-- 5. 二尺袖 -->
                             <div class="top5-card" onclick="location.hash='plan/plan4';" data-card="nishaku">
                                 <div class="top5-card-image">
-                                    <img src="img/TOP5二尺袖1.jpg" alt="${t('二尺袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
-                                    <img src="img/TOP5二尺袖2.jpg" alt="${t('二尺袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
-                                    <img src="img/TOP5二尺袖3.jpg" alt="${t('二尺袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/top5_nishaku1.jpg" alt="${t('二尺袖套餐')}" class="img-main show" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/top5_nishaku2.jpg" alt="${t('二尺袖套餐')}" class="img-hover" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
+                                    <img src="img/top5_nishaku3.jpg" alt="${t('二尺袖套餐')}" class="img-hover-2" onerror="this.src='https://placehold.co/300x360/86198f/ffffff?text=二尺袖套餐';">
                                     <div class="top5-badge">5</div>
                                 </div>
                                 <div class="top5-card-info">
@@ -1712,17 +1712,17 @@
                         <div class="magazine-photos-layout">
                             <!-- 封面照5 - 左側大圖 -->
                             <div class="magazine-photo-item magazine-photo-5">
-                                <img src="img/封面照5.jpg" alt="${t('封面照5')}" onerror="this.src='https://placehold.co/700x500/F5E6D3/000000?text=${encodeURIComponent(t('封面照5'))}';">
+                                <img src="img/cover5.jpg" alt="${t('封面照5')}" onerror="this.src='https://placehold.co/700x500/F5E6D3/000000?text=${encodeURIComponent(t('封面照5'))}';">
                             </div>
 
                             <!-- 封面照6 - 右上小圖 -->
                             <div class="magazine-photo-item magazine-photo-6">
-                                <img src="img/封面照6.jpg" alt="${t('封面照6')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照6'))}';">
+                                <img src="img/cover6.jpg" alt="${t('封面照6')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照6'))}';">
                             </div>
 
                             <!-- 封面照7 - 右下小圖 -->
                             <div class="magazine-photo-item magazine-photo-7">
-                                <img src="img/封面照7.jpg" alt="${t('封面照7')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照7'))}';">
+                                <img src="img/cover7.jpg" alt="${t('封面照7')}" onerror="this.src='https://placehold.co/500x240/F5E6D3/000000?text=${encodeURIComponent(t('封面照7'))}';">
 
                             </div>
                         
@@ -2091,7 +2091,7 @@
                         <div class="our-service-grid">
                             <a href="#kimono-plans" class="our-service-card group" onclick="location.hash='kimono-plans'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/近景1.jpg" alt="${t('和服租借')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=KIMONO'">
+                                    <img src="img/closeup1.jpg" alt="${t('和服租借')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=KIMONO'">
                             </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">KIMONO RENTAL</h3>
@@ -2101,7 +2101,7 @@
                             </a>
                             <a href="#photo-plans" class="our-service-card group" onclick="location.hash='photo-plans'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/攝影封.jpg" alt="${t('專業攝影')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=PHOTO'">
+                                    <img src="img/photo_cover_small.jpg" alt="${t('專業攝影')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=PHOTO'">
                         </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">PHOTOGRAPHY</h3>
@@ -2111,7 +2111,7 @@
                             </a>
                             <a href="#tea-room" class="our-service-card group" onclick="location.hash='tea-room'; return false;">
                                 <div class="our-service-img-wrap">
-                                    <img src="img/茶室體驗2.jpg" alt="${t('茶室體驗')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=TEA'">
+                                    <img src="img/tearoom_experience2.jpg" alt="${t('茶室體驗')}" class="our-service-img" onerror="this.src='https://placehold.co/600x600/F5E6D3/544739?text=TEA'">
                         </div>
                                 <div class="our-service-overlay">
                                     <h3 class="our-service-card-title">TEA ROOM</h3>
@@ -2149,7 +2149,7 @@
             
             const img = document.getElementById('tearoom-carousel-img');
             const dots = carousel.querySelectorAll('.tearoom-dot');
-            const tearoomImages = ['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'];
+            const tearoomImages = ['img/matcha_experience.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'];
             let currentIndex = 0;
             
             // 點擊小點切換圖片
@@ -3111,14 +3111,14 @@
             // 圖示對應圖片路徑（透明背景 PNG）
             function getIconImage(iconType) {
                 const iconImages = {
-                    obi: 'img/和服方案_腰帶.png',
-                    hair: 'img/和服方案_髮型.png',
-                    underwear: 'img/和服方案_內搭.png',
-                    nagajuban: 'img/和服方案_長乳半.png',
-                    zori: 'img/和服方案_木屐.png',
-                    bag: 'img/和服方案_包包.png',
-                    tabi: 'img/和服方案_分趾襪.png',
-                    hairpin: 'img/和服方案_髮飾.png'
+                    obi: 'img/plan_obi.png',
+                    hair: 'img/plan_hairstyle.png',
+                    underwear: 'img/plan_innerwear.png',
+                    nagajuban: 'img/plan_nagajuban.png',
+                    zori: 'img/plan_geta.png',
+                    bag: 'img/plan_bag.png',
+                    tabi: 'img/plan_tabi.png',
+                    hairpin: 'img/plan_hair_accessory.png'
                 };
                 return iconImages[iconType] || '';
             }
@@ -3601,14 +3601,14 @@
         function renderHairstyle() {
             // 八種免費髮型
             const freeStyles = [
-                { id: '01', name: '日系盤髮', nameEn: 'Japanese Updo', category: 'classic', image: 'img/免費髮型_日系盤髮.jpg', size: 'tall' },
-                { id: '02', name: '日系盤髮2', nameEn: 'Japanese Updo II', category: 'classic', image: 'img/免費髮型_日系盤髮2.jpg', size: 'square' },
-                { id: '03', name: '日系低盤', nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/免費髮型_日系低盤.jpg', size: 'wide' },
-                { id: '04', name: '雙馬尾造型', nameEn: 'Twin Tails', category: 'cute', image: 'img/免費髮型_雙馬尾造型.jpg', size: 'tall' },
-                { id: '05', name: '日系馬尾', nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/免費髮型_日系馬尾.jpg', size: 'square' },
-                { id: '06', name: '短髮盤髮', nameEn: 'Short Hair Updo', category: 'classic', image: 'img/免費髮型_短髮盤髮.jpg', size: 'square' },
-                { id: '07', name: '假髮造型', nameEn: 'Wig Style', category: 'classic', image: 'img/免費髮型_假髮造型.jpg', size: 'wide' },
-                { id: '08', name: '丸子造型', nameEn: 'Bun Style', category: 'cute', image: 'img/免費髮型_丸子造型.jpg', size: 'tall' }
+                { id: '01', name: '日系盤髮', nameEn: 'Japanese Updo', category: 'classic', image: 'img/hairstyle_updo.jpg', size: 'tall' },
+                { id: '02', name: '日系盤髮2', nameEn: 'Japanese Updo II', category: 'classic', image: 'img/hairstyle_updo2.jpg', size: 'square' },
+                { id: '03', name: '日系低盤', nameEn: 'Japanese Low Bun', category: 'classic', image: 'img/hairstyle_low_updo.jpg', size: 'wide' },
+                { id: '04', name: '雙馬尾造型', nameEn: 'Twin Tails', category: 'cute', image: 'img/hairstyle_twin_tails.jpg', size: 'tall' },
+                { id: '05', name: '日系馬尾', nameEn: 'Japanese Ponytail', category: 'cute', image: 'img/hairstyle_ponytail.jpg', size: 'square' },
+                { id: '06', name: '短髮盤髮', nameEn: 'Short Hair Updo', category: 'classic', image: 'img/hairstyle_short_updo.jpg', size: 'square' },
+                { id: '07', name: '假髮造型', nameEn: 'Wig Style', category: 'classic', image: 'img/hairstyle_wig.jpg', size: 'wide' },
+                { id: '08', name: '丸子造型', nameEn: 'Bun Style', category: 'cute', image: 'img/hairstyle_bun.jpg', size: 'tall' }
             ];
             
             const content = `
@@ -3636,7 +3636,7 @@
                                 <p class="hair-mag-hero-sub">ニコニコ着物</p>
                             </div>
                             <div class="hair-mag-hero-img">
-                                <img src="img/髮型設計封面.jpg" alt="${t('髮型設計')}" onerror="this.style.opacity='0'">
+                                <img src="img/hairstyle_cover.jpg" alt="${t('髮型設計')}" onerror="this.style.opacity='0'">
                             </div>
                         </div>
                         <!-- 右側：文字介紹 -->
@@ -3702,7 +3702,7 @@
                                 </ul>
                 </div>
                             <div class="hair-mag-premium-img" onclick="openHairLightbox(8)">
-                                <img src="img/收費髮型1.jpg" alt="${t('新日本髮')}" onerror="this.src='https://placehold.co/500x650/F9F8F6/444444?text=${encodeURIComponent(t('新日本髮'))}'">
+                                <img src="img/premium_hairstyle1.jpg" alt="${t('新日本髮')}" onerror="this.src='https://placehold.co/500x650/F9F8F6/444444?text=${encodeURIComponent(t('新日本髮'))}'">
                         </div>
                     </div>
                     </section>
@@ -3738,7 +3738,7 @@
             // 設定 Lightbox 圖片
             window.hairLightboxImages = [
                 ...freeStyles.map(s => s.image),
-                'img/收費髮型1.jpg'
+                'img/premium_hairstyle1.jpg'
             ];
             
             getContentDiv().innerHTML = content + getFooterHTML();
@@ -3854,7 +3854,7 @@
                                     <span class="si-card-label">KIMONO SELECT</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/寬敞明亮接待區.jpg" alt="${t('挑選和服')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
+                                    <img src="img/reception_area.jpg" alt="${t('挑選和服')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=01'">
                                 </div>
                                 <h3 class="si-card-title">${t('挑選和服')}</h3>
                                 <p class="si-card-desc">${t('數百套和服任您挑選，')}<br>${t('從日常小紋到華麗振袖，')}<br>${t('找到最適合您的京都之美。')}</p>
@@ -3867,7 +3867,7 @@
                                     <span class="si-card-label">STYLING AREA</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/店內10.jpg" alt="${t('髮型著裝區')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=02'">
+                                    <img src="img/shop_interior10.jpg" alt="${t('髮型著裝區')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=02'">
                                 </div>
                                 <h3 class="si-card-title">${t('髮型著裝區')}</h3>
                                 <p class="si-card-desc">${t('專業造型師為您打造')}<br>${t('精緻日式髮型，')}<br>${t('多款免費造型可供選擇。')}</p>
@@ -3880,7 +3880,7 @@
                                     <span class="si-card-label">TEA ROOM</span>
                                     </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/茶室1.jpg" alt="${t('茶室租借')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=03'">
+                                    <img src="img/tearoom1.jpg" alt="${t('茶室租借')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=03'">
                                 </div>
                                 <h3 class="si-card-title">${t('茶室租借')}</h3>
                                 <p class="si-card-desc">${t('附設傳統日式茶室，')}<br>${t('可拍照留念或搭配抹茶體驗，')}<br>${t('在靜謐空間中留下珍貴回憶。')}</p>
@@ -3893,7 +3893,7 @@
                                     <span class="si-card-label">FRIENDLY SERVICE</span>
                                 </div>
                                 <div class="si-card-img-wrap">
-                                    <img src="img/服務親切.jpg" alt="${t('服務親切')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
+                                    <img src="img/friendly_service.jpg" alt="${t('服務親切')}" class="si-card-img" onerror="this.src='https://placehold.co/400x500/F5E6D3/544739?text=04'">
                             </div>
                                 <h3 class="si-card-title">${t('服務親切')}</h3>
                                 <p class="si-card-desc">${t('中文、英文、日文對應，')}<br>${t('耐心協助挑選搭配和服，')}<br>${t('讓您安心享受京都之旅。')}</p>
@@ -3954,7 +3954,7 @@
                                 <p class="hair-mag-hero-sub">ニコニコ着物</p>
                     </div>
                             <div class="hair-mag-hero-img" style="max-width: 720px;">
-                                <img src="img/茶室體驗封面2.jpg" alt="${t('茶室')}" onerror="this.style.opacity='0'">
+                                <img src="img/tearoom_cover2.jpg" alt="${t('茶室')}" onerror="this.style.opacity='0'">
                     </div>
                         </div>
                         <!-- 右側：文字介紹 -->
@@ -3985,7 +3985,7 @@
                                 <div style="position: absolute; top: 0; left: -20px; width: 160px; height: 120%; background: #BFC7B3; z-index: -1;"></div>
                                 
                                 <!-- 主圖片（自然呈現，不被色塊推擠） -->
-                                <img src="img/茶室體驗5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
+                                <img src="img/tearoom_experience5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
                     </div>
                             
                             <!-- 右側：文字區塊（垂直置中） -->
@@ -4038,7 +4038,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                         </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/茶室體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/tearoom_experience.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4064,7 +4064,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                         </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/抹茶體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/tearoom_experience1.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4090,7 +4090,7 @@
                                         <li style="margin-bottom: 0.5rem;">● <strong>${t('人數：')}</strong> ${t('1~4人')}</li>
                 </ul>
                                 </div>
-                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/和服抹茶體驗.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
+                                <a href="javascript:void(0)" onclick="openPhotoPlanSample('img/kimono_matcha.jpg')" style="display: block; padding: 0.75rem 2rem; border: 1px solid #544739; color: #544739; text-decoration: none; text-align: center; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; margin-top: auto;" onmouseover="this.style.backgroundColor='#544739'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#544739';">
                                     ${t('查看照片')}
                                 </a>
                             </div>
@@ -4124,16 +4124,16 @@
                             <!-- 四張小圖網格（3:4 比例，錯落排列） -->
                             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; position: relative; z-index: 1; padding-bottom: 24px;" class="tea-room-images-grid">
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; transform: translateY(-20px);">
-                                    <img src="img/茶室體驗1.jpg" alt="${t('茶室體驗1')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 0); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗1'))}'">
+                                    <img src="img/matcha_experience.jpg" alt="${t('茶室體驗1')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/matcha_experience.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 0); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗1'))}'">
                             </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;">
-                                    <img src="img/茶室體驗2.jpg" alt="${t('茶室體驗2')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 1); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗2'))}'">
+                                    <img src="img/tearoom_experience2.jpg" alt="${t('茶室體驗2')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/matcha_experience.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 1); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗2'))}'">
                             </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; transform: translateY(-20px);">
-                                    <img src="img/茶室體驗3.jpg" alt="${t('茶室體驗3')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 2); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗3'))}'">
+                                    <img src="img/tearoom_experience3.jpg" alt="${t('茶室體驗3')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/matcha_experience.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 2); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗3'))}'">
                                 </div>
                                 <div class="tea-img-item" style="position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;">
-                                    <img src="img/茶室體驗4.jpg" alt="${t('茶室體驗4')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/茶室體驗1.jpg', 'img/茶室體驗2.jpg', 'img/茶室體驗3.jpg', 'img/茶室體驗4.jpg'], 3); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗4'))}'">
+                                    <img src="img/tearoom_experience4.jpg" alt="${t('茶室體驗4')}" style="width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer;" onclick="if(typeof window.openLightbox === 'function') { window.openLightbox(['img/matcha_experience.jpg', 'img/tearoom_experience2.jpg', 'img/tearoom_experience3.jpg', 'img/tearoom_experience4.jpg'], 3); }" onerror="this.src='https://placehold.co/300x400/ecfdf5/10b981?text=${encodeURIComponent(t('茶室體驗4'))}'">
                                 </div>
                             </div>
                         </div>
@@ -4308,7 +4308,7 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/照片庫封面.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
+                            <img src="img/gallery_cover.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
                     </div>
                         <!-- 極淡黑色漸層（確保文字清晰） -->
                         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.08) 60%, rgba(0,0,0,0.3) 100%); z-index: 3; pointer-events: none;"></div>
@@ -4382,7 +4382,7 @@
                             <!-- 1. 小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/小紋_照片庫.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
+                                    <img src="img/gallery_komon.jpg" alt="${t('小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/Gallery_Komon_260101_green4.jpg'" onmouseout="this.src='img/gallery_komon.jpg'" onerror="this.src='https://placehold.co/400x500/d946ef/ffffff?text=小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4398,7 +4398,7 @@
                             <!-- 2. 高級小紋套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-komon'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/高級小紋_照片庫.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級小紋_照片庫2.jpg'" onmouseout="this.src='img/高級小紋_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
+                                    <img src="img/gallery_premium_komon.jpg" alt="${t('高級小紋套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_premium_komon2.jpg'" onmouseout="this.src='img/gallery_premium_komon.jpg'" onerror="this.src='https://placehold.co/400x500/c026d3/ffffff?text=高級小紋套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4414,7 +4414,7 @@
                             <!-- 3. 蕾絲套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/lace'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/蕾絲_照片庫.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/蕾絲_照片庫2.jpg'" onmouseout="this.src='img/蕾絲_照片庫.jpg'" onerror="this.src='img/白蕾絲3.jpg'">
+                                    <img src="img/gallery_lace.jpg" alt="${t('蕾絲套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/white_lace1.jpg'" onmouseout="this.src='img/gallery_lace.jpg'" onerror="this.src='img/white_lace3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4430,7 +4430,7 @@
                             <!-- 4. 二尺袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/nishaku-sode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/二尺袖_照片庫.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/二尺袖_照片庫2.jpg'" onmouseout="this.src='img/二尺袖_照片庫.jpg'" onerror="this.src='img/粉二尺袖3.jpg'">
+                                    <img src="img/gallery_nishaku.jpg" alt="${t('二尺袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_nishaku2.jpg'" onmouseout="this.src='img/gallery_nishaku.jpg'" onerror="this.src='img/pink_nishaku3.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4446,7 +4446,7 @@
                             <!-- 5. 訪問服套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/houmongi'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/訪問服_照片庫.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/訪問服_照片庫2.jpg'" onmouseout="this.src='img/訪問服_照片庫.jpg'" onerror="this.src='img/高級訪問服1.jpg'">
+                                    <img src="img/gallery_houmongi.jpg" alt="${t('訪問服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_houmongi2.jpg'" onmouseout="this.src='img/gallery_houmongi.jpg'" onerror="this.src='img/cover8.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4462,7 +4462,7 @@
                             <!-- 6. 黑留袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/kurotomesode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/黑留袖_照片庫.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/黑留袖_照片庫2.jpg'" onmouseout="this.src='img/黑留袖_照片庫.jpg'" onerror="this.src='img/kimi5.jpg'">
+                                    <img src="img/gallery_kurotomesode.jpg" alt="${t('黑留袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/photo_carousel3.jpg'" onmouseout="this.src='img/gallery_kurotomesode.jpg'" onerror="this.src='img/kimi5.jpg'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4478,7 +4478,7 @@
                             <!-- 8. 袴套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/hakama'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/袴_照片庫.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
+                                    <img src="img/gallery_hakama.jpg" alt="${t('袴套餐')}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/400x500/8b5cf6/ffffff?text=袴套餐'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4494,7 +4494,7 @@
                             <!-- 9. 振袖套餐 -->
                             <div class="top-12-card" data-gender="female" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/furisode'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/振袖_照片庫.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/振袖_照片庫2.jpg'" onmouseout="this.src='img/振袖_照片庫.jpg'" onerror="this.src='img/白精品振袖1.jpg'">
+                                    <img src="img/gallery_furisode.jpg" alt="${t('振袖套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_furisode2.jpg'" onmouseout="this.src='img/gallery_furisode.jpg'" onerror="this.src='img/white_standard_furisode1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4526,7 +4526,7 @@
                             <!-- 11. 高級武士服套餐 -->
                             <div class="top-12-card" data-gender="male" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/premium-samurai'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/高級武士服_照片庫.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/高級武士服_照片庫2.jpg'" onmouseout="this.src='img/高級武士服_照片庫.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
+                                    <img src="img/gallery_samurai.jpg" alt="${t('高級武士服套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/gallery_samurai2.jpg'" onmouseout="this.src='img/gallery_samurai.jpg'" onerror="this.src='https://placehold.co/400x500/2563eb/ffffff?text=高級武士服套餐'">
                         </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -4542,7 +4542,7 @@
                             <!-- 12. 情侶套餐 -->
                             <div class="top-12-card" data-gender="other" style="position: relative; background: white; border-radius: 0; overflow: hidden; cursor: pointer;" onclick="window.location.hash='#album/couple'">
                                 <div style="position: relative; width: 100%; aspect-ratio: 3/4; background: #f5f5f5; overflow: hidden;">
-                                    <img src="img/情侶套餐_照片庫.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/情侶套餐_照片庫2.jpg'" onmouseout="this.src='img/情侶套餐_照片庫.jpg'" onerror="this.src='img/情侶套餐1.jpg'">
+                                    <img src="img/gallery_couple.jpg" alt="${t('情侶套餐')}" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;" onmouseover="this.src='img/photo_carousel2.jpg'" onmouseout="this.src='img/gallery_couple.jpg'" onerror="this.src='img/couple1.jpg'">
                     </div>
                                 <div style="padding: 1.5rem; background: white;">
                                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -5063,10 +5063,10 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/攝影方案封面1.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/photo_plan_cover1.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                     </div>
                         <div class="mySlides fade">
-                            <img src="img/攝影方案封面2.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
+                            <img src="img/photo_plan_cover2.jpg" alt="${t('攝影方案封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=${encodeURIComponent(t('攝影方案封面'))}'">
                 </div>
                         <button class="prev" onclick="plusSlides(-1)"></button>
                         <button class="next" onclick="plusSlides(1)"></button>
@@ -5084,7 +5084,7 @@
                     <div class="photo-plans-about-container" style="display: grid; grid-template-columns: 0.8fr 2.2fr; gap: 10rem; align-items: stretch; max-width: 1200px; margin: 0 auto;">
                         <!-- Left: Image -->
                         <div class="photo-plans-about-image" style="display: flex; align-items: stretch; justify-content: flex-start;">
-                            <img src="img/介紹.jpg" alt="${t('攝影介紹')}" class="photo-plans-about-img" style="width: 100%; height: 100%; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" onerror="this.src='https://placehold.co/600x800/cccccc/000000?text=介紹'">
+                            <img src="img/intro.jpg" alt="${t('攝影介紹')}" class="photo-plans-about-img" style="width: 100%; height: 100%; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" onerror="this.src='https://placehold.co/600x800/cccccc/000000?text=介紹'">
                 </div>
 
                         <!-- Right: Text Content -->
@@ -5227,14 +5227,14 @@
                         <div class="photo-portfolio-carousel-container" style="position: relative; margin-bottom: 3rem;">
                             <div class="photo-portfolio-carousel" style="display: flex; overflow-x: auto; gap: 2rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
                                 <!-- 原有作品 -->
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/藍二尺袖1.jpg', 'img/藍二尺袖2.jpg', 'img/藍二尺袖3.jpg', 'img/藍二尺袖4.jpg'], 0)">
-                                    <img src="img/藍二尺袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/blue_nishaku1.jpg', 'img/blue_nishaku2.jpg', 'img/blue_nishaku3.jpg', 'img/blue_nishaku4.jpg'], 0)">
+                                    <img src="img/blue_nishaku1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
                             </div>
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/白精品振袖1.jpg', 'img/白精品振袖2.jpg', 'img/白精品振袖3.jpg'], 0)">
-                                    <img src="img/白精品振袖1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/white_standard_furisode1.jpg', 'img/white_standard_furisode2.jpg', 'img/white_standard_furisode3.jpg'], 0)">
+                                    <img src="img/white_standard_furisode1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
                         </div>
-                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/高級訪問服1.jpg', 'img/高級訪問服2.jpg', 'img/高級訪問服3.jpg', 'img/高級訪問服4.jpg', 'img/高級訪問服5.jpg'], 0)">
-                                    <img src="img/高級訪問服1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                                <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/cover8.jpg', 'img/premium_houmongi2.jpg', 'img/premium_houmongi3.jpg', 'img/premium_houmongi4.jpg', 'img/cover9.jpg'], 0)">
+                                    <img src="img/cover8.jpg" alt="${t('攝影作品')}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
                         </div>
                                 <!-- Gallery 作品集 -->
                                 <div class="photo-portfolio-square" style="aspect-ratio: 1 / 1; overflow: hidden; cursor: pointer; flex-shrink: 0; width: calc(33.333% - 1.33rem); scroll-snap-align: start;" onclick="openLightbox(['img/Gallery_Lace_240731_white1.jpg', 'img/Gallery_Lace_240731_white2.jpg', 'img/Gallery_Lace_240731_white3.jpg', 'img/Gallery_Lace_240731_white4.jpg', 'img/Gallery_Lace_240731_white5.jpg'], 0)">
@@ -5336,28 +5336,28 @@
                         <div class="photo-bottom-carousel-container" style="position: relative; overflow: hidden; width: 100%; margin: 0; padding: 0;">
                                 <div class="photo-bottom-carousel-track" style="display: flex; transition: transform 0.5s ease-in-out; will-change: transform; width: 100%; margin: 0; padding: 0;">
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel1.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播2.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/couple3.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播3.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/gallery_kurotomesode2.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播4.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel4.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播5.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel5.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播6.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel6.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播7.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel7.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                                 <div class="photo-bottom-carousel-item" style="flex-shrink: 0; width: calc(100% / 6); padding: 0; margin: 0;">
-                                    <img src="img/攝影底下輪播8.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
+                                    <img src="img/photo_carousel8.jpg" alt="${t('攝影作品')}" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0; display: block; margin: 0; padding: 0;">
                                 </div>
                             </div>
                         </div>
