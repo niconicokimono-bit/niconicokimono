@@ -5650,3 +5650,125 @@ body[data-lang="en"] .kimono-plan-card {
         padding-bottom: 4rem !important;
     }
 }
+
+/* ====== 茶室頁面 - 響應式排版 ====== */
+.tea-room-section-01-flex {
+    min-height: 600px;
+}
+
+@media (max-width: 1024px) {
+    .tea-room-section-01-flex {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+        min-height: auto !important;
+    }
+    .tea-room-section-01-image {
+        width: 100% !important;
+        max-width: 500px !important;
+        flex: 0 0 auto !important;
+        margin: 0 auto !important;
+    }
+    .tea-room-green-deco {
+        width: 100px !important;
+        left: -10px !important;
+    }
+    .tea-room-section-01-text {
+        width: 100% !important;
+        flex: 0 0 auto !important;
+        padding: 0 !important;
+    }
+    .tea-room-section-01-text p {
+        white-space: normal !important;
+    }
+    .tea-room-section-01-text > div {
+        max-width: 100% !important;
+    }
+    .tea-room-plans-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+    }
+    .tea-room-section-01-wrapper {
+        padding: 4rem 0 !important;
+    }
+    .tea-room-plans-wrapper {
+        padding: 4rem 0 !important;
+    }
+    .tea-room-images-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    .tea-room-kimono-title {
+        font-size: 3rem !important;
+        letter-spacing: 0.4em !important;
+    }
+    .tea-room-section-02-number {
+        font-size: 2.5rem !important;
+    }
+    .tea-room-section-02-wrapper {
+        padding: 4rem 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .tea-room-section-01-wrapper {
+        padding: 2.5rem 0 !important;
+    }
+    .tea-room-plans-wrapper {
+        padding: 2.5rem 0 !important;
+    }
+    .tea-room-section-02-wrapper {
+        padding: 2.5rem 0 !important;
+    }
+    .tea-room-section-01-flex {
+        gap: 1.5rem !important;
+    }
+    .tea-room-section-01-image {
+        max-width: 100% !important;
+        width: 100% !important;
+        aspect-ratio: 3/4 !important;
+    }
+    .tea-room-green-deco {
+        width: 60px !important;
+        left: -5px !important;
+        height: 110% !important;
+    }
+    .tea-room-section-01-text p {
+        white-space: normal !important;
+        font-size: 0.875rem !important;
+        line-height: 2.2 !important;
+    }
+    .tea-room-plans-grid {
+        max-width: 100% !important;
+    }
+    .tea-room-plans-grid > div {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .tea-room-kimono-title {
+        font-size: 2.2rem !important;
+        letter-spacing: 0.3em !important;
+    }
+    .tea-room-images-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+    .tea-room-images-grid .tea-img-item {
+        transform: none !important;
+    }
+    .tea-room-section-02-number {
+        font-size: 2rem !important;
+    }
+    .tea-room-deco-bar-left {
+        width: 30px !important;
+        left: -0.5rem !important;
+    }
+    .tea-room-deco-bar-right {
+        width: 25px !important;
+        right: -0.5rem !important;
+    }
+}

@@ -3988,7 +3988,7 @@
                                 <div class="tea-room-green-deco" style="position: absolute; top: 0; left: -20px; width: 160px; height: 120%; background: #BFC7B3; z-index: -1;"></div>
                                 
                                 <!-- 主圖片（自然呈現，不被色塊推擠） -->
-                                <img src="img/tearoom_experience5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
+                                <img src="img/tearoom_experience5.jpg" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
                     </div>
                             
                             <!-- 右側：文字區塊（垂直置中） -->
@@ -4147,114 +4147,6 @@
                         </div>
                     </div>
                 </div>
-
-                <style>
-                    /* 確保 Section 01 容器不會切掉內容 */
-                    .tea-room-section-01-container {
-                        overflow: visible !important;
-                    }
-                    
-                    @media (max-width: 1024px) {
-                        .tea-room-section-01-flex {
-                            flex-direction: column !important;
-                            gap: 2rem !important;
-                            min-height: auto !important;
-                        }
-                        .tea-room-section-01-image {
-                            width: 100% !important;
-                            max-width: 500px !important;
-                            aspect-ratio: 4/5 !important;
-                            margin: 0 auto !important;
-                        }
-                        .tea-room-green-deco {
-                            width: 100px !important;
-                            left: -10px !important;
-                        }
-                        .tea-room-section-01-text {
-                            width: 100% !important;
-                            padding: 0 !important;
-                        }
-                        .tea-room-section-01-text p {
-                            white-space: normal !important;
-                        }
-                        .tea-room-plans-grid {
-                            grid-template-columns: 1fr !important;
-                            gap: 1.5rem !important;
-                            max-width: 500px !important;
-                            margin: 0 auto !important;
-                        }
-                        .tea-room-kimono-title {
-                            font-size: 3rem !important;
-                            letter-spacing: 0.4em !important;
-                        }
-                        .tea-room-images-grid {
-                            grid-template-columns: repeat(2, 1fr) !important;
-                            gap: 20px !important;
-                        }
-                        .tea-room-section-02-number {
-                            font-size: 2.5rem !important;
-                        }
-                    }
-                    @media (max-width: 768px) {
-                        .tea-room-section-01-wrapper {
-                            padding: 3rem 0 !important;
-                        }
-                        .tea-room-plans-wrapper {
-                            padding: 3rem 0 !important;
-                        }
-                        .tea-room-plans-grid > div {
-                            padding: 1.5rem !important;
-                        }
-                        .tea-room-section-01-flex {
-                            gap: 1.5rem !important;
-                        }
-                        .tea-room-section-01-image {
-                            max-width: 100% !important;
-                            width: 100% !important;
-                            aspect-ratio: 3/4 !important;
-                        }
-                        .tea-room-green-deco {
-                            width: 60px !important;
-                            left: -5px !important;
-                            height: 110% !important;
-                        }
-                        .tea-room-section-01-text p {
-                            white-space: normal !important;
-                            font-size: 0.875rem !important;
-                            line-height: 2.2 !important;
-                        }
-                        .tea-room-plans-grid {
-                            max-width: 100% !important;
-                        }
-                    }
-                    @media (max-width: 640px) {
-                        .tea-room-section-02-wrapper {
-                            padding: 3rem 0 !important;
-                        }
-                        .tea-room-deco-bar-left {
-                            width: 30px !important;
-                            left: -0.5rem !important;
-                        }
-                        .tea-room-deco-bar-right {
-                            width: 25px !important;
-                            right: -0.5rem !important;
-                        }
-                        .tea-room-kimono-title {
-                            font-size: 2.2rem !important;
-                            letter-spacing: 0.3em !important;
-                        }
-                        .tea-room-images-grid {
-                            grid-template-columns: repeat(2, 1fr) !important;
-                            gap: 14px !important;
-                        }
-                        .tea-room-images-grid .tea-img-item {
-                            transform: none !important;
-                        }
-                        .tea-room-section-02-number {
-                            font-size: 2rem !important;
-                        }
-                    }
-                </style>
 
                 <!-- Lightbox 燈箱 -->
                 <div id="lightbox" class="lightbox" onclick="if(event.target.id === 'lightbox') closeLightbox()">
