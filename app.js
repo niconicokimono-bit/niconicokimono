@@ -3974,18 +3974,18 @@
                 </div>
 
                 <!-- Section 01: Main Image and Text with Overlapping Green Block -->
-                <div style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); margin-top: 0; padding: 6rem 0; position: relative; overflow: visible;">
+                <div class="tea-room-section-01-wrapper" style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); margin-top: 0; padding: 6rem 0; position: relative; overflow: visible;">
                     <!-- 不規則橢圓裝飾 -->
                     <div style="position: absolute; top: -30px; right: 5%; width: 200px; height: 160px; background: rgba(232, 190, 190, 0.14); border-radius: 50% 45% 55% 40%; transform: rotate(12deg); z-index: 0; pointer-events: none;"></div>
                     <div style="position: absolute; bottom: 8%; left: -30px; width: 170px; height: 140px; background: rgba(183, 210, 220, 0.15); border-radius: 40% 55% 45% 60%; transform: rotate(-18deg); z-index: 0; pointer-events: none;"></div>
                     <div style="position: absolute; top: 40%; right: -20px; width: 130px; height: 110px; background: rgba(230, 218, 195, 0.2); border-radius: 55% 45% 50% 50%; transform: rotate(25deg); z-index: 0; pointer-events: none;"></div>
                     <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
                         <!-- Flex 容器：圖片和文字垂直對齊 -->
-                        <div style="display: flex; align-items: center; gap: 4rem; position: relative; min-height: 600px;">
+                        <div class="tea-room-section-01-flex" style="display: flex; align-items: center; gap: 4rem; position: relative;">
                             <!-- 左側：圖片容器（包含色塊、圖片） -->
                             <div style="position: relative; flex: 0 0 auto; width: 40%; aspect-ratio: 4/5; overflow: visible;" class="tea-room-section-01-image">
                                 <!-- 淺綠色裝飾色塊（位於圖片後方，漂浮） -->
-                                <div style="position: absolute; top: 0; left: -20px; width: 160px; height: 120%; background: #BFC7B3; z-index: -1;"></div>
+                                <div class="tea-room-green-deco" style="position: absolute; top: 0; left: -20px; width: 160px; height: 120%; background: #BFC7B3; z-index: -1;"></div>
                                 
                                 <!-- 主圖片（自然呈現，不被色塊推擠） -->
                                 <img src="img/tearoom_experience5.png" alt="${t('茶室體驗')}" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; position: relative; z-index: 0;" onerror="this.src='https://placehold.co/400x500/ecfdf5/10b981?text=茶室體驗5'">
@@ -4013,13 +4013,13 @@
                 </div>
 
                 <!-- 三個方案 -->
-                <div style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 6rem 0; position: relative; overflow: hidden;">
+                <div class="tea-room-plans-wrapper" style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 6rem 0; position: relative; overflow: hidden;">
                     <!-- 不規則橢圓裝飾 -->
                     <div style="position: absolute; top: -20px; left: 3%; width: 190px; height: 150px; background: rgba(191, 199, 179, 0.16); border-radius: 48% 52% 43% 57%; transform: rotate(-10deg); z-index: 0; pointer-events: none;"></div>
                     <div style="position: absolute; bottom: -30px; right: 8%; width: 220px; height: 170px; background: rgba(232, 190, 190, 0.13); border-radius: 52% 48% 55% 45%; transform: rotate(15deg); z-index: 0; pointer-events: none;"></div>
                     <div style="position: absolute; top: 50%; left: -40px; width: 140px; height: 120px; background: rgba(183, 210, 220, 0.18); border-radius: 45% 55% 50% 50%; transform: rotate(-22deg); z-index: 0; pointer-events: none;"></div>
                     <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div class="tea-room-plans-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                             <!-- Plan A -->
                             <div style="border: 1px solid #544739; padding: 2.5rem; position: relative; display: flex; flex-direction: column;">
                                 <div style="font-size: 4rem; font-weight: 300; color: #544739; line-height: 1; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif;">
@@ -4102,7 +4102,7 @@
                 </div>
 
                 <!-- Section 02: KIMONO Title and Four Small Images -->
-                <div style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 6rem 0; position: relative; overflow: hidden;">
+                <div class="tea-room-section-02-wrapper" style="background: white; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 6rem 0; position: relative; overflow: hidden;">
                     <!-- 不規則橢圓裝飾 -->
                     <div style="position: absolute; top: 10%; right: -30px; width: 180px; height: 150px; background: rgba(191, 199, 179, 0.17); border-radius: 50% 42% 58% 48%; transform: rotate(8deg); z-index: 0; pointer-events: none;"></div>
                     <div style="position: absolute; bottom: 5%; left: 2%; width: 200px; height: 160px; background: rgba(230, 218, 195, 0.18); border-radius: 45% 55% 48% 52%; transform: rotate(-12deg); z-index: 0; pointer-events: none;"></div>
@@ -4119,10 +4119,10 @@
                         <!-- 照片區域（含裝飾色塊） -->
                         <div style="position: relative; margin-top: 1rem;">
                             <!-- 左側裝飾色塊 -->
-                            <div style="position: absolute; left: -2rem; top: 15%; width: 80px; height: 70%; background: #BFC7B3; z-index: 0;"></div>
+                            <div class="tea-room-deco-bar-left" style="position: absolute; left: -2rem; top: 15%; width: 80px; height: 70%; background: #BFC7B3; z-index: 0;"></div>
                             
                             <!-- 右側裝飾色塊 -->
-                            <div style="position: absolute; right: -2rem; bottom: 10%; width: 60px; height: 50%; background: #BFC7B3; z-index: 0;"></div>
+                            <div class="tea-room-deco-bar-right" style="position: absolute; right: -2rem; bottom: 10%; width: 60px; height: 50%; background: #BFC7B3; z-index: 0;"></div>
                         
                             <!-- 四張小圖網格（3:4 比例，錯落排列） -->
                             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; position: relative; z-index: 1; padding-bottom: 24px;" class="tea-room-images-grid">
@@ -4155,17 +4155,33 @@
                     }
                     
                     @media (max-width: 1024px) {
-                        .tea-room-section-01-image,
-                        .tea-room-section-01-text {
-                            width: 100% !important;
+                        .tea-room-section-01-flex {
+                            flex-direction: column !important;
+                            gap: 2rem !important;
+                            min-height: auto !important;
                         }
                         .tea-room-section-01-image {
                             width: 100% !important;
+                            max-width: 500px !important;
                             aspect-ratio: 4/5 !important;
-                            margin-bottom: 2rem !important;
+                            margin: 0 auto !important;
+                        }
+                        .tea-room-green-deco {
+                            width: 100px !important;
+                            left: -10px !important;
                         }
                         .tea-room-section-01-text {
+                            width: 100% !important;
                             padding: 0 !important;
+                        }
+                        .tea-room-section-01-text p {
+                            white-space: normal !important;
+                        }
+                        .tea-room-plans-grid {
+                            grid-template-columns: 1fr !important;
+                            gap: 1.5rem !important;
+                            max-width: 500px !important;
+                            margin: 0 auto !important;
                         }
                         .tea-room-kimono-title {
                             font-size: 3rem !important;
@@ -4179,7 +4195,50 @@
                             font-size: 2.5rem !important;
                         }
                     }
+                    @media (max-width: 768px) {
+                        .tea-room-section-01-wrapper {
+                            padding: 3rem 0 !important;
+                        }
+                        .tea-room-plans-wrapper {
+                            padding: 3rem 0 !important;
+                        }
+                        .tea-room-plans-grid > div {
+                            padding: 1.5rem !important;
+                        }
+                        .tea-room-section-01-flex {
+                            gap: 1.5rem !important;
+                        }
+                        .tea-room-section-01-image {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            aspect-ratio: 3/4 !important;
+                        }
+                        .tea-room-green-deco {
+                            width: 60px !important;
+                            left: -5px !important;
+                            height: 110% !important;
+                        }
+                        .tea-room-section-01-text p {
+                            white-space: normal !important;
+                            font-size: 0.875rem !important;
+                            line-height: 2.2 !important;
+                        }
+                        .tea-room-plans-grid {
+                            max-width: 100% !important;
+                        }
+                    }
                     @media (max-width: 640px) {
+                        .tea-room-section-02-wrapper {
+                            padding: 3rem 0 !important;
+                        }
+                        .tea-room-deco-bar-left {
+                            width: 30px !important;
+                            left: -0.5rem !important;
+                        }
+                        .tea-room-deco-bar-right {
+                            width: 25px !important;
+                            right: -0.5rem !important;
+                        }
                         .tea-room-kimono-title {
                             font-size: 2.2rem !important;
                             letter-spacing: 0.3em !important;
