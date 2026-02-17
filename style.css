@@ -72,7 +72,7 @@ html {
     margin: 0 auto;
     display: block;
 }
-/* 滿版輪播樣式 */
+/* 滿版輪播樣式（主要定義在後方 .photo-plans-hero-image-fullwidth） */
 .photo-plans-hero-fullwidth .slideshow-container {
     position: relative;
     width: 100%;
@@ -80,17 +80,6 @@ html {
 .photo-plans-hero-fullwidth .mySlides {
     position: relative;
     width: 100%;
-}
-.photo-plans-hero-fullwidth .mySlides img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center 65%;
-    display: block;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -4265,25 +4254,25 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    margin-top: -67px;
+    margin-top: -56px;
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
 }
-/* 響應式調整：不同螢幕尺寸的負 margin */
+/* 響應式調整：不同螢幕尺寸的負 margin（對應 navbar 高度） */
 @media (min-width: 640px) {
     .photo-plans-hero-fullwidth {
-        margin-top: -77px;
+        margin-top: -60px;
     }
 }
 @media (min-width: 768px) {
     .photo-plans-hero-fullwidth {
-        margin-top: -87px;
+        margin-top: -64px;
     }
 }
 @media (min-width: 1024px) {
     .photo-plans-hero-fullwidth {
-        margin-top: -97px;
+        margin-top: -68px;
     }
 }
 /* 當攝影方案頁面時，移除 content 的上方間距 */
@@ -4291,10 +4280,11 @@ body[data-lang="en"] #main-navbar nav > div:last-child {
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
-/* 當攝影方案頁面時，讓導航欄變透明 */
+/* 當攝影方案頁面時，讓導航欄變透明並移除下邊距 */
 header.photo-plans-navbar-transparent {
     background-color: transparent !important;
     box-shadow: none !important;
+    margin-bottom: 0 !important;
 }
 header.photo-plans-navbar-transparent nav a,
 header.photo-plans-navbar-transparent .nav-link {
@@ -4311,22 +4301,49 @@ header.photo-plans-navbar-transparent a[href="#home"] {
     color: #fff !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+/* 漢堡選單圖示在透明導航欄時變白色 */
+header.photo-plans-navbar-transparent #mobile-menu-toggle svg {
+    stroke: #fff !important;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
 .photo-plans-hero-container {
     width: 100%;
     position: relative;
     margin: 0;
     padding: 0;
+    min-height: 320px;
 }
 .photo-plans-hero-image-fullwidth {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 100%;
+    min-height: 320px;
     object-fit: cover;
     object-position: center 65%;
     display: block;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
+}
+.photo-plans-hero-container .mySlides {
+    min-height: 320px;
+}
+@media (min-width: 768px) {
+    .photo-plans-hero-image-fullwidth {
+        min-height: 450px;
+    }
+    .photo-plans-hero-container,
+    .photo-plans-hero-container .mySlides {
+        min-height: 450px;
+    }
+}
+@media (min-width: 1024px) {
+    .photo-plans-hero-image-fullwidth {
+        min-height: 560px;
+    }
+    .photo-plans-hero-container,
+    .photo-plans-hero-container .mySlides {
+        min-height: 560px;
+    }
 }
 .photo-plans-hero-overlay {
     position: absolute;
