@@ -4262,7 +4262,7 @@
                 <div class="photo-plans-hero-fullwidth">
                     <div class="slideshow-container photo-plans-hero-container">
                         <div class="mySlides fade">
-                            <img src="img/gallery_cover.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
+                            <img src="img/gallery_cover.jpg" alt="${t('照片庫封面')}" class="photo-plans-hero-image-fullwidth" style="object-position: center 40%;" onerror="this.src='https://placehold.co/1200x600/cccccc/000000?text=照片庫封面'">
                     </div>
                         <!-- 極淡黑色漸層（確保文字清晰） -->
                         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.08) 60%, rgba(0,0,0,0.3) 100%); z-index: 3; pointer-events: none;"></div>
