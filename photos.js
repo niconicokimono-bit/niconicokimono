@@ -5,9 +5,9 @@
  * 更新方式：新增照片到 img/ 後，在終端機執行：
  *   node update-photos.js
  *
- * 最後更新：2026/2/16 下午2:41:18
+ * 最後更新：2026/2/19 下午8:48:12
  * 實穿照 (Gallery_): 199 張
- * 型錄照 (Plan_):    45 張
+ * 型錄照 (Plan_):    55 張
  */
 
 // ====== 實穿照（Gallery_方案_日期_顏色.jpg）======
@@ -215,10 +215,13 @@ window.galleryFiles = [
 
 // ====== 型錄照（Plan_方案_顏色.jpg）======
 window.planFiles = [
+    "Plan_Gold_Furisode_250130_green.jpg",
+    "Plan_Gold_Furisode_250130_purple.jpg",
     "Plan_Gold_Furisode_blue.jpg",
     "Plan_Gold_Furisode_orange.jpg",
     "Plan_Gold_Furisode_purple1.jpg",
     "Plan_Gold_Furisode_red1.jpg",
+    "Plan_Houmongi_230202_green.jpg",
     "Plan_Houmongi_other.jpg",
     "Plan_Houmongi_pink1.jpg",
     "Plan_Houmongi_pink2.jpg",
@@ -227,6 +230,8 @@ window.planFiles = [
     "Plan_Komon_green2.jpg",
     "Plan_Kuro_Tomesode1.jpg",
     "Plan_Kuro_Tomesode2.jpg",
+    "Plan_Lace_260219_orange.jpg",
+    "Plan_Lace_260219_other.jpg",
     "Plan_Lace_blue.jpg",
     "Plan_Lace_green.jpg",
     "Plan_Lace_pink.jpg",
@@ -247,6 +252,10 @@ window.planFiles = [
     "Plan_Premium_Houmongi_pink2.jpg",
     "Plan_Premium_Houmongi_pink3.jpg",
     "Plan_Premium_Houmongi_white.jpg",
+    "Plan_Premium_Komon_260218_blue.jpg",
+    "Plan_Premium_Komon_260219_blue.jpg",
+    "Plan_Premium_Komon_260219_orange.jpg",
+    "Plan_Premium_Komon_260219_purple.jpg",
     "Plan_Premium_Komon_beige.jpg",
     "Plan_Premium_Komon_blue1.jpg",
     "Plan_Premium_Komon_blue2.jpg",
