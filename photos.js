@@ -5,9 +5,9 @@
  * 更新方式：新增照片到 img/ 後，在終端機執行：
  *   node update-photos.js
  *
- * 最後更新：2026/2/19 下午8:48:12
+ * 最後更新：2026/3/6 上午10:07:18
  * 實穿照 (Gallery_): 199 張
- * 型錄照 (Plan_):    55 張
+ * 型錄照 (Plan_):    58 張
  */
 
 // ====== 實穿照（Gallery_方案_日期_顏色.jpg）======
@@ -221,6 +221,7 @@ window.planFiles = [
     "Plan_Gold_Furisode_orange.jpg",
     "Plan_Gold_Furisode_purple1.jpg",
     "Plan_Gold_Furisode_red1.jpg",
+    "Plan_Hakama_260306_red.jpg",
     "Plan_Houmongi_230202_green.jpg",
     "Plan_Houmongi_other.jpg",
     "Plan_Houmongi_pink1.jpg",
@@ -238,6 +239,7 @@ window.planFiles = [
     "Plan_Lace_white.jpg",
     "Plan_Lace_white2.jpg",
     "Plan_Lace_white3.jpg",
+    "Plan_Luxury_Furisode_260306_orange.jpg",
     "Plan_Luxury_Furisode_black2.jpg",
     "Plan_Luxury_Furisode_blue.jpg",
     "Plan_Luxury_Furisode_pink.jpg",
@@ -256,6 +258,7 @@ window.planFiles = [
     "Plan_Premium_Komon_260219_blue.jpg",
     "Plan_Premium_Komon_260219_orange.jpg",
     "Plan_Premium_Komon_260219_purple.jpg",
+    "Plan_Premium_Komon_260306_grey.jpg",
     "Plan_Premium_Komon_beige.jpg",
     "Plan_Premium_Komon_blue1.jpg",
     "Plan_Premium_Komon_blue2.jpg",
